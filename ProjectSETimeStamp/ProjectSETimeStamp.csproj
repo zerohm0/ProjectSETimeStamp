@@ -33,8 +33,35 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Syncfusion.Grid.Base, Version=19.3460.0.53, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Grid.Base.19.3.0.53\lib\net46\Syncfusion.Grid.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Grid.Windows, Version=19.3460.0.53, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Grid.Windows.19.3.0.53\lib\net46\Syncfusion.Grid.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Licensing, Version=19.3460.0.53, Culture=neutral, PublicKeyToken=632609b4d040f6b4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Licensing.19.3.0.53\lib\net46\Syncfusion.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.Base, Version=19.3460.0.53, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Shared.Base.19.3.0.53\lib\net46\Syncfusion.Shared.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Shared.Windows, Version=19.3460.0.53, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Shared.Windows.19.3.0.53\lib\net46\Syncfusion.Shared.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.SpellChecker.Base, Version=19.3460.0.53, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.SpellChecker.Base.19.3.0.53\lib\net46\Syncfusion.SpellChecker.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Tools.Base, Version=19.3460.0.53, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Tools.Base.19.3.0.53\lib\net46\Syncfusion.Tools.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Syncfusion.Tools.Windows, Version=19.3460.0.53, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
+      <HintPath>..\packages\Syncfusion.Tools.Windows.19.3.0.53\lib\net46\Syncfusion.Tools.Windows.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.Ribbon, Version=2.0.0.0, Culture=neutral, PublicKeyToken=928736e248aa81f9, processorArchitecture=MSIL">
+      <HintPath>..\packages\RibbonWinForms.5.0.1.1\lib\net472\System.Windows.Forms.Ribbon.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,16 +73,121 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="AddTimeStamp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="AddTimeStamp.Designer.cs">
+      <DependentUpon>AddTimeStamp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApproveAccept.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApproveAccept.Designer.cs">
+      <DependentUpon>ApproveAccept.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ApproveTimeStamp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApproveTimeStamp.Designer.cs">
+      <DependentUpon>ApproveTimeStamp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AskTimeStamp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AskTimeStamp.Designer.cs">
+      <DependentUpon>AskTimeStamp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HistoryTimeStamp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HistoryTimeStamp.Designer.cs">
+      <DependentUpon>HistoryTimeStamp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HRMHoliday.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HRMHoliday.Designer.cs">
+      <DependentUpon>HRMHoliday.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TypeTimeStamp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TypeTimeStamp.Designer.cs">
+      <DependentUpon>TypeTimeStamp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Authentication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Authentication.Designer.cs">
+      <DependentUpon>Authentication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditAuthen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditAuthen.Designer.cs">
+      <DependentUpon>EditAuthen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditEmployee.Designer.cs">
+      <DependentUpon>EditEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeForm.Designer.cs">
+      <DependentUpon>EmployeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI.Designer.cs">
+      <DependentUpon>MDI.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="VeriStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VeriStatus.Designer.cs">
+      <DependentUpon>VeriStatus.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddTimeStamp.resx">
+      <DependentUpon>AddTimeStamp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApproveAccept.resx">
+      <DependentUpon>ApproveAccept.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApproveTimeStamp.resx">
+      <DependentUpon>ApproveTimeStamp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AskTimeStamp.resx">
+      <DependentUpon>AskTimeStamp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HistoryTimeStamp.resx">
+      <DependentUpon>HistoryTimeStamp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HRMHoliday.resx">
+      <DependentUpon>HRMHoliday.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TypeTimeStamp.resx">
+      <DependentUpon>TypeTimeStamp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Authentication.resx">
+      <DependentUpon>Authentication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditAuthen.resx">
+      <DependentUpon>EditAuthen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditEmployee.resx">
+      <DependentUpon>EditEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeForm.resx">
+      <DependentUpon>EmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI.resx">
+      <DependentUpon>MDI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -66,6 +198,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="VeriStatus.resx">
+      <DependentUpon>VeriStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
