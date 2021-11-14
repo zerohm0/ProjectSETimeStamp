@@ -82,12 +82,12 @@ namespace ProjectSETimeStamp
 
         private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
         {
-
+            //assasasasaackadadoikadnadladadladiialdmadladjal
         }
 
         private void Username_LB_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("sdsdsd");
         }
 
         private void Username_TB_KeyPress_1(object sender, KeyPressEventArgs e)

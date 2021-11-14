@@ -46,6 +46,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -68,6 +69,7 @@
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel3, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label2, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -324,6 +326,16 @@
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(64, 18);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(482, 17);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "                                         ";
+            // 
             // LoginEN
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -336,6 +348,7 @@
             this.Text = "LoginEN";
             this.Load += new System.EventHandler(this.LoginEN_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
@@ -372,5 +385,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.CheckBox Showpassword_CB;
+        private System.Windows.Forms.Label label2;
     }
 }
