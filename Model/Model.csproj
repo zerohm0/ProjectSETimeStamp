@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{46041786-E882-4055-9F57-2A783E99893C}</ProjectGuid>
+    <ProjectGuid>{839D65BD-5D47-48CF-B729-7F9DFFDF5EA8}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>ProjectService</RootNamespace>
-    <AssemblyName>ProjectService</AssemblyName>
+    <RootNamespace>Model</RootNamespace>
+    <AssemblyName>Model</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,8 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Container.cs" />
+    <Compile Include="Filter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TimeStampService.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -69,19 +70,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Model\Model.csproj">
-      <Project>{839d65bd-5d47-48cf-b729-7f9dffdf5ea8}</Project>
-      <Name>Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ProjectDatabase\ProjectDatabaseandService.csproj">
-      <Project>{189e76ae-72f3-415e-b89e-bb77f9e583bb}</Project>
-      <Name>ProjectDatabaseandService</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

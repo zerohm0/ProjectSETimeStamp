@@ -145,9 +145,12 @@ namespace ProjectSETimeStamp
             this.ClientSize = new System.Drawing.Size(986, 582);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.ribbon1);
+            this.IsMdiContainer = true;
             this.KeyPreview = true;
             this.Name = "MDI";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
             this.PerformLayout();
 

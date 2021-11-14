@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="c303c26a56854fe4b4b4752c642a5790" Name="Diagram1">
+      <Diagram DiagramId="c303c26a56854fe4b4b4752c642a5790" Name="Diagram1" ZoomLevel="74">
         <EntityTypeShape EntityType="TimestampModel.Employee" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="TimestampModel.Permission" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
         <EntityTypeShape EntityType="TimestampModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="6.75" IsExpanded="true" />
