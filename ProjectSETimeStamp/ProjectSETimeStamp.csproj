@@ -109,6 +109,11 @@
     <Compile Include="HRMHoliday.Designer.cs">
       <DependentUpon>HRMHoliday.cs</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="TypeTimeStamp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -209,13 +214,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="VeriStatus.resx">
       <DependentUpon>VeriStatus.cs</DependentUpon>
     </EmbeddedResource>
@@ -232,6 +233,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\HidePassword.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\User-blue-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\PasswordIcon-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\iconEmployee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\1024px-User_icon_2.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\CreatePass.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\CreateRole.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

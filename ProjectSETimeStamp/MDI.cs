@@ -16,5 +16,16 @@ namespace ProjectSETimeStamp
         {
             InitializeComponent();
         }
+
+        private void MDI_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void ribbonPanel1_Paint(object sender, PaintEventArgs e)
+        {
+            //Image img =  collr
+            //e.Graphics.DrawImage(img, new Point(0, 0));
+        }
     }
 }
