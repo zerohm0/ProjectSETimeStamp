@@ -156,12 +156,6 @@
     <Compile Include="FrmCreateReports.Designer.cs">
       <DependentUpon>FrmCreateReports.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginEN.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LoginEN.Designer.cs">
-      <DependentUpon>LoginEN.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VeriStatus.cs">
@@ -208,9 +202,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCreateReports.resx">
       <DependentUpon>FrmCreateReports.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LoginEN.resx">
-      <DependentUpon>LoginEN.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
