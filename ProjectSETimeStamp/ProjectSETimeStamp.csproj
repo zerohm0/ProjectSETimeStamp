@@ -67,9 +67,13 @@
     <Reference Include="Syncfusion.Tools.Windows, Version=19.3460.0.53, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <HintPath>..\packages\Syncfusion.Tools.Windows.19.3.0.53\lib\net46\Syncfusion.Tools.Windows.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Windows.Forms.Ribbon, Version=2.0.0.0, Culture=neutral, PublicKeyToken=928736e248aa81f9, processorArchitecture=MSIL">
       <HintPath>..\packages\RibbonWinForms.5.0.1.1\lib\net472\System.Windows.Forms.Ribbon.dll</HintPath>
     </Reference>
@@ -108,6 +112,26 @@
     <Compile Include="AskTimeStamp.Designer.cs">
       <DependentUpon>AskTimeStamp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Container.cs" />
+    <Compile Include="DBM.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBM.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DBM.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DBM.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBM.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Employee.cs">
+      <DependentUpon>DBM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Filter.cs" />
     <Compile Include="HistoryTimeStamp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +150,9 @@
     <Compile Include="MDIForm.Designer.cs">
       <DependentUpon>MDIForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Permission.cs">
+      <DependentUpon>DBM.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -136,6 +163,19 @@
     </Compile>
     <Compile Include="SearchReport.Designer.cs">
       <DependentUpon>SearchReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service.cs" />
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>DBM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Timestamp.cs">
+      <DependentUpon>DBM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TimestampType.cs">
+      <DependentUpon>DBM.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TimestapStatus.cs">
+      <DependentUpon>DBM.tt</DependentUpon>
     </Compile>
     <Compile Include="TypeTimeStamp.cs">
       <SubType>Form</SubType>
@@ -240,6 +280,13 @@
     <EmbeddedResource Include="VeriStatus.resx">
       <DependentUpon>VeriStatus.cs</DependentUpon>
     </EmbeddedResource>
+    <EntityDeploy Include="DBM.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DBM.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DBM.edmx.diagram">
+      <DependentUpon>DBM.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -314,6 +361,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Add1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DBM.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DBM.edmx</DependentUpon>
+      <LastGenOutput>DBM.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DBM.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DBM.edmx</DependentUpon>
+      <LastGenOutput>DBM.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
