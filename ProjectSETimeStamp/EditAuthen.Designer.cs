@@ -31,24 +31,27 @@ namespace ProjectSETimeStamp
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.comboBoxPermissLev = new System.Windows.Forms.ComboBox();
+            this.comboBoxDepart = new System.Windows.Forms.ComboBox();
+            this.comboBoxEmpID = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonAddPermiss = new System.Windows.Forms.Button();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.buttonSubmit = new System.Windows.Forms.Button();
+            this.buttonCancel = new System.Windows.Forms.Button();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.textBoxName = new System.Windows.Forms.TextBox();
+            this.textBoxLName = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -81,48 +84,18 @@ namespace ProjectSETimeStamp
             this.label1.TabIndex = 2;
             this.label1.Text = "สิทธิ์ผู้ใช้งาน > แก้ไขสิทธิ์";
             // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 47);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(708, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "รหัสพนักงาน";
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 119);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(708, 13);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "ชื่อ-นามสกุล";
-            // 
-            // label7
-            // 
-            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 191);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(708, 13);
-            this.label7.TabIndex = 5;
-            this.label7.Text = "แผนก";
-            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Controls.Add(this.comboBox5, 0, 8);
-            this.tableLayoutPanel2.Controls.Add(this.comboBox4, 0, 6);
-            this.tableLayoutPanel2.Controls.Add(this.comboBox3, 0, 4);
-            this.tableLayoutPanel2.Controls.Add(this.comboBox2, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.comboBoxPermissLev, 0, 8);
+            this.tableLayoutPanel2.Controls.Add(this.comboBoxDepart, 0, 6);
+            this.tableLayoutPanel2.Controls.Add(this.comboBoxEmpID, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.label7, 0, 5);
             this.tableLayoutPanel2.Controls.Add(this.label5, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.label2, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 7);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel5, 0, 4);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(43, 25);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -140,41 +113,65 @@ namespace ProjectSETimeStamp
             this.tableLayoutPanel2.Size = new System.Drawing.Size(714, 363);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
-            // comboBox2
+            // comboBoxPermissLev
             // 
-            this.comboBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(3, 79);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(708, 21);
-            this.comboBox2.TabIndex = 9;
+            this.comboBoxPermissLev.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBoxPermissLev.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxPermissLev.FormattingEnabled = true;
+            this.comboBoxPermissLev.Location = new System.Drawing.Point(3, 295);
+            this.comboBoxPermissLev.Name = "comboBoxPermissLev";
+            this.comboBoxPermissLev.Size = new System.Drawing.Size(708, 21);
+            this.comboBoxPermissLev.TabIndex = 12;
             // 
-            // comboBox3
+            // comboBoxDepart
             // 
-            this.comboBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(3, 151);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(708, 21);
-            this.comboBox3.TabIndex = 10;
+            this.comboBoxDepart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBoxDepart.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxDepart.FormattingEnabled = true;
+            this.comboBoxDepart.Location = new System.Drawing.Point(3, 223);
+            this.comboBoxDepart.Name = "comboBoxDepart";
+            this.comboBoxDepart.Size = new System.Drawing.Size(708, 21);
+            this.comboBoxDepart.TabIndex = 11;
             // 
-            // comboBox4
+            // comboBoxEmpID
             // 
-            this.comboBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(3, 223);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(708, 21);
-            this.comboBox4.TabIndex = 11;
+            this.comboBoxEmpID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBoxEmpID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxEmpID.FormattingEnabled = true;
+            this.comboBoxEmpID.Location = new System.Drawing.Point(3, 79);
+            this.comboBoxEmpID.Name = "comboBoxEmpID";
+            this.comboBoxEmpID.Size = new System.Drawing.Size(708, 21);
+            this.comboBoxEmpID.TabIndex = 9;
             // 
-            // comboBox5
+            // label7
             // 
-            this.comboBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(3, 295);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(708, 21);
-            this.comboBox5.TabIndex = 12;
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(3, 191);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(708, 13);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "แผนก";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(3, 119);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(708, 13);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "ชื่อ-นามสกุล";
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 47);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(708, 13);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "รหัสพนักงาน";
             // 
             // tableLayoutPanel3
             // 
@@ -182,7 +179,7 @@ namespace ProjectSETimeStamp
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel3.Controls.Add(this.label3, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.button1, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.buttonAddPermiss, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 255);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -201,14 +198,14 @@ namespace ProjectSETimeStamp
             this.label3.TabIndex = 6;
             this.label3.Text = "สิทธิ็การใช้งาน";
             // 
-            // button1
+            // buttonAddPermiss
             // 
-            this.button1.Location = new System.Drawing.Point(640, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(65, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "เพิ่ม";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonAddPermiss.Location = new System.Drawing.Point(640, 3);
+            this.buttonAddPermiss.Name = "buttonAddPermiss";
+            this.buttonAddPermiss.Size = new System.Drawing.Size(65, 23);
+            this.buttonAddPermiss.TabIndex = 7;
+            this.buttonAddPermiss.Text = "เพิ่ม";
+            this.buttonAddPermiss.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel4
             // 
@@ -218,8 +215,8 @@ namespace ProjectSETimeStamp
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
-            this.tableLayoutPanel4.Controls.Add(this.button2, 1, 0);
-            this.tableLayoutPanel4.Controls.Add(this.button3, 3, 0);
+            this.tableLayoutPanel4.Controls.Add(this.buttonSubmit, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.buttonCancel, 3, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(43, 394);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
@@ -228,25 +225,57 @@ namespace ProjectSETimeStamp
             this.tableLayoutPanel4.Size = new System.Drawing.Size(714, 30);
             this.tableLayoutPanel4.TabIndex = 4;
             // 
-            // button2
+            // buttonSubmit
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button2.Location = new System.Drawing.Point(252, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(86, 24);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "บันทึก";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonSubmit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonSubmit.Location = new System.Drawing.Point(252, 3);
+            this.buttonSubmit.Name = "buttonSubmit";
+            this.buttonSubmit.Size = new System.Drawing.Size(86, 24);
+            this.buttonSubmit.TabIndex = 0;
+            this.buttonSubmit.Text = "บันทึก";
+            this.buttonSubmit.UseVisualStyleBackColor = true;
+            this.buttonSubmit.Click += new System.EventHandler(this.buttonSubmit_Click);
             // 
-            // button3
+            // buttonCancel
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button3.Location = new System.Drawing.Point(372, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(86, 24);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "ยกเลิก";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonCancel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonCancel.Location = new System.Drawing.Point(372, 3);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(86, 24);
+            this.buttonCancel.TabIndex = 1;
+            this.buttonCancel.Text = "ยกเลิก";
+            this.buttonCancel.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 2;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Controls.Add(this.textBoxName, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.textBoxLName, 1, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 147);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(708, 30);
+            this.tableLayoutPanel5.TabIndex = 14;
+            // 
+            // textBoxName
+            // 
+            this.textBoxName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxName.Location = new System.Drawing.Point(3, 5);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(348, 20);
+            this.textBoxName.TabIndex = 0;
+            // 
+            // textBoxLName
+            // 
+            this.textBoxLName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxLName.Location = new System.Drawing.Point(357, 5);
+            this.textBoxLName.Name = "textBoxLName";
+            this.textBoxLName.Size = new System.Drawing.Size(348, 20);
+            this.textBoxLName.TabIndex = 1;
             // 
             // EditAuthen
             // 
@@ -256,6 +285,7 @@ namespace ProjectSETimeStamp
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "EditAuthen";
             this.Text = "EditAuthen";
+            this.Load += new System.EventHandler(this.EditAuthen_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.tableLayoutPanel2.ResumeLayout(false);
@@ -263,6 +293,8 @@ namespace ProjectSETimeStamp
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
+            this.tableLayoutPanel5.ResumeLayout(false);
+            this.tableLayoutPanel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -272,18 +304,20 @@ namespace ProjectSETimeStamp
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBoxPermissLev;
+        private System.Windows.Forms.ComboBox comboBoxDepart;
+        private System.Windows.Forms.ComboBox comboBoxEmpID;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonAddPermiss;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buttonSubmit;
+        private System.Windows.Forms.Button buttonCancel;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
+        private System.Windows.Forms.TextBox textBoxName;
+        private System.Windows.Forms.TextBox textBoxLName;
     }
 }
