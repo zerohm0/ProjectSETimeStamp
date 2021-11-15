@@ -6,7 +6,19 @@ using System.Threading.Tasks;
 
 namespace ProjectSETimeStamp
 {
-    class Filter
+    public class Filter
     {
+        public string ID { get; set; }
+
+        public string Password { get; set; }
+
+        public string Username { get; set; }
+
+        public string Name { get; set; }
+        public string LName { get; set; }
+
+        public string Department { get; set; }
+
+        public string Level { get; set; }
     }
 }

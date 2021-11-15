@@ -144,12 +144,6 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Model\Model.csproj">
-      <Project>{839d65bd-5d47-48cf-b729-7f9dffdf5ea8}</Project>
-      <Name>Model</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace ProjectSETimeStamp
 {
-    class Container
+    public class Container
     {
+        public bool Status { get; set; }
+        public string Message { get; set; }
+        public string ExceptMessage { get; set; }
+        public dynamic ResultObj { get; set; }
+
+        public dynamic ResultID { get; set; }
+
+        public dynamic ResultAnotherOneBiteTheDust { get; set; }
+
+        public Filter Filter { get; set; }
     }
 }

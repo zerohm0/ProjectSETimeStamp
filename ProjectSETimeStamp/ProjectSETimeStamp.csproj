@@ -284,6 +284,8 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>DBM.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="CodeTemplates\EFModelFromDatabase\Context.cs.t4" />
+    <None Include="CodeTemplates\EFModelFromDatabase\EntityType.cs.t4" />
     <None Include="DBM.edmx.diagram">
       <DependentUpon>DBM.edmx</DependentUpon>
     </None>
@@ -321,16 +323,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Image\CreateRole.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Model\Model.csproj">
-      <Project>{839d65bd-5d47-48cf-b729-7f9dffdf5ea8}</Project>
-      <Name>Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ProjectDatabase\ProjectDatabaseandService.csproj">
-      <Project>{189e76ae-72f3-415e-b89e-bb77f9e583bb}</Project>
-      <Name>ProjectDatabaseandService</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Zoom.png" />
