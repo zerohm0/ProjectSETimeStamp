@@ -16,7 +16,7 @@ namespace ProjectSETimeStamp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginEN());
+            Application.Run(new EditAuthen());
         }
     }
 }

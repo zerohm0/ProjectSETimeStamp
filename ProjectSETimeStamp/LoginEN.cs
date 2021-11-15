@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using Model;
+using ProjectDatabase;
+using Container = Model.Container;
 
 namespace ProjectSETimeStamp
 {
     public partial class LoginEN : Form
     {
+        private Service service;
         public LoginEN()
         {
+            service = new Service();
             InitializeComponent();
             
         }
@@ -148,6 +153,8 @@ namespace ProjectSETimeStamp
             {
                 MessageBox.Show("USERNAME หรือ PASSWORD ไม่ถูกต้อง", "Warning input is Fail", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
+            var ret = service.Login(Username_TB.Text, Password_TB.Text);
         }
 
         private void Submit_BT_MouseMove(object sender, MouseEventArgs e)

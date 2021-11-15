@@ -8,10 +8,10 @@ namespace Model
 {
     public class Container
     {
-        public bool status { get; set; }
+        public bool Status { get; set; }
         public string Message { get; set; }
         public string ExceptMessage { get; set; }
-        public dynamic ResultOBj { get; set; }
+        public dynamic ResultObj { get; set; }
 
         public dynamic ResultID { get; set; }
 

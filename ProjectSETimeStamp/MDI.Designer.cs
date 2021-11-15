@@ -51,7 +51,6 @@ namespace ProjectSETimeStamp
             // 
             this.ribbon1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ribbon1.Location = new System.Drawing.Point(0, 0);
-            this.ribbon1.Margin = new System.Windows.Forms.Padding(4);
             this.ribbon1.Minimized = false;
             this.ribbon1.Name = "ribbon1";
             // 
@@ -67,7 +66,7 @@ namespace ProjectSETimeStamp
             // 
             this.ribbon1.QuickAccessToolbar.Items.Add(this.ribbonButton1);
             this.ribbon1.RibbonTabFont = new System.Drawing.Font("Trebuchet MS", 9F);
-            this.ribbon1.Size = new System.Drawing.Size(986, 156);
+            this.ribbon1.Size = new System.Drawing.Size(740, 127);
             this.ribbon1.TabIndex = 0;
             this.ribbon1.Tabs.Add(this.ribbonTab1);
             this.ribbon1.Tabs.Add(this.ribbonTab2);
@@ -157,22 +156,22 @@ namespace ProjectSETimeStamp
             // statusStrip1
             // 
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.statusStrip1.Location = new System.Drawing.Point(0, 560);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 451);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(986, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(740, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // MDI
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(986, 582);
+            this.ClientSize = new System.Drawing.Size(740, 473);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.ribbon1);
             this.IsMdiContainer = true;
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MDI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
