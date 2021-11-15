@@ -63,16 +63,16 @@ namespace ProjectSETimeStamp
             String Username = Username_TB.Text;
             String Password = Password_TB.Text;
             // Submit ผ่านไปหน้า form1
-            MDI homeform = new MDI() ;
-            if (Username == "js" && Password == "va")
-            {
-                homeform.Show();
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("USERNAME หรือ PASSWORD ไม่ถูกต้อง","Warning input is Fail",MessageBoxButtons.OK,MessageBoxIcon.Warning);
-            }
+            //MDI homeform = new MDI() ;
+            //if (Username == "js" && Password == "va")
+            //{
+            //    homeform.Show();
+            //    this.Hide();
+            //}
+            //else
+            //{
+            //    MessageBox.Show("USERNAME หรือ PASSWORD ไม่ถูกต้อง","Warning input is Fail",MessageBoxButtons.OK,MessageBoxIcon.Warning);
+            //}
 
         }
         private void Submit_BT_MouseHover(object sender, EventArgs e)
@@ -127,34 +127,45 @@ namespace ProjectSETimeStamp
         {
             //String SQL_Query = "";
             //string con = "Data Source=$Local;Initial Catalog=$Database;User ID=$USer;Password=$Password";
-            String Username = Username_TB.Text;
-            String Password = Password_TB.Text;
-            // Submit ผ่านไปหน้า form1
-            MDI homeform = new MDI();
-            if (Username == "js" && Password == "va")
-            {
-                homeform.Show();
-                this.Hide();
-            }
-            else if (Username == "" && Password == "" )
-            {
-                MessageBox.Show("โปรดใส่ Username หรือ Password ");
+            //String Username = Username_TB.Text;
+            //String Password = Password_TB.Text;
+            //// Submit ผ่านไปหน้า form1
+            //MDI homeform = new MDI();
+            //if (Username == "js" && Password == "va")
+            //{
+            //    homeform.Show();
+            //    this.Hide();
+            //}
+            //else if (Username == "" && Password == "" )
+            //{
+            //    MessageBox.Show("โปรดใส่ Username หรือ Password ");
 
-            }
-            else if (Username == "")
+            //}
+            //else if (Username == "")
+            //{
+            //    MessageBox.Show("โปรดใส่ Username");
+            //}
+            //else if (Password == "")
+            //{
+            //    MessageBox.Show("โปรดใส่ Password");
+            //}
+            //else
+            //{
+            //    MessageBox.Show("USERNAME หรือ PASSWORD ไม่ถูกต้อง", "Warning input is Fail", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //}
+
+            var ret = service.Login(Username_TB.Text, Password_TB.Text);
+            if (ret.Status)
             {
-                MessageBox.Show("โปรดใส่ Username");
-            }
-            else if (Password == "")
-            {
-                MessageBox.Show("โปรดใส่ Password");
+                MessageBox.Show(ret.Message);
+                var frm = new MDIForm();
+
+                frm.Show();
             }
             else
             {
-                MessageBox.Show("USERNAME หรือ PASSWORD ไม่ถูกต้อง", "Warning input is Fail", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(ret.Message);
             }
-
-            var ret = service.Login(Username_TB.Text, Password_TB.Text);
         }
 
         private void Submit_BT_MouseMove(object sender, MouseEventArgs e)

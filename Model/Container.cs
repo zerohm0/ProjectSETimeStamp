@@ -15,6 +15,8 @@ namespace Model
 
         public dynamic ResultID { get; set; }
 
+        public dynamic ResultAnotherOneBiteTheDust { get; set; }
+
         public Filter Filter { get; set; }
     }
 }
