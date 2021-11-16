@@ -12,10 +12,10 @@ namespace ProjectSETimeStamp
     using System;
     using System.Collections.Generic;
     
-    public partial class TimestapStatus
+    public partial class TimestampStatus
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public TimestapStatus()
+        public TimestampStatus()
         {
             this.Timestamp = new HashSet<Timestamp>();
         }

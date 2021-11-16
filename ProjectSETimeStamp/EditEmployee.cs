@@ -30,7 +30,7 @@ namespace ProjectSETimeStamp
             filter.Name = textBoxName.Text;
             filter.LName = textBoxLName.Text;
             filter.Department = comboBoxDepartment.Text;
-            filter.Level = comboBoxPosition.Text;//ไม่ถูกต้องเพราะผิดform
+            filter.Level = comboBoxPosition.Text;
             var container = new Container();
             container.Filter = filter;
             var ret = service.EmployEdit(container);
@@ -47,7 +47,7 @@ namespace ProjectSETimeStamp
 
         private void EditEmployee_Load(object sender, EventArgs e)
         {
-            var ret = service.getList();
+            var ret = service.getList2();
             if (ret.Status)
             {
                 comboBoxEmpID.Items.AddRange(ret.ResultID.ToArray());

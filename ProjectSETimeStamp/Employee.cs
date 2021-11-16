@@ -27,8 +27,9 @@ namespace ProjectSETimeStamp
         public string EmpPass { get; set; }
         public Nullable<System.DateTime> EmpBirth { get; set; }
         public string EmpDepart { get; set; }
+        public string EmpPosit { get; set; }
         public string EmpEmail { get; set; }
-        public string EmpHNo { get; set; }
+        public string EmpHNO { get; set; }
         public string EmpSoi { get; set; }
         public string EmpRoad { get; set; }
         public string EmpSubDis { get; set; }
@@ -36,7 +37,7 @@ namespace ProjectSETimeStamp
         public string EmpProvice { get; set; }
         public string EmpPost { get; set; }
         public string EmpCall { get; set; }
-        public Nullable<int> PermisID { get; set; }
+        public int PermisID { get; set; }
     
         public virtual Permission Permission { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

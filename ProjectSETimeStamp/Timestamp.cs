@@ -15,17 +15,18 @@ namespace ProjectSETimeStamp
     public partial class Timestamp
     {
         public int TimestampID { get; set; }
-        public Nullable<int> EmpID { get; set; }
-        public string TimestampFDay { get; set; }
-        public string TimestampLDay { get; set; }
-        public string TimestampKDay { get; set; }
-        public string TimestampOffcall { get; set; }
+        public int EmpID { get; set; }
+        public Nullable<System.TimeSpan> TimestampIn { get; set; }
+        public Nullable<System.TimeSpan> TimestampOut { get; set; }
+        public Nullable<System.DateTime> TimestampFDay { get; set; }
+        public Nullable<System.DateTime> TimestampLDay { get; set; }
+        public Nullable<System.DateTime> TimestampKDay { get; set; }
         public string TimestampDes { get; set; }
-        public Nullable<int> TypeID { get; set; }
-        public Nullable<int> StatusID { get; set; }
+        public int TypeID { get; set; }
+        public int StatusID { get; set; }
     
         public virtual Employee Employee { get; set; }
+        public virtual TimestampStatus TimestampStatus { get; set; }
         public virtual TimestampType TimestampType { get; set; }
-        public virtual TimestapStatus TimestapStatus { get; set; }
     }
 }

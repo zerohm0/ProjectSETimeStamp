@@ -26,9 +26,9 @@ namespace ProjectSETimeStamp
             //DateTime DateIn = dateTimePickerS.Value;
             //DateTime DateOut = dateTimePickerE.Value;
             var filter = new Filter();
-            DateTime TimeIN = DateTime.ParseExact(textBoxIn.Text, "HH:mm",
+            TimeSpan TimeIN = TimeSpan.ParseExact(textBoxIn.Text, "HH:mm",
                                         CultureInfo.InvariantCulture);
-            DateTime TimeOut = DateTime.ParseExact(textBoxOut.Text, "HH:mm", CultureInfo.InvariantCulture);
+            TimeSpan TimeOut = TimeSpan.ParseExact(textBoxOut.Text, "HH:mm", CultureInfo.InvariantCulture);
 
             filter.ID = labelEmpID.Text;
             filter.dtF = dateTimePickerS.Value;

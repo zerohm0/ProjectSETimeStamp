@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="TimestampModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="TimestampEntities.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Employee">
           <Key>
             <PropertyRef Name="EmpID" />
@@ -16,8 +16,9 @@
           <Property Name="EmpPass" Type="varchar" MaxLength="50" />
           <Property Name="EmpBirth" Type="date" />
           <Property Name="EmpDepart" Type="varchar" MaxLength="50" />
+          <Property Name="EmpPosit" Type="varchar" MaxLength="50" />
           <Property Name="EmpEmail" Type="varchar" MaxLength="50" />
-          <Property Name="EmpHNo" Type="varchar" MaxLength="50" />
+          <Property Name="EmpHNO" Type="varchar" MaxLength="50" />
           <Property Name="EmpSoi" Type="varchar" MaxLength="50" />
           <Property Name="EmpRoad" Type="varchar" MaxLength="50" />
           <Property Name="EmpSubDis" Type="varchar" MaxLength="50" />
@@ -25,7 +26,18 @@
           <Property Name="EmpProvice" Type="varchar" MaxLength="50" />
           <Property Name="EmpPost" Type="varchar" MaxLength="50" />
           <Property Name="EmpCall" Type="varchar" MaxLength="50" />
-          <Property Name="PermisID" Type="int" />
+          <Property Name="PermisID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Holiday">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="No" Type="int" />
+          <Property Name="Holiday" Type="date" />
+          <Property Name="EmpName" Type="varchar" MaxLength="50" />
+          <Property Name="ThisDay" Type="date" />
+          <Property Name="other" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Permission">
           <Key>
@@ -50,14 +62,22 @@
             <PropertyRef Name="TimestampID" />
           </Key>
           <Property Name="TimestampID" Type="int" Nullable="false" />
-          <Property Name="EmpID" Type="int" />
-          <Property Name="TimestampFDay" Type="varchar" MaxLength="50" />
-          <Property Name="TimestampLDay" Type="varchar" MaxLength="50" />
-          <Property Name="TimestampKDay" Type="varchar" MaxLength="50" />
-          <Property Name="TimestampOffcall" Type="varchar" MaxLength="50" />
+          <Property Name="EmpID" Type="int" Nullable="false" />
+          <Property Name="TimestampIn" Type="time" Precision="7" />
+          <Property Name="TimestampOut" Type="time" Precision="7" />
+          <Property Name="TimestampFDay" Type="datetime" />
+          <Property Name="TimestampLDay" Type="datetime" />
+          <Property Name="TimestampKDay" Type="datetime" />
           <Property Name="TimestampDes" Type="varchar" MaxLength="50" />
-          <Property Name="TypeID" Type="int" />
-          <Property Name="StatusID" Type="int" />
+          <Property Name="TypeID" Type="int" Nullable="false" />
+          <Property Name="StatusID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TimestampStatus">
+          <Key>
+            <PropertyRef Name="StatusID" />
+          </Key>
+          <Property Name="StatusID" Type="int" Nullable="false" />
+          <Property Name="Status" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="TimestampType">
           <Key>
@@ -67,15 +87,8 @@
           <Property Name="TypeName" Type="varchar" MaxLength="50" />
           <Property Name="TypeDetail" Type="varchar" MaxLength="50" />
         </EntityType>
-        <EntityType Name="TimestapStatus">
-          <Key>
-            <PropertyRef Name="StatusID" />
-          </Key>
-          <Property Name="StatusID" Type="int" Nullable="false" />
-          <Property Name="Status" Type="varchar" MaxLength="50" />
-        </EntityType>
         <Association Name="FK_Employee_Permission">
-          <End Role="Permission" Type="Self.Permission" Multiplicity="0..1" />
+          <End Role="Permission" Type="Self.Permission" Multiplicity="1" />
           <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Permission">
@@ -87,7 +100,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Timestamp_Employee">
-          <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
           <End Role="Timestamp" Type="Self.Timestamp" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Employee">
@@ -98,8 +111,20 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Timestamp_TimestampStatus">
+          <End Role="TimestampStatus" Type="Self.TimestampStatus" Multiplicity="1" />
+          <End Role="Timestamp" Type="Self.Timestamp" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TimestampStatus">
+              <PropertyRef Name="StatusID" />
+            </Principal>
+            <Dependent Role="Timestamp">
+              <PropertyRef Name="StatusID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Timestamp_TimestampType">
-          <End Role="TimestampType" Type="Self.TimestampType" Multiplicity="0..1" />
+          <End Role="TimestampType" Type="Self.TimestampType" Multiplicity="1" />
           <End Role="Timestamp" Type="Self.Timestamp" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="TimestampType">
@@ -110,25 +135,14 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Timestamp_TimestapStatus">
-          <End Role="TimestapStatus" Type="Self.TimestapStatus" Multiplicity="0..1" />
-          <End Role="Timestamp" Type="Self.Timestamp" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TimestapStatus">
-              <PropertyRef Name="StatusID" />
-            </Principal>
-            <Dependent Role="Timestamp">
-              <PropertyRef Name="StatusID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityContainer Name="TimestampModelStoreContainer">
+        <EntityContainer Name="TimestampEntitiesStoreContainer">
           <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Holiday" EntityType="Self.Holiday" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Permission" EntityType="Self.Permission" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Timestamp" EntityType="Self.Timestamp" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TimestampStatus" EntityType="Self.TimestampStatus" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TimestampType" EntityType="Self.TimestampType" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="TimestapStatus" EntityType="Self.TimestapStatus" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Employee_Permission" Association="Self.FK_Employee_Permission">
             <End Role="Permission" EntitySet="Permission" />
             <End Role="Employee" EntitySet="Employee" />
@@ -137,20 +151,19 @@
             <End Role="Employee" EntitySet="Employee" />
             <End Role="Timestamp" EntitySet="Timestamp" />
           </AssociationSet>
+          <AssociationSet Name="FK_Timestamp_TimestampStatus" Association="Self.FK_Timestamp_TimestampStatus">
+            <End Role="TimestampStatus" EntitySet="TimestampStatus" />
+            <End Role="Timestamp" EntitySet="Timestamp" />
+          </AssociationSet>
           <AssociationSet Name="FK_Timestamp_TimestampType" Association="Self.FK_Timestamp_TimestampType">
             <End Role="TimestampType" EntitySet="TimestampType" />
             <End Role="Timestamp" EntitySet="Timestamp" />
           </AssociationSet>
-          <AssociationSet Name="FK_Timestamp_TimestapStatus" Association="Self.FK_Timestamp_TimestapStatus">
-            <End Role="TimestapStatus" EntitySet="TimestapStatus" />
-            <End Role="Timestamp" EntitySet="Timestamp" />
-          </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="TimestampModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="TimestampEntities" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Employee">
           <Key>
             <PropertyRef Name="EmpID" />
@@ -162,8 +175,9 @@
           <Property Name="EmpPass" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="EmpBirth" Type="DateTime" Precision="0" />
           <Property Name="EmpDepart" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EmpPosit" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="EmpEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="EmpHNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EmpHNO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="EmpSoi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="EmpRoad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="EmpSubDis" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
@@ -171,7 +185,7 @@
           <Property Name="EmpProvice" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="EmpPost" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="EmpCall" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="PermisID" Type="Int32" />
+          <Property Name="PermisID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Permission" Relationship="Self.FK_Employee_Permission" FromRole="Employee" ToRole="Permission" />
           <NavigationProperty Name="Timestamp" Relationship="Self.FK_Timestamp_Employee" FromRole="Employee" ToRole="Timestamp" />
         </EntityType>
@@ -199,17 +213,26 @@
             <PropertyRef Name="TimestampID" />
           </Key>
           <Property Name="TimestampID" Type="Int32" Nullable="false" />
-          <Property Name="EmpID" Type="Int32" />
-          <Property Name="TimestampFDay" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="TimestampLDay" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="TimestampKDay" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="TimestampOffcall" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EmpID" Type="Int32" Nullable="false" />
+          <Property Name="TimestampIn" Type="Time" Precision="7" />
+          <Property Name="TimestampOut" Type="Time" Precision="7" />
+          <Property Name="TimestampFDay" Type="DateTime" Precision="3" />
+          <Property Name="TimestampLDay" Type="DateTime" Precision="3" />
+          <Property Name="TimestampKDay" Type="DateTime" Precision="3" />
           <Property Name="TimestampDes" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="TypeID" Type="Int32" />
-          <Property Name="StatusID" Type="Int32" />
+          <Property Name="TypeID" Type="Int32" Nullable="false" />
+          <Property Name="StatusID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Employee" Relationship="Self.FK_Timestamp_Employee" FromRole="Timestamp" ToRole="Employee" />
+          <NavigationProperty Name="TimestampStatus" Relationship="Self.FK_Timestamp_TimestampStatus" FromRole="Timestamp" ToRole="TimestampStatus" />
           <NavigationProperty Name="TimestampType" Relationship="Self.FK_Timestamp_TimestampType" FromRole="Timestamp" ToRole="TimestampType" />
-          <NavigationProperty Name="TimestapStatus" Relationship="Self.FK_Timestamp_TimestapStatus" FromRole="Timestamp" ToRole="TimestapStatus" />
+        </EntityType>
+        <EntityType Name="TimestampStatus">
+          <Key>
+            <PropertyRef Name="StatusID" />
+          </Key>
+          <Property Name="StatusID" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Timestamp" Relationship="Self.FK_Timestamp_TimestampStatus" FromRole="TimestampStatus" ToRole="Timestamp" />
         </EntityType>
         <EntityType Name="TimestampType">
           <Key>
@@ -220,16 +243,8 @@
           <Property Name="TypeDetail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Timestamp" Relationship="Self.FK_Timestamp_TimestampType" FromRole="TimestampType" ToRole="Timestamp" />
         </EntityType>
-        <EntityType Name="TimestapStatus">
-          <Key>
-            <PropertyRef Name="StatusID" />
-          </Key>
-          <Property Name="StatusID" Type="Int32" Nullable="false" />
-          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="Timestamp" Relationship="Self.FK_Timestamp_TimestapStatus" FromRole="TimestapStatus" ToRole="Timestamp" />
-        </EntityType>
         <Association Name="FK_Employee_Permission">
-          <End Role="Permission" Type="Self.Permission" Multiplicity="0..1" />
+          <End Role="Permission" Type="Self.Permission" Multiplicity="1" />
           <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Permission">
@@ -241,7 +256,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Timestamp_Employee">
-          <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+          <End Role="Employee" Type="Self.Employee" Multiplicity="1" />
           <End Role="Timestamp" Type="Self.Timestamp" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Employee">
@@ -252,8 +267,20 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Timestamp_TimestampStatus">
+          <End Role="TimestampStatus" Type="Self.TimestampStatus" Multiplicity="1" />
+          <End Role="Timestamp" Type="Self.Timestamp" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TimestampStatus">
+              <PropertyRef Name="StatusID" />
+            </Principal>
+            <Dependent Role="Timestamp">
+              <PropertyRef Name="StatusID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Timestamp_TimestampType">
-          <End Role="TimestampType" Type="Self.TimestampType" Multiplicity="0..1" />
+          <End Role="TimestampType" Type="Self.TimestampType" Multiplicity="1" />
           <End Role="Timestamp" Type="Self.Timestamp" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="TimestampType">
@@ -264,25 +291,13 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Timestamp_TimestapStatus">
-          <End Role="TimestapStatus" Type="Self.TimestapStatus" Multiplicity="0..1" />
-          <End Role="Timestamp" Type="Self.Timestamp" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="TimestapStatus">
-              <PropertyRef Name="StatusID" />
-            </Principal>
-            <Dependent Role="Timestamp">
-              <PropertyRef Name="StatusID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityContainer Name="TimestampEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Employee" EntityType="Self.Employee" />
           <EntitySet Name="Permission" EntityType="Self.Permission" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
           <EntitySet Name="Timestamp" EntityType="Self.Timestamp" />
+          <EntitySet Name="TimestampStatus" EntityType="Self.TimestampStatus" />
           <EntitySet Name="TimestampType" EntityType="Self.TimestampType" />
-          <EntitySet Name="TimestapStatus" EntityType="Self.TimestapStatus" />
           <AssociationSet Name="FK_Employee_Permission" Association="Self.FK_Employee_Permission">
             <End Role="Permission" EntitySet="Permission" />
             <End Role="Employee" EntitySet="Employee" />
@@ -291,23 +306,35 @@
             <End Role="Employee" EntitySet="Employee" />
             <End Role="Timestamp" EntitySet="Timestamp" />
           </AssociationSet>
+          <AssociationSet Name="FK_Timestamp_TimestampStatus" Association="Self.FK_Timestamp_TimestampStatus">
+            <End Role="TimestampStatus" EntitySet="TimestampStatus" />
+            <End Role="Timestamp" EntitySet="Timestamp" />
+          </AssociationSet>
           <AssociationSet Name="FK_Timestamp_TimestampType" Association="Self.FK_Timestamp_TimestampType">
             <End Role="TimestampType" EntitySet="TimestampType" />
             <End Role="Timestamp" EntitySet="Timestamp" />
           </AssociationSet>
-          <AssociationSet Name="FK_Timestamp_TimestapStatus" Association="Self.FK_Timestamp_TimestapStatus">
-            <End Role="TimestapStatus" EntitySet="TimestapStatus" />
-            <End Role="Timestamp" EntitySet="Timestamp" />
-          </AssociationSet>
+          <EntitySet Name="Holiday" EntityType="TimestampEntities.Holiday" />
         </EntityContainer>
+        <EntityType Name="Holiday">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="No" Type="Int32" />
+          <Property Name="Holiday1" Type="DateTime" Precision="0" />
+          <Property Name="EmpName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ThisDay" Type="DateTime" Precision="0" />
+          <Property Name="other" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="TimestampModelStoreContainer" CdmEntityContainer="TimestampEntities">
+        <EntityContainerMapping StorageEntityContainer="TimestampEntitiesStoreContainer" CdmEntityContainer="Entities">
           <EntitySetMapping Name="Employee">
-            <EntityTypeMapping TypeName="TimestampModel.Employee">
+            <EntityTypeMapping TypeName="TimestampEntities.Employee">
               <MappingFragment StoreEntitySet="Employee">
                 <ScalarProperty Name="EmpID" ColumnName="EmpID" />
                 <ScalarProperty Name="EmpFName" ColumnName="EmpFName" />
@@ -316,8 +343,9 @@
                 <ScalarProperty Name="EmpPass" ColumnName="EmpPass" />
                 <ScalarProperty Name="EmpBirth" ColumnName="EmpBirth" />
                 <ScalarProperty Name="EmpDepart" ColumnName="EmpDepart" />
+                <ScalarProperty Name="EmpPosit" ColumnName="EmpPosit" />
                 <ScalarProperty Name="EmpEmail" ColumnName="EmpEmail" />
-                <ScalarProperty Name="EmpHNo" ColumnName="EmpHNo" />
+                <ScalarProperty Name="EmpHNO" ColumnName="EmpHNO" />
                 <ScalarProperty Name="EmpSoi" ColumnName="EmpSoi" />
                 <ScalarProperty Name="EmpRoad" ColumnName="EmpRoad" />
                 <ScalarProperty Name="EmpSubDis" ColumnName="EmpSubDis" />
@@ -330,7 +358,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Permission">
-            <EntityTypeMapping TypeName="TimestampModel.Permission">
+            <EntityTypeMapping TypeName="TimestampEntities.Permission">
               <MappingFragment StoreEntitySet="Permission">
                 <ScalarProperty Name="PermisID" ColumnName="PermisID" />
                 <ScalarProperty Name="PermisLevel" ColumnName="PermisLevel" />
@@ -339,7 +367,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="TimestampModel.sysdiagrams">
+            <EntityTypeMapping TypeName="TimestampEntities.sysdiagrams">
               <MappingFragment StoreEntitySet="sysdiagrams">
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -350,22 +378,31 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Timestamp">
-            <EntityTypeMapping TypeName="TimestampModel.Timestamp">
+            <EntityTypeMapping TypeName="TimestampEntities.Timestamp">
               <MappingFragment StoreEntitySet="Timestamp">
                 <ScalarProperty Name="TimestampID" ColumnName="TimestampID" />
                 <ScalarProperty Name="EmpID" ColumnName="EmpID" />
+                <ScalarProperty Name="TimestampIn" ColumnName="TimestampIn" />
+                <ScalarProperty Name="TimestampOut" ColumnName="TimestampOut" />
                 <ScalarProperty Name="TimestampFDay" ColumnName="TimestampFDay" />
                 <ScalarProperty Name="TimestampLDay" ColumnName="TimestampLDay" />
                 <ScalarProperty Name="TimestampKDay" ColumnName="TimestampKDay" />
-                <ScalarProperty Name="TimestampOffcall" ColumnName="TimestampOffcall" />
                 <ScalarProperty Name="TimestampDes" ColumnName="TimestampDes" />
                 <ScalarProperty Name="TypeID" ColumnName="TypeID" />
                 <ScalarProperty Name="StatusID" ColumnName="StatusID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="TimestampStatus">
+            <EntityTypeMapping TypeName="TimestampEntities.TimestampStatus">
+              <MappingFragment StoreEntitySet="TimestampStatus">
+                <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="TimestampType">
-            <EntityTypeMapping TypeName="TimestampModel.TimestampType">
+            <EntityTypeMapping TypeName="TimestampEntities.TimestampType">
               <MappingFragment StoreEntitySet="TimestampType">
                 <ScalarProperty Name="TypeID" ColumnName="TypeID" />
                 <ScalarProperty Name="TypeName" ColumnName="TypeName" />
@@ -373,11 +410,15 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="TimestapStatus">
-            <EntityTypeMapping TypeName="TimestampModel.TimestapStatus">
-              <MappingFragment StoreEntitySet="TimestapStatus">
-                <ScalarProperty Name="StatusID" ColumnName="StatusID" />
-                <ScalarProperty Name="Status" ColumnName="Status" />
+          <EntitySetMapping Name="Holiday">
+            <EntityTypeMapping TypeName="TimestampEntities.Holiday">
+              <MappingFragment StoreEntitySet="Holiday">
+                <ScalarProperty Name="other" ColumnName="other" />
+                <ScalarProperty Name="ThisDay" ColumnName="ThisDay" />
+                <ScalarProperty Name="EmpName" ColumnName="EmpName" />
+                <ScalarProperty Name="Holiday1" ColumnName="Holiday" />
+                <ScalarProperty Name="No" ColumnName="No" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

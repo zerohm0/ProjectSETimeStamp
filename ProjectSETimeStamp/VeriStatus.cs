@@ -50,11 +50,20 @@ namespace ProjectSETimeStamp
         private void buttonReject_Click(object sender,EventArgs e)
         {
             int ID = 0;//ID ของ Timestamp ที่ต้องการยกเลิก
-            var ret = service.RejectTimestampofMine(ID);
-            if (ret.Status)
+            DialogResult dialogResult = MessageBox.Show("แจ้งเตือน", "ต้องการยกเลิก Timestamp "+ID.ToString()+ " หรือไม่?", MessageBoxButtons.OKCancel);
+            if (dialogResult == DialogResult.OK)
             {
-                MessageBox.Show(ret.Message);
+                var ret = service.RejectTimestampofMine(ID);
+                if (ret.Status)
+                {
+                    MessageBox.Show(ret.Message);
+                }
             }
+            else if (dialogResult == DialogResult.Cancel)
+            {
+                //do something else
+            }
+            
         }
     }
 }

@@ -113,23 +113,23 @@
       <DependentUpon>AskTimeStamp.cs</DependentUpon>
     </Compile>
     <Compile Include="Container.cs" />
-    <Compile Include="DBM.Context.cs">
+    <Compile Include="Database.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DBM.Context.tt</DependentUpon>
+      <DependentUpon>Database.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="DBM.cs">
+    <Compile Include="Database.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DBM.tt</DependentUpon>
+      <DependentUpon>Database.tt</DependentUpon>
     </Compile>
-    <Compile Include="DBM.Designer.cs">
+    <Compile Include="Database.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DBM.edmx</DependentUpon>
+      <DependentUpon>Database.edmx</DependentUpon>
     </Compile>
     <Compile Include="Employee.cs">
-      <DependentUpon>DBM.tt</DependentUpon>
+      <DependentUpon>Database.tt</DependentUpon>
     </Compile>
     <Compile Include="Filter.cs" />
     <Compile Include="HistoryTimeStamp.cs">
@@ -137,6 +137,9 @@
     </Compile>
     <Compile Include="HistoryTimeStamp.Designer.cs">
       <DependentUpon>HistoryTimeStamp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Holiday.cs">
+      <DependentUpon>Database.tt</DependentUpon>
     </Compile>
     <Compile Include="HRMHoliday.cs">
       <SubType>Form</SubType>
@@ -151,7 +154,7 @@
       <DependentUpon>MDIForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Permission.cs">
-      <DependentUpon>DBM.tt</DependentUpon>
+      <DependentUpon>Database.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -166,16 +169,16 @@
     </Compile>
     <Compile Include="Service.cs" />
     <Compile Include="sysdiagrams.cs">
-      <DependentUpon>DBM.tt</DependentUpon>
+      <DependentUpon>Database.tt</DependentUpon>
     </Compile>
     <Compile Include="Timestamp.cs">
-      <DependentUpon>DBM.tt</DependentUpon>
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TimestampStatus.cs">
+      <DependentUpon>Database.tt</DependentUpon>
     </Compile>
     <Compile Include="TimestampType.cs">
-      <DependentUpon>DBM.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TimestapStatus.cs">
-      <DependentUpon>DBM.tt</DependentUpon>
+      <DependentUpon>Database.tt</DependentUpon>
     </Compile>
     <Compile Include="TypeTimeStamp.cs">
       <SubType>Form</SubType>
@@ -280,14 +283,14 @@
     <EmbeddedResource Include="VeriStatus.resx">
       <DependentUpon>VeriStatus.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="DBM.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DBM.Designer.cs</LastGenOutput>
-    </EntityDeploy>
     <None Include="CodeTemplates\EFModelFromDatabase\Context.cs.t4" />
     <None Include="CodeTemplates\EFModelFromDatabase\EntityType.cs.t4" />
-    <None Include="DBM.edmx.diagram">
-      <DependentUpon>DBM.edmx</DependentUpon>
+    <EntityDeploy Include="Database.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Database.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Database.edmx.diagram">
+      <DependentUpon>Database.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -355,19 +358,19 @@
     <None Include="Resources\Add1.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DBM.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DBM.edmx</DependentUpon>
-      <LastGenOutput>DBM.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="DBM.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DBM.edmx</DependentUpon>
-      <LastGenOutput>DBM.cs</LastGenOutput>
-    </Content>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Content Include="Database.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Database.edmx</DependentUpon>
+      <LastGenOutput>Database.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Database.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Database.edmx</DependentUpon>
+      <LastGenOutput>Database.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

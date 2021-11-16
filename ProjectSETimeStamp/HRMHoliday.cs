@@ -12,14 +12,30 @@ namespace ProjectSETimeStamp
 {
     public partial class HRMHoliday : Form
     {
+        private Service service;
+
         public HRMHoliday()
         {
+            service = new Service();
+
             InitializeComponent();
         }
 
         private void HRMHoliday_Load(object sender, EventArgs e)
         {
-            
+
+        }
+        public void RunList()
+        {
+            var ret = service.GetHoliday();
+            if (ret.Status)
+            {
+                dataGridView1.DataSource = ret.ResultObj;
+            }
+            else
+            {
+                MessageBox.Show(ret.Message);
+            }
         }
     }
 }

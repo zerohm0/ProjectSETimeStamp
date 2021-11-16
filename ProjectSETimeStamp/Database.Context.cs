@@ -13,10 +13,10 @@ namespace ProjectSETimeStamp
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class TimestampEntities : DbContext
+    public partial class Entities : DbContext
     {
-        public TimestampEntities()
-            : base("name=TimestampEntities")
+        public Entities()
+            : base("name=Entities")
         {
         }
     
@@ -29,7 +29,8 @@ namespace ProjectSETimeStamp
         public virtual DbSet<Permission> Permission { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Timestamp> Timestamp { get; set; }
+        public virtual DbSet<TimestampStatus> TimestampStatus { get; set; }
         public virtual DbSet<TimestampType> TimestampType { get; set; }
-        public virtual DbSet<TimestapStatus> TimestapStatus { get; set; }
+        public virtual DbSet<Holiday> Holiday { get; set; }
     }
 }

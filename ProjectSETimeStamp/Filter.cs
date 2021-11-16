@@ -31,8 +31,8 @@ namespace ProjectSETimeStamp
 
         public string Detial { get; set; }
 
-        public DateTime TimeIn { get; set; }
+        public TimeSpan TimeIn { get; set; }
 
-        public DateTime TimeOut { get; set; }
+        public TimeSpan TimeOut { get; set; }
     }
 }
