@@ -21,7 +21,7 @@ namespace ProjectSETimeStamp
 
         private void Authentication_Load(object sender, EventArgs e)
         {
-
+            RunList();
         }
         public void RunList()
         {
@@ -50,7 +50,9 @@ namespace ProjectSETimeStamp
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            EditEmployee ARPC = new EditEmployee();
+            //อันนี้ของEdit ของปุ่มในตาราง ไม่ใช่ปุ่ม +
+
+            EditAuthen ARPC = new EditAuthen();
             var value = ARPC.ShowDialog();
             //AMC.labelStatus.Enabled = false;
             //AMC.labelStatus.Visible = false;

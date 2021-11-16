@@ -59,16 +59,16 @@ namespace ProjectSETimeStamp
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 82F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 450);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(830, 549);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(43, 61);
+            this.dataGridView1.Location = new System.Drawing.Point(44, 73);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(714, 363);
+            this.dataGridView1.Size = new System.Drawing.Size(741, 444);
             this.dataGridView1.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -79,20 +79,21 @@ namespace ProjectSETimeStamp
             this.tableLayoutPanel2.Controls.Add(this.textBox1, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(43, 25);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(44, 30);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(714, 30);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(741, 37);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // textBox1
             // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBox1.Location = new System.Drawing.Point(3, 7);
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Location = new System.Drawing.Point(3, 8);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(351, 20);
+            this.textBox1.Size = new System.Drawing.Size(364, 20);
             this.textBox1.TabIndex = 0;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // tableLayoutPanel3
             // 
@@ -102,29 +103,31 @@ namespace ProjectSETimeStamp
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
             this.tableLayoutPanel3.Controls.Add(this.buttonSearch, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(360, 3);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(373, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(351, 24);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(365, 31);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // buttonSearch
             // 
+            this.buttonSearch.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonSearch.Image = global::ProjectSETimeStamp.Properties.Resources.Zoom;
             this.buttonSearch.Location = new System.Drawing.Point(3, 3);
             this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(28, 18);
+            this.buttonSearch.Size = new System.Drawing.Size(30, 25);
             this.buttonSearch.TabIndex = 0;
-            this.buttonSearch.Text = "button1";
             this.buttonSearch.UseVisualStyleBackColor = true;
+            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(43, 4);
+            this.label1.Location = new System.Drawing.Point(44, 7);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(714, 13);
+            this.label1.Size = new System.Drawing.Size(741, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "รายการอนุมัติ TimeStamp";
             // 
@@ -132,10 +135,11 @@ namespace ProjectSETimeStamp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(830, 549);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "ApproveTimeStamp";
             this.Text = "ApproveTimeStamp";
+            this.Load += new System.EventHandler(this.ApproveTimeStamp_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

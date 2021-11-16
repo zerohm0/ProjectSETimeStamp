@@ -54,5 +54,26 @@ namespace ProjectSETimeStamp
             form.WindowState = FormWindowState.Maximized;
             form.Show();
         }
+
+        private void ribbonButtonCheckStatus_Click(object sender, EventArgs e)
+        {
+            foreach (Form f in MdiChildren)
+            {
+                if (f.GetType() == typeof(VeriStatus))
+                {
+                    f.Activate();
+                    f.WindowState = FormWindowState.Maximized;
+                    
+                    return;
+                }
+            }
+            Form form = new VeriStatus
+            {
+                MdiParent = this
+            };
+            
+            form.WindowState = FormWindowState.Maximized;
+            form.Show();
+        }
     }
 }

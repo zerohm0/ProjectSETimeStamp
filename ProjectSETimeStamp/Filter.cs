@@ -20,5 +20,19 @@ namespace ProjectSETimeStamp
         public string Department { get; set; }
 
         public string Level { get; set; }
+
+        public DateTime dtF { get; set; }
+
+        public DateTime dtL { get; set; }
+
+        public DateTime dtK { get; set; }
+
+        public string Type { get; set; }
+
+        public string Detial { get; set; }
+
+        public DateTime TimeIn { get; set; }
+
+        public DateTime TimeOut { get; set; }
     }
 }

@@ -32,7 +32,7 @@ namespace ProjectSETimeStamp
             filter.Level = comboBoxPermissLev.Text;
             var container = new Container();
             container.Filter = filter;
-            var ret = service.EmployEdit(container);
+            var ret = service.AuthenEdit(container);
             if (ret.Status)
             {
                 MessageBox.Show(ret.Message);

@@ -12,9 +12,49 @@ namespace ProjectSETimeStamp
 {
     public partial class VeriStatus : Form
     {
+        private Service service;
+
+        public int Eid= 0;
         public VeriStatus()
         {
+            service = new Service();
+
             InitializeComponent();
+        }
+
+        private void VeriStatus_Load(object sender, EventArgs e)
+        {
+            MDIForm mdi = new MDIForm();
+            Eid = Convert.ToInt32(mdi.toolStripStatusLabelEN.Text);
+
+            RunList();
+
+        }
+        public void RunList()
+        {
+            var ret = service.GetTimestampOfMine(Eid);
+            if (ret.Status)
+            {
+                dataGridView1.DataSource = ret.ResultObj;
+            }
+            else
+            {
+                MessageBox.Show(ret.Message);
+            }
+        }
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+            var ret = service.TimestampofMineSeaarch(textBox1.Text, Eid);
+            dataGridView1.DataSource = ret.ResultObj;
+        }
+        private void buttonReject_Click(object sender,EventArgs e)
+        {
+            int ID = 0;//ID ของ Timestamp ที่ต้องการยกเลิก
+            var ret = service.RejectTimestampofMine(ID);
+            if (ret.Status)
+            {
+                MessageBox.Show(ret.Message);
+            }
         }
     }
 }

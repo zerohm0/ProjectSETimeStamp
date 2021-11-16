@@ -32,27 +32,33 @@ namespace ProjectSETimeStamp
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MDIForm));
             this.ribbon1 = new System.Windows.Forms.Ribbon();
             this.ribbonTab1 = new System.Windows.Forms.RibbonTab();
-            this.ribbonTab2 = new System.Windows.Forms.RibbonTab();
-            this.ribbonTab3 = new System.Windows.Forms.RibbonTab();
-            this.ribbonTab4 = new System.Windows.Forms.RibbonTab();
-            this.ribbonTab5 = new System.Windows.Forms.RibbonTab();
-            this.ribbonTab6 = new System.Windows.Forms.RibbonTab();
             this.ribbonPanel1 = new System.Windows.Forms.RibbonPanel();
-            this.ribbonPanel2 = new System.Windows.Forms.RibbonPanel();
-            this.ribbonPanel3 = new System.Windows.Forms.RibbonPanel();
-            this.ribbonPanel4 = new System.Windows.Forms.RibbonPanel();
-            this.ribbonPanel5 = new System.Windows.Forms.RibbonPanel();
-            this.ribbonPanel6 = new System.Windows.Forms.RibbonPanel();
             this.ribbonButtonEmp = new System.Windows.Forms.RibbonButton();
             this.ribbonButtonAuthen = new System.Windows.Forms.RibbonButton();
             this.ribbonButton3 = new System.Windows.Forms.RibbonButton();
+            this.ribbonTab2 = new System.Windows.Forms.RibbonTab();
+            this.ribbonPanel2 = new System.Windows.Forms.RibbonPanel();
             this.ribbonButton4 = new System.Windows.Forms.RibbonButton();
+            this.ribbonTab3 = new System.Windows.Forms.RibbonTab();
+            this.ribbonPanel3 = new System.Windows.Forms.RibbonPanel();
             this.ribbonButton5 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton6 = new System.Windows.Forms.RibbonButton();
-            this.ribbonButton7 = new System.Windows.Forms.RibbonButton();
+            this.ribbonTab4 = new System.Windows.Forms.RibbonTab();
+            this.ribbonPanel4 = new System.Windows.Forms.RibbonPanel();
+            this.ribbonButtonCheckStatus = new System.Windows.Forms.RibbonButton();
+            this.ribbonTab5 = new System.Windows.Forms.RibbonTab();
+            this.ribbonPanel5 = new System.Windows.Forms.RibbonPanel();
             this.ribbonButton8 = new System.Windows.Forms.RibbonButton();
+            this.ribbonTab6 = new System.Windows.Forms.RibbonTab();
+            this.ribbonPanel6 = new System.Windows.Forms.RibbonPanel();
             this.ribbonButton9 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton10 = new System.Windows.Forms.RibbonButton();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabelEN = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabelNAME = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabelDEP = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabelPOS = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // ribbon1
@@ -86,36 +92,6 @@ namespace ProjectSETimeStamp
             this.ribbonTab1.Panels.Add(this.ribbonPanel1);
             this.ribbonTab1.Text = "ผู้ใช้งาน";
             // 
-            // ribbonTab2
-            // 
-            this.ribbonTab2.Name = "ribbonTab2";
-            this.ribbonTab2.Panels.Add(this.ribbonPanel2);
-            this.ribbonTab2.Text = "ประเภทTimestamp";
-            // 
-            // ribbonTab3
-            // 
-            this.ribbonTab3.Name = "ribbonTab3";
-            this.ribbonTab3.Panels.Add(this.ribbonPanel3);
-            this.ribbonTab3.Text = "ขอTimestamp";
-            // 
-            // ribbonTab4
-            // 
-            this.ribbonTab4.Name = "ribbonTab4";
-            this.ribbonTab4.Panels.Add(this.ribbonPanel4);
-            this.ribbonTab4.Text = "ตรวจสอบสถานะ";
-            // 
-            // ribbonTab5
-            // 
-            this.ribbonTab5.Name = "ribbonTab5";
-            this.ribbonTab5.Panels.Add(this.ribbonPanel5);
-            this.ribbonTab5.Text = "ประวัติ";
-            // 
-            // ribbonTab6
-            // 
-            this.ribbonTab6.Name = "ribbonTab6";
-            this.ribbonTab6.Panels.Add(this.ribbonPanel6);
-            this.ribbonTab6.Text = "รายงาน";
-            // 
             // ribbonPanel1
             // 
             this.ribbonPanel1.Items.Add(this.ribbonButtonEmp);
@@ -123,38 +99,6 @@ namespace ProjectSETimeStamp
             this.ribbonPanel1.Items.Add(this.ribbonButton3);
             this.ribbonPanel1.Name = "ribbonPanel1";
             this.ribbonPanel1.Text = " ";
-            // 
-            // ribbonPanel2
-            // 
-            this.ribbonPanel2.Items.Add(this.ribbonButton4);
-            this.ribbonPanel2.Name = "ribbonPanel2";
-            this.ribbonPanel2.Text = " ";
-            // 
-            // ribbonPanel3
-            // 
-            this.ribbonPanel3.Items.Add(this.ribbonButton5);
-            this.ribbonPanel3.Items.Add(this.ribbonButton6);
-            this.ribbonPanel3.Name = "ribbonPanel3";
-            this.ribbonPanel3.Text = "ribbonPanel3";
-            // 
-            // ribbonPanel4
-            // 
-            this.ribbonPanel4.Items.Add(this.ribbonButton7);
-            this.ribbonPanel4.Name = "ribbonPanel4";
-            this.ribbonPanel4.Text = " ";
-            // 
-            // ribbonPanel5
-            // 
-            this.ribbonPanel5.Items.Add(this.ribbonButton8);
-            this.ribbonPanel5.Name = "ribbonPanel5";
-            this.ribbonPanel5.Text = " ";
-            // 
-            // ribbonPanel6
-            // 
-            this.ribbonPanel6.Items.Add(this.ribbonButton9);
-            this.ribbonPanel6.Items.Add(this.ribbonButton10);
-            this.ribbonPanel6.Name = "ribbonPanel6";
-            this.ribbonPanel6.Text = " ";
             // 
             // ribbonButtonEmp
             // 
@@ -182,6 +126,18 @@ namespace ProjectSETimeStamp
             this.ribbonButton3.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton3.SmallImage")));
             this.ribbonButton3.Text = "ระดับสิทธิ์";
             // 
+            // ribbonTab2
+            // 
+            this.ribbonTab2.Name = "ribbonTab2";
+            this.ribbonTab2.Panels.Add(this.ribbonPanel2);
+            this.ribbonTab2.Text = "ประเภทTimestamp";
+            // 
+            // ribbonPanel2
+            // 
+            this.ribbonPanel2.Items.Add(this.ribbonButton4);
+            this.ribbonPanel2.Name = "ribbonPanel2";
+            this.ribbonPanel2.Text = " ";
+            // 
             // ribbonButton4
             // 
             this.ribbonButton4.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton4.Image")));
@@ -189,6 +145,19 @@ namespace ProjectSETimeStamp
             this.ribbonButton4.Name = "ribbonButton4";
             this.ribbonButton4.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton4.SmallImage")));
             this.ribbonButton4.Text = "ประเภทTimestamp";
+            // 
+            // ribbonTab3
+            // 
+            this.ribbonTab3.Name = "ribbonTab3";
+            this.ribbonTab3.Panels.Add(this.ribbonPanel3);
+            this.ribbonTab3.Text = "ขอTimestamp";
+            // 
+            // ribbonPanel3
+            // 
+            this.ribbonPanel3.Items.Add(this.ribbonButton5);
+            this.ribbonPanel3.Items.Add(this.ribbonButton6);
+            this.ribbonPanel3.Name = "ribbonPanel3";
+            this.ribbonPanel3.Text = "ribbonPanel3";
             // 
             // ribbonButton5
             // 
@@ -206,13 +175,38 @@ namespace ProjectSETimeStamp
             this.ribbonButton6.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton6.SmallImage")));
             this.ribbonButton6.Text = "อนุมัติTimestamp";
             // 
-            // ribbonButton7
+            // ribbonTab4
             // 
-            this.ribbonButton7.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton7.Image")));
-            this.ribbonButton7.LargeImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton7.LargeImage")));
-            this.ribbonButton7.Name = "ribbonButton7";
-            this.ribbonButton7.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton7.SmallImage")));
-            this.ribbonButton7.Text = "ตรวจสอบสถานะ";
+            this.ribbonTab4.Name = "ribbonTab4";
+            this.ribbonTab4.Panels.Add(this.ribbonPanel4);
+            this.ribbonTab4.Text = "ตรวจสอบสถานะ";
+            // 
+            // ribbonPanel4
+            // 
+            this.ribbonPanel4.Items.Add(this.ribbonButtonCheckStatus);
+            this.ribbonPanel4.Name = "ribbonPanel4";
+            this.ribbonPanel4.Text = " ";
+            // 
+            // ribbonButtonCheckStatus
+            // 
+            this.ribbonButtonCheckStatus.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButtonCheckStatus.Image")));
+            this.ribbonButtonCheckStatus.LargeImage = ((System.Drawing.Image)(resources.GetObject("ribbonButtonCheckStatus.LargeImage")));
+            this.ribbonButtonCheckStatus.Name = "ribbonButtonCheckStatus";
+            this.ribbonButtonCheckStatus.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButtonCheckStatus.SmallImage")));
+            this.ribbonButtonCheckStatus.Text = "ตรวจสอบสถานะ";
+            this.ribbonButtonCheckStatus.Click += new System.EventHandler(this.ribbonButtonCheckStatus_Click);
+            // 
+            // ribbonTab5
+            // 
+            this.ribbonTab5.Name = "ribbonTab5";
+            this.ribbonTab5.Panels.Add(this.ribbonPanel5);
+            this.ribbonTab5.Text = "ประวัติ";
+            // 
+            // ribbonPanel5
+            // 
+            this.ribbonPanel5.Items.Add(this.ribbonButton8);
+            this.ribbonPanel5.Name = "ribbonPanel5";
+            this.ribbonPanel5.Text = " ";
             // 
             // ribbonButton8
             // 
@@ -221,6 +215,19 @@ namespace ProjectSETimeStamp
             this.ribbonButton8.Name = "ribbonButton8";
             this.ribbonButton8.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton8.SmallImage")));
             this.ribbonButton8.Text = "ประวัติ";
+            // 
+            // ribbonTab6
+            // 
+            this.ribbonTab6.Name = "ribbonTab6";
+            this.ribbonTab6.Panels.Add(this.ribbonPanel6);
+            this.ribbonTab6.Text = "รายงาน";
+            // 
+            // ribbonPanel6
+            // 
+            this.ribbonPanel6.Items.Add(this.ribbonButton9);
+            this.ribbonPanel6.Items.Add(this.ribbonButton10);
+            this.ribbonPanel6.Name = "ribbonPanel6";
+            this.ribbonPanel6.Text = " ";
             // 
             // ribbonButton9
             // 
@@ -238,17 +245,58 @@ namespace ProjectSETimeStamp
             this.ribbonButton10.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton10.SmallImage")));
             this.ribbonButton10.Text = "จัดทำรายงาน";
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabelEN,
+            this.toolStripStatusLabelNAME,
+            this.toolStripStatusLabelDEP,
+            this.toolStripStatusLabelPOS});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 532);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(916, 22);
+            this.statusStrip1.TabIndex = 3;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabelEN
+            // 
+            this.toolStripStatusLabelEN.Name = "toolStripStatusLabelEN";
+            this.toolStripStatusLabelEN.Size = new System.Drawing.Size(64, 17);
+            this.toolStripStatusLabelEN.Text = "รหัสพนักงาน";
+            // 
+            // toolStripStatusLabelNAME
+            // 
+            this.toolStripStatusLabelNAME.Name = "toolStripStatusLabelNAME";
+            this.toolStripStatusLabelNAME.Size = new System.Drawing.Size(39, 17);
+            this.toolStripStatusLabelNAME.Text = "ชื่อสกุล";
+            // 
+            // toolStripStatusLabelDEP
+            // 
+            this.toolStripStatusLabelDEP.Name = "toolStripStatusLabelDEP";
+            this.toolStripStatusLabelDEP.Size = new System.Drawing.Size(34, 17);
+            this.toolStripStatusLabelDEP.Text = "แผนก";
+            // 
+            // toolStripStatusLabelPOS
+            // 
+            this.toolStripStatusLabelPOS.Name = "toolStripStatusLabelPOS";
+            this.toolStripStatusLabelPOS.Size = new System.Drawing.Size(44, 17);
+            this.toolStripStatusLabelPOS.Text = "ตำแหน่ง";
+            // 
             // MDIForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(916, 554);
+            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.ribbon1);
             this.IsMdiContainer = true;
             this.KeyPreview = true;
             this.Name = "MDIForm";
             this.Text = "MDIForm";
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -269,7 +317,7 @@ namespace ProjectSETimeStamp
         private System.Windows.Forms.RibbonButton ribbonButton6;
         private System.Windows.Forms.RibbonTab ribbonTab4;
         private System.Windows.Forms.RibbonPanel ribbonPanel4;
-        private System.Windows.Forms.RibbonButton ribbonButton7;
+        private System.Windows.Forms.RibbonButton ribbonButtonCheckStatus;
         private System.Windows.Forms.RibbonTab ribbonTab5;
         private System.Windows.Forms.RibbonPanel ribbonPanel5;
         private System.Windows.Forms.RibbonButton ribbonButton8;
@@ -277,5 +325,10 @@ namespace ProjectSETimeStamp
         private System.Windows.Forms.RibbonPanel ribbonPanel6;
         private System.Windows.Forms.RibbonButton ribbonButton9;
         private System.Windows.Forms.RibbonButton ribbonButton10;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        public System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelEN;
+        public System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelNAME;
+        public System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelDEP;
+        public System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelPOS;
     }
 }

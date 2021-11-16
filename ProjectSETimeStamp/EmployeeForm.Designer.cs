@@ -30,15 +30,15 @@ namespace ProjectSETimeStamp
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.buttonSearch = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.buttonSearch = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
@@ -49,7 +49,7 @@ namespace ProjectSETimeStamp
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
-            this.tableLayoutPanel1.Controls.Add(this.dataGridView1, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.dataGridView, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label1, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -63,23 +63,22 @@ namespace ProjectSETimeStamp
             this.tableLayoutPanel1.Size = new System.Drawing.Size(845, 633);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
-            // dataGridView1
+            // dataGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(45, 84);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(754, 513);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView.Location = new System.Drawing.Point(45, 84);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.RowHeadersWidth = 51;
+            this.dataGridView.Size = new System.Drawing.Size(754, 513);
+            this.dataGridView.TabIndex = 0;
             // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Controls.Add(this.textBox1, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.textBoxSearch, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(45, 34);
@@ -89,13 +88,15 @@ namespace ProjectSETimeStamp
             this.tableLayoutPanel2.Size = new System.Drawing.Size(754, 44);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
-            // textBox1
+            // textBoxSearch
             // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.textBox1.Location = new System.Drawing.Point(3, 21);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(371, 20);
-            this.textBox1.TabIndex = 0;
+            this.textBoxSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxSearch.Location = new System.Drawing.Point(3, 12);
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(371, 20);
+            this.textBoxSearch.TabIndex = 0;
+            this.textBoxSearch.Text = "ค้นหาด้วยชื่อ,รหัสพนักงาน";
+            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
             // 
             // tableLayoutPanel3
             // 
@@ -113,6 +114,17 @@ namespace ProjectSETimeStamp
             this.tableLayoutPanel3.Size = new System.Drawing.Size(371, 38);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
+            // buttonSearch
+            // 
+            this.buttonSearch.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonSearch.Image = global::ProjectSETimeStamp.Properties.Resources.Zoom;
+            this.buttonSearch.Location = new System.Drawing.Point(3, 3);
+            this.buttonSearch.Name = "buttonSearch";
+            this.buttonSearch.Size = new System.Drawing.Size(31, 32);
+            this.buttonSearch.TabIndex = 0;
+            this.buttonSearch.UseVisualStyleBackColor = true;
+            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
+            // 
             // buttonAdd
             // 
             this.buttonAdd.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -122,6 +134,7 @@ namespace ProjectSETimeStamp
             this.buttonAdd.Size = new System.Drawing.Size(31, 32);
             this.buttonAdd.TabIndex = 1;
             this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // label1
             // 
@@ -133,16 +146,6 @@ namespace ProjectSETimeStamp
             this.label1.TabIndex = 2;
             this.label1.Text = "ข้อมูลพนักงาน";
             // 
-            // buttonSearch
-            // 
-            this.buttonSearch.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonSearch.Image = global::ProjectSETimeStamp.Properties.Resources.Zoom;
-            this.buttonSearch.Location = new System.Drawing.Point(3, 3);
-            this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(31, 32);
-            this.buttonSearch.TabIndex = 0;
-            this.buttonSearch.UseVisualStyleBackColor = true;
-            // 
             // EmployeeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -151,9 +154,10 @@ namespace ProjectSETimeStamp
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "EmployeeForm";
             this.Text = "EmployeeForm";
+            this.Load += new System.EventHandler(this.EmployeeForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
@@ -164,9 +168,9 @@ namespace ProjectSETimeStamp
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBoxSearch;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.Button buttonAdd;
