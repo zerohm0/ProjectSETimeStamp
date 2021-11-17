@@ -46,12 +46,6 @@ namespace ProjectSETimeStamp
             this.ribbonTab4 = new System.Windows.Forms.RibbonTab();
             this.ribbonPanel4 = new System.Windows.Forms.RibbonPanel();
             this.ribbonButtonCheckStatus = new System.Windows.Forms.RibbonButton();
-            this.ribbonTab5 = new System.Windows.Forms.RibbonTab();
-            this.ribbonPanel5 = new System.Windows.Forms.RibbonPanel();
-            this.ribbonButton8 = new System.Windows.Forms.RibbonButton();
-            this.ribbonTab6 = new System.Windows.Forms.RibbonTab();
-            this.ribbonPanel6 = new System.Windows.Forms.RibbonPanel();
-            this.ribbonButton10 = new System.Windows.Forms.RibbonButton();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelEN = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabelNAME = new System.Windows.Forms.ToolStripStatusLabel();
@@ -81,8 +75,6 @@ namespace ProjectSETimeStamp
             this.ribbon1.Tabs.Add(this.ribbonTab2);
             this.ribbon1.Tabs.Add(this.ribbonTab3);
             this.ribbon1.Tabs.Add(this.ribbonTab4);
-            this.ribbon1.Tabs.Add(this.ribbonTab5);
-            this.ribbon1.Tabs.Add(this.ribbonTab6);
             this.ribbon1.Text = "ribbon1";
             // 
             // ribbonTab1
@@ -195,46 +187,6 @@ namespace ProjectSETimeStamp
             this.ribbonButtonCheckStatus.Text = "ตรวจสอบสถานะ";
             this.ribbonButtonCheckStatus.Click += new System.EventHandler(this.ribbonButtonCheckStatus_Click);
             // 
-            // ribbonTab5
-            // 
-            this.ribbonTab5.Name = "ribbonTab5";
-            this.ribbonTab5.Panels.Add(this.ribbonPanel5);
-            this.ribbonTab5.Text = "ประวัติ";
-            // 
-            // ribbonPanel5
-            // 
-            this.ribbonPanel5.Items.Add(this.ribbonButton8);
-            this.ribbonPanel5.Name = "ribbonPanel5";
-            this.ribbonPanel5.Text = " ";
-            // 
-            // ribbonButton8
-            // 
-            this.ribbonButton8.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton8.Image")));
-            this.ribbonButton8.LargeImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton8.LargeImage")));
-            this.ribbonButton8.Name = "ribbonButton8";
-            this.ribbonButton8.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton8.SmallImage")));
-            this.ribbonButton8.Text = "ประวัติ";
-            // 
-            // ribbonTab6
-            // 
-            this.ribbonTab6.Name = "ribbonTab6";
-            this.ribbonTab6.Panels.Add(this.ribbonPanel6);
-            this.ribbonTab6.Text = "รายงาน";
-            // 
-            // ribbonPanel6
-            // 
-            this.ribbonPanel6.Items.Add(this.ribbonButton10);
-            this.ribbonPanel6.Name = "ribbonPanel6";
-            this.ribbonPanel6.Text = " ";
-            // 
-            // ribbonButton10
-            // 
-            this.ribbonButton10.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton10.Image")));
-            this.ribbonButton10.LargeImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton10.LargeImage")));
-            this.ribbonButton10.Name = "ribbonButton10";
-            this.ribbonButton10.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton10.SmallImage")));
-            this.ribbonButton10.Text = "จัดทำรายงาน";
-            // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -308,12 +260,6 @@ namespace ProjectSETimeStamp
         private System.Windows.Forms.RibbonTab ribbonTab4;
         private System.Windows.Forms.RibbonPanel ribbonPanel4;
         private System.Windows.Forms.RibbonButton ribbonButtonCheckStatus;
-        private System.Windows.Forms.RibbonTab ribbonTab5;
-        private System.Windows.Forms.RibbonPanel ribbonPanel5;
-        private System.Windows.Forms.RibbonButton ribbonButton8;
-        private System.Windows.Forms.RibbonTab ribbonTab6;
-        private System.Windows.Forms.RibbonPanel ribbonPanel6;
-        private System.Windows.Forms.RibbonButton ribbonButton10;
         private System.Windows.Forms.StatusStrip statusStrip1;
         public System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelEN;
         public System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelNAME;
