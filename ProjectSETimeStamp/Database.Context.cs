@@ -26,11 +26,11 @@ namespace ProjectSETimeStamp
         }
     
         public virtual DbSet<Employee> Employee { get; set; }
+        public virtual DbSet<Holiday> Holiday { get; set; }
         public virtual DbSet<Permission> Permission { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Timestamp> Timestamp { get; set; }
         public virtual DbSet<TimestampStatus> TimestampStatus { get; set; }
         public virtual DbSet<TimestampType> TimestampType { get; set; }
-        public virtual DbSet<Holiday> Holiday { get; set; }
     }
 }

@@ -51,7 +51,6 @@ namespace ProjectSETimeStamp
             this.ribbonButton8 = new System.Windows.Forms.RibbonButton();
             this.ribbonTab6 = new System.Windows.Forms.RibbonTab();
             this.ribbonPanel6 = new System.Windows.Forms.RibbonPanel();
-            this.ribbonButton9 = new System.Windows.Forms.RibbonButton();
             this.ribbonButton10 = new System.Windows.Forms.RibbonButton();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelEN = new System.Windows.Forms.ToolStripStatusLabel();
@@ -224,18 +223,9 @@ namespace ProjectSETimeStamp
             // 
             // ribbonPanel6
             // 
-            this.ribbonPanel6.Items.Add(this.ribbonButton9);
             this.ribbonPanel6.Items.Add(this.ribbonButton10);
             this.ribbonPanel6.Name = "ribbonPanel6";
             this.ribbonPanel6.Text = " ";
-            // 
-            // ribbonButton9
-            // 
-            this.ribbonButton9.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton9.Image")));
-            this.ribbonButton9.LargeImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton9.LargeImage")));
-            this.ribbonButton9.Name = "ribbonButton9";
-            this.ribbonButton9.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton9.SmallImage")));
-            this.ribbonButton9.Text = "สืบค้นรายงาน";
             // 
             // ribbonButton10
             // 
@@ -323,7 +313,6 @@ namespace ProjectSETimeStamp
         private System.Windows.Forms.RibbonButton ribbonButton8;
         private System.Windows.Forms.RibbonTab ribbonTab6;
         private System.Windows.Forms.RibbonPanel ribbonPanel6;
-        private System.Windows.Forms.RibbonButton ribbonButton9;
         private System.Windows.Forms.RibbonButton ribbonButton10;
         private System.Windows.Forms.StatusStrip statusStrip1;
         public System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelEN;

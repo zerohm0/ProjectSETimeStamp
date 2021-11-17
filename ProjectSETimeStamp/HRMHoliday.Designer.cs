@@ -138,6 +138,7 @@ namespace ProjectSETimeStamp
             this.buttonAdd.Size = new System.Drawing.Size(33, 32);
             this.buttonAdd.TabIndex = 3;
             this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // HRMHoliday
             // 

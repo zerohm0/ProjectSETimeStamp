@@ -4,18 +4,19 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="833635ba267e43d5b09e45f35f3f2b20" Name="Diagram1">
-        <EntityTypeShape EntityType="TimestampEntities.Employee" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="TimestampEntities.Permission" Width="1.5" PointX="0.75" PointY="2.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="TimestampEntities.sysdiagrams" Width="1.5" PointX="5.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TimestampEntities.Timestamp" Width="1.5" PointX="5.25" PointY="1.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="TimestampEntities.TimestampStatus" Width="1.5" PointX="3" PointY="7.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="TimestampEntities.TimestampType" Width="1.5" PointX="3" PointY="9.75" IsExpanded="true" />
-        <AssociationConnector Association="TimestampEntities.FK_Employee_Permission" ManuallyRouted="false" />
-        <AssociationConnector Association="TimestampEntities.FK_Timestamp_Employee" ManuallyRouted="false" />
-        <AssociationConnector Association="TimestampEntities.FK_Timestamp_TimestampStatus" ManuallyRouted="false" />
-        <AssociationConnector Association="TimestampEntities.FK_Timestamp_TimestampType" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="TimestampEntities.Holiday" Width="1.5" PointX="7.375" PointY="0.75" />
+      <Diagram DiagramId="833635ba267e43d5b09e45f35f3f2b20" Name="Diagram1" ZoomLevel="97">
+        <EntityTypeShape EntityType="TimestampEntities.Employee" Width="1.5" PointX="3" PointY="2.25" />
+        <EntityTypeShape EntityType="TimestampEntities.Holiday" Width="1.5" PointX="5.25" PointY="3.625" />
+        <EntityTypeShape EntityType="TimestampEntities.Permission" Width="1.5" PointX="0.75" PointY="3.875" />
+        <EntityTypeShape EntityType="TimestampEntities.sysdiagrams" Width="1.5" PointX="0.75" PointY="9" />
+        <EntityTypeShape EntityType="TimestampEntities.Timestamp" Width="1.5" PointX="8.25" PointY="3" />
+        <EntityTypeShape EntityType="TimestampEntities.TimestampStatus" Width="1.5" PointX="6" PointY="7.25" />
+        <EntityTypeShape EntityType="TimestampEntities.TimestampType" Width="1.5" PointX="6" PointY="0.75" />
+        <AssociationConnector Association="TimestampEntities.FK_Employee_Permission" />
+        <AssociationConnector Association="TimestampEntities.FK_Holiday_Employee" />
+        <AssociationConnector Association="TimestampEntities.FK_Timestamp_Employee" />
+        <AssociationConnector Association="TimestampEntities.FK_Timestamp_TimestampStatus" />
+        <AssociationConnector Association="TimestampEntities.FK_Timestamp_TimestampType" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

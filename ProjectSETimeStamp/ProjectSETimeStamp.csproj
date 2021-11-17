@@ -43,6 +43,7 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="Syncfusion.Grid.Base, Version=19.3460.0.53, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <HintPath>..\packages\Syncfusion.Grid.Base.19.3.0.53\lib\net46\Syncfusion.Grid.Base.dll</HintPath>
     </Reference>
@@ -132,12 +133,6 @@
       <DependentUpon>Database.tt</DependentUpon>
     </Compile>
     <Compile Include="Filter.cs" />
-    <Compile Include="HistoryTimeStamp.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="HistoryTimeStamp.Designer.cs">
-      <DependentUpon>HistoryTimeStamp.cs</DependentUpon>
-    </Compile>
     <Compile Include="Holiday.cs">
       <DependentUpon>Database.tt</DependentUpon>
     </Compile>
@@ -160,12 +155,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="SearchReport.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SearchReport.Designer.cs">
-      <DependentUpon>SearchReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Service.cs" />
     <Compile Include="sysdiagrams.cs">
@@ -210,12 +199,6 @@
     <Compile Include="EmployeeForm.Designer.cs">
       <DependentUpon>EmployeeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmCreateReports.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmCreateReports.Designer.cs">
-      <DependentUpon>FrmCreateReports.cs</DependentUpon>
-    </Compile>
     <Compile Include="LoginEN.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -242,17 +225,11 @@
     <EmbeddedResource Include="AskTimeStamp.resx">
       <DependentUpon>AskTimeStamp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HistoryTimeStamp.resx">
-      <DependentUpon>HistoryTimeStamp.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="HRMHoliday.resx">
       <DependentUpon>HRMHoliday.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDIForm.resx">
       <DependentUpon>MDIForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SearchReport.resx">
-      <DependentUpon>SearchReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TypeTimeStamp.resx">
       <DependentUpon>TypeTimeStamp.cs</DependentUpon>
@@ -268,9 +245,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeeForm.resx">
       <DependentUpon>EmployeeForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmCreateReports.resx">
-      <DependentUpon>FrmCreateReports.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginEN.resx">
       <DependentUpon>LoginEN.cs</DependentUpon>

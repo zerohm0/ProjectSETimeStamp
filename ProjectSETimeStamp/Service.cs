@@ -158,7 +158,9 @@ namespace ProjectSETimeStamp
             var ret = new Container();
             using(Entities en = new Entities())
             {
-                var obj = from his in en.Holiday select new { ลำดับ = his.No, วันที่หยุด = his.Holiday1, ผู้รับผิดชอบ = his.EmpName, วันที่แก้ไข = his.ThisDay, หมายเหตุ = his.other };
+                var obj = from his in en.Holiday
+                          join Emp in en.Employee on his.EmpID equals Emp.EmpID
+                          select new { ลำดับ = his.Id, วันที่หยุด = his.Holiday1, ผู้รับผิดชอบ = Emp.EmpFName+"  "+Emp.EmpLName , วันที่แก้ไข = his.ThisDay, หมายเหตุ = his.other };
 
                 if (obj.Count() > 0)
                 {
@@ -440,6 +442,35 @@ namespace ProjectSETimeStamp
 
 
 
+            }
+            return ret;
+        }
+
+        public Container AddHoliday(Container container)
+        {
+            var ret = new Container();
+            if (container.Filter != null)
+            {
+                var filter = container.Filter;
+
+                using(Entities te = new Entities())
+                {
+                    Holiday hld = new Holiday();
+
+                    ret.Status = true;
+
+                    var lastID = from sss in te.Holiday orderby sss.Id descending select sss.Id;
+
+                    hld.Id = Convert.ToInt32(lastID.FirstOrDefault()) + 1;
+                    hld.Holiday1 = filter.dtF;
+                    hld.ThisDay = filter.dtK;
+                    hld.other = filter.Detial;
+                    hld.EmpID = Convert.ToInt32(filter.ID);
+                    hld.Depart = filter.Department;
+
+                    te.SaveChanges();
+                    ret.Message = "Create Holiday";
+                }
             }
             return ret;
         }

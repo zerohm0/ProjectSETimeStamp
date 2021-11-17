@@ -20,6 +20,7 @@ namespace ProjectSETimeStamp
         public Nullable<System.TimeSpan> TimestampOut { get; set; }
         public Nullable<System.DateTime> TimestampFDay { get; set; }
         public Nullable<System.DateTime> TimestampLDay { get; set; }
+        public Nullable<int> TimestampHoliday { get; set; }
         public Nullable<System.DateTime> TimestampKDay { get; set; }
         public string TimestampDes { get; set; }
         public int TypeID { get; set; }

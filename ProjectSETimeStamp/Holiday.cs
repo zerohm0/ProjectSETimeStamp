@@ -15,10 +15,12 @@ namespace ProjectSETimeStamp
     public partial class Holiday
     {
         public int Id { get; set; }
-        public Nullable<int> No { get; set; }
         public Nullable<System.DateTime> Holiday1 { get; set; }
-        public string EmpName { get; set; }
         public Nullable<System.DateTime> ThisDay { get; set; }
         public string other { get; set; }
+        public Nullable<int> EmpID { get; set; }
+        public string Depart { get; set; }
+    
+        public virtual Employee Employee { get; set; }
     }
 }
