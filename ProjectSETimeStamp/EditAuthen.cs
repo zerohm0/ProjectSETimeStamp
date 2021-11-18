@@ -58,5 +58,10 @@ namespace ProjectSETimeStamp
                 MessageBox.Show(ret.Message);
             }
         }
+
+        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

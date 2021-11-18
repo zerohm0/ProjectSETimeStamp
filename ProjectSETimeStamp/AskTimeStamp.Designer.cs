@@ -72,6 +72,7 @@ namespace ProjectSETimeStamp
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
@@ -84,22 +85,26 @@ namespace ProjectSETimeStamp
             this.tableLayoutPanel1.Controls.Add(this.buttonCancel, 2, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(800, 605);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1067, 745);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label1.Location = new System.Drawing.Point(43, 5);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label1.Location = new System.Drawing.Point(57, 5);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(634, 13);
+            this.label1.Size = new System.Drawing.Size(845, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "หมายเลข TimeStamp";
             // 
@@ -119,7 +124,8 @@ namespace ProjectSETimeStamp
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel4, 0, 10);
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel5, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(43, 21);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(57, 26);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 11;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8F));
@@ -133,25 +139,27 @@ namespace ProjectSETimeStamp
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(634, 508);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(845, 625);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
             // textBoxDetail
             // 
             this.textBoxDetail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxDetail.Location = new System.Drawing.Point(3, 403);
+            this.textBoxDetail.Location = new System.Drawing.Point(4, 502);
+            this.textBoxDetail.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxDetail.Multiline = true;
             this.textBoxDetail.Name = "textBoxDetail";
-            this.textBoxDetail.Size = new System.Drawing.Size(628, 44);
+            this.textBoxDetail.Size = new System.Drawing.Size(837, 54);
             this.textBoxDetail.TabIndex = 20;
             // 
             // labelDepart
             // 
             this.labelDepart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.labelDepart.AutoSize = true;
-            this.labelDepart.Location = new System.Drawing.Point(3, 238);
+            this.labelDepart.Location = new System.Drawing.Point(4, 296);
+            this.labelDepart.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelDepart.Name = "labelDepart";
-            this.labelDepart.Size = new System.Drawing.Size(628, 13);
+            this.labelDepart.Size = new System.Drawing.Size(837, 17);
             this.labelDepart.TabIndex = 0;
             this.labelDepart.Text = "label10";
             // 
@@ -159,9 +167,10 @@ namespace ProjectSETimeStamp
             // 
             this.labelEmpID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.labelEmpID.AutoSize = true;
-            this.labelEmpID.Location = new System.Drawing.Point(3, 148);
+            this.labelEmpID.Location = new System.Drawing.Point(4, 184);
+            this.labelEmpID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelEmpID.Name = "labelEmpID";
-            this.labelEmpID.Size = new System.Drawing.Size(628, 13);
+            this.labelEmpID.Size = new System.Drawing.Size(837, 17);
             this.labelEmpID.TabIndex = 0;
             this.labelEmpID.Text = "labelEmpID";
             // 
@@ -169,9 +178,10 @@ namespace ProjectSETimeStamp
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 373);
+            this.label3.Location = new System.Drawing.Point(4, 464);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(628, 13);
+            this.label3.Size = new System.Drawing.Size(837, 17);
             this.label3.TabIndex = 15;
             this.label3.Text = "รายละเอียด";
             // 
@@ -179,9 +189,10 @@ namespace ProjectSETimeStamp
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 13);
+            this.label2.Location = new System.Drawing.Point(4, 16);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(628, 13);
+            this.label2.Size = new System.Drawing.Size(837, 17);
             this.label2.TabIndex = 0;
             this.label2.Text = "ชื่อ-สกุล";
             // 
@@ -189,9 +200,10 @@ namespace ProjectSETimeStamp
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 103);
+            this.label4.Location = new System.Drawing.Point(4, 128);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(628, 13);
+            this.label4.Size = new System.Drawing.Size(837, 17);
             this.label4.TabIndex = 14;
             this.label4.Text = "รหัสพนักงาน";
             // 
@@ -199,9 +211,10 @@ namespace ProjectSETimeStamp
             // 
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(3, 193);
+            this.label7.Location = new System.Drawing.Point(4, 240);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(628, 13);
+            this.label7.Size = new System.Drawing.Size(837, 17);
             this.label7.TabIndex = 5;
             this.label7.Text = "แผนก";
             // 
@@ -209,9 +222,10 @@ namespace ProjectSETimeStamp
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 283);
+            this.label5.Location = new System.Drawing.Point(4, 352);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(628, 13);
+            this.label5.Size = new System.Drawing.Size(837, 17);
             this.label5.TabIndex = 3;
             this.label5.Text = "ประเภท";
             // 
@@ -219,9 +233,10 @@ namespace ProjectSETimeStamp
             // 
             this.comboBoxType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxType.FormattingEnabled = true;
-            this.comboBoxType.Location = new System.Drawing.Point(3, 324);
+            this.comboBoxType.Location = new System.Drawing.Point(4, 405);
+            this.comboBoxType.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxType.Name = "comboBoxType";
-            this.comboBoxType.Size = new System.Drawing.Size(628, 21);
+            this.comboBoxType.Size = new System.Drawing.Size(837, 24);
             this.comboBoxType.TabIndex = 10;
             // 
             // tableLayoutPanel4
@@ -234,29 +249,32 @@ namespace ProjectSETimeStamp
             this.tableLayoutPanel4.Controls.Add(this.label8, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.dateTimePickerS, 0, 1);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 453);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(4, 564);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(628, 52);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(837, 57);
             this.tableLayoutPanel4.TabIndex = 17;
             // 
             // dateTimePickerE
             // 
             this.dateTimePickerE.CustomFormat = "dd/MM/yy";
-            this.dateTimePickerE.Location = new System.Drawing.Point(317, 29);
+            this.dateTimePickerE.Location = new System.Drawing.Point(422, 32);
+            this.dateTimePickerE.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePickerE.Name = "dateTimePickerE";
-            this.dateTimePickerE.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePickerE.Size = new System.Drawing.Size(265, 22);
             this.dateTimePickerE.TabIndex = 3;
             // 
             // label9
             // 
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(317, 6);
+            this.label9.Location = new System.Drawing.Point(422, 5);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(308, 13);
+            this.label9.Size = new System.Drawing.Size(411, 17);
             this.label9.TabIndex = 1;
             this.label9.Text = "วันที่สิ้นสุด(ถ้าวันเดียว ให้ใส่วันเดิม)";
             // 
@@ -264,18 +282,20 @@ namespace ProjectSETimeStamp
             // 
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(3, 6);
+            this.label8.Location = new System.Drawing.Point(4, 5);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(308, 13);
+            this.label8.Size = new System.Drawing.Size(410, 17);
             this.label8.TabIndex = 0;
             this.label8.Text = "วันที่เริ่ม";
             // 
             // dateTimePickerS
             // 
             this.dateTimePickerS.CustomFormat = "dd/MM/yy";
-            this.dateTimePickerS.Location = new System.Drawing.Point(3, 29);
+            this.dateTimePickerS.Location = new System.Drawing.Point(4, 32);
+            this.dateTimePickerS.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePickerS.Name = "dateTimePickerS";
-            this.dateTimePickerS.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePickerS.Size = new System.Drawing.Size(265, 22);
             this.dateTimePickerS.TabIndex = 2;
             // 
             // tableLayoutPanel5
@@ -286,20 +306,22 @@ namespace ProjectSETimeStamp
             this.tableLayoutPanel5.Controls.Add(this.labelLastName, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.labelName, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 43);
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(4, 54);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(628, 44);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(837, 54);
             this.tableLayoutPanel5.TabIndex = 21;
             // 
             // labelLastName
             // 
             this.labelLastName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.labelLastName.AutoSize = true;
-            this.labelLastName.Location = new System.Drawing.Point(317, 15);
+            this.labelLastName.Location = new System.Drawing.Point(422, 18);
+            this.labelLastName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelLastName.Name = "labelLastName";
-            this.labelLastName.Size = new System.Drawing.Size(308, 13);
+            this.labelLastName.Size = new System.Drawing.Size(411, 17);
             this.labelLastName.TabIndex = 1;
             this.labelLastName.Text = "labelLastName";
             // 
@@ -307,9 +329,10 @@ namespace ProjectSETimeStamp
             // 
             this.labelName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.labelName.AutoSize = true;
-            this.labelName.Location = new System.Drawing.Point(3, 15);
+            this.labelName.Location = new System.Drawing.Point(4, 18);
+            this.labelName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(308, 13);
+            this.labelName.Size = new System.Drawing.Size(410, 17);
             this.labelName.TabIndex = 0;
             this.labelName.Text = "labelName";
             // 
@@ -323,20 +346,22 @@ namespace ProjectSETimeStamp
             this.tableLayoutPanel3.Controls.Add(this.label6, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.buttonUpload, 2, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(43, 571);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(57, 703);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(634, 31);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(845, 38);
             this.tableLayoutPanel3.TabIndex = 7;
             this.tableLayoutPanel3.Visible = false;
             // 
             // textBoxFile
             // 
             this.textBoxFile.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBoxFile.Location = new System.Drawing.Point(129, 3);
+            this.textBoxFile.Location = new System.Drawing.Point(173, 4);
+            this.textBoxFile.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxFile.Name = "textBoxFile";
-            this.textBoxFile.Size = new System.Drawing.Size(437, 20);
+            this.textBoxFile.Size = new System.Drawing.Size(583, 22);
             this.textBoxFile.TabIndex = 0;
             this.textBoxFile.Visible = false;
             // 
@@ -344,22 +369,28 @@ namespace ProjectSETimeStamp
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(3, 9);
+            this.label6.Location = new System.Drawing.Point(4, 10);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(120, 13);
+            this.label6.Size = new System.Drawing.Size(161, 17);
             this.label6.TabIndex = 1;
             this.label6.Text = "แนบไฟล์";
             this.label6.Visible = false;
             // 
             // buttonUpload
             // 
+            this.buttonUpload.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.buttonUpload.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonUpload.Location = new System.Drawing.Point(572, 3);
+            this.buttonUpload.Image = global::ProjectSETimeStamp.Properties.Resources.Upload;
+            this.buttonUpload.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.buttonUpload.Location = new System.Drawing.Point(764, 4);
+            this.buttonUpload.Margin = new System.Windows.Forms.Padding(4);
             this.buttonUpload.Name = "buttonUpload";
-            this.buttonUpload.Size = new System.Drawing.Size(59, 25);
+            this.buttonUpload.Size = new System.Drawing.Size(77, 30);
             this.buttonUpload.TabIndex = 2;
             this.buttonUpload.Text = "อัปโหลด";
-            this.buttonUpload.UseVisualStyleBackColor = true;
+            this.buttonUpload.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.buttonUpload.UseVisualStyleBackColor = false;
             this.buttonUpload.Visible = false;
             // 
             // tableLayoutPanel6
@@ -378,20 +409,22 @@ namespace ProjectSETimeStamp
             this.tableLayoutPanel6.Controls.Add(this.textBoxIn, 2, 0);
             this.tableLayoutPanel6.Controls.Add(this.textBoxOut, 5, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(43, 535);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(57, 659);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(634, 30);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(845, 36);
             this.tableLayoutPanel6.TabIndex = 8;
             // 
             // label12
             // 
             this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(3, 8);
+            this.label12.Location = new System.Drawing.Point(4, 9);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(73, 13);
+            this.label12.Size = new System.Drawing.Size(97, 17);
             this.label12.TabIndex = 0;
             this.label12.Text = "เวลาเข้า";
             // 
@@ -399,9 +432,10 @@ namespace ProjectSETimeStamp
             // 
             this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(319, 8);
+            this.label13.Location = new System.Drawing.Point(425, 9);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(73, 13);
+            this.label13.Size = new System.Drawing.Size(97, 17);
             this.label13.TabIndex = 0;
             this.label13.Text = "เวลาออก";
             // 
@@ -409,9 +443,10 @@ namespace ProjectSETimeStamp
             // 
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(82, 8);
+            this.label10.Location = new System.Drawing.Point(109, 9);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(152, 13);
+            this.label10.Size = new System.Drawing.Size(203, 17);
             this.label10.TabIndex = 0;
             this.label10.Text = "ตัวอย่าง: 08:00";
             // 
@@ -419,34 +454,40 @@ namespace ProjectSETimeStamp
             // 
             this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(398, 8);
+            this.label11.Location = new System.Drawing.Point(530, 9);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(152, 13);
+            this.label11.Size = new System.Drawing.Size(203, 17);
             this.label11.TabIndex = 0;
             this.label11.Text = "ตัวอย่าง: 17:45";
             // 
             // textBoxIn
             // 
             this.textBoxIn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxIn.Location = new System.Drawing.Point(240, 5);
+            this.textBoxIn.Location = new System.Drawing.Point(320, 7);
+            this.textBoxIn.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxIn.Name = "textBoxIn";
-            this.textBoxIn.Size = new System.Drawing.Size(73, 20);
+            this.textBoxIn.Size = new System.Drawing.Size(97, 22);
             this.textBoxIn.TabIndex = 1;
             // 
             // textBoxOut
             // 
             this.textBoxOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxOut.Location = new System.Drawing.Point(556, 5);
+            this.textBoxOut.Location = new System.Drawing.Point(741, 7);
+            this.textBoxOut.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxOut.Name = "textBoxOut";
-            this.textBoxOut.Size = new System.Drawing.Size(75, 20);
+            this.textBoxOut.Size = new System.Drawing.Size(100, 22);
             this.textBoxOut.TabIndex = 2;
             // 
             // buttonAccept
             // 
             this.buttonAccept.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonAccept.Location = new System.Drawing.Point(683, 535);
+            this.buttonAccept.Image = global::ProjectSETimeStamp.Properties.Resources.save32;
+            this.buttonAccept.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonAccept.Location = new System.Drawing.Point(910, 659);
+            this.buttonAccept.Margin = new System.Windows.Forms.Padding(4);
             this.buttonAccept.Name = "buttonAccept";
-            this.buttonAccept.Size = new System.Drawing.Size(114, 30);
+            this.buttonAccept.Size = new System.Drawing.Size(153, 36);
             this.buttonAccept.TabIndex = 9;
             this.buttonAccept.Text = "ยืนยัน";
             this.buttonAccept.UseVisualStyleBackColor = true;
@@ -455,9 +496,12 @@ namespace ProjectSETimeStamp
             // buttonCancel
             // 
             this.buttonCancel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonCancel.Location = new System.Drawing.Point(683, 571);
+            this.buttonCancel.Image = global::ProjectSETimeStamp.Properties.Resources.Delete;
+            this.buttonCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCancel.Location = new System.Drawing.Point(910, 703);
+            this.buttonCancel.Margin = new System.Windows.Forms.Padding(4);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(114, 31);
+            this.buttonCancel.Size = new System.Drawing.Size(153, 38);
             this.buttonCancel.TabIndex = 10;
             this.buttonCancel.Text = "ยกเลิก";
             this.buttonCancel.UseVisualStyleBackColor = true;
@@ -465,10 +509,11 @@ namespace ProjectSETimeStamp
             // 
             // AskTimeStamp
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 605);
+            this.ClientSize = new System.Drawing.Size(1067, 745);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AskTimeStamp";
             this.Text = "AskTimeStamp";
             this.tableLayoutPanel1.ResumeLayout(false);

@@ -59,5 +59,10 @@ namespace ProjectSETimeStamp
                 MessageBox.Show(ret.Message);
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

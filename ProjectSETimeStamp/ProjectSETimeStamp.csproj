@@ -69,7 +69,7 @@
       <HintPath>..\packages\Syncfusion.Tools.Windows.19.3.0.53\lib\net46\Syncfusion.Tools.Windows.dll</HintPath>
     </Reference>
     <Reference Include="System">
-      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -129,6 +129,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Database.edmx</DependentUpon>
     </Compile>
+    <Compile Include="DGVPrinters.cs" />
     <Compile Include="Employee.cs">
       <DependentUpon>Database.tt</DependentUpon>
     </Compile>
@@ -345,6 +346,19 @@
       <DependentUpon>Database.edmx</DependentUpon>
       <LastGenOutput>Database.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\Search.png" />
+    <None Include="Resources\Upload.png" />
+    <None Include="Resources\Bad mark.png" />
+    <None Include="Resources\Good mark.png" />
+    <None Include="Resources\Erase.png" />
+    <None Include="Resources\Apply.png" />
+    <None Include="Resources\Delete.png" />
+    <None Include="Resources\save32.png" />
+    <None Include="Resources\personal.png" />
+    <None Include="Resources\Boss1.png" />
+    <None Include="Resources\lock_1.png" />
+    <None Include="Resources\logo_200x200 %281%29.png" />
+    <None Include="Resources\logo_200x200.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

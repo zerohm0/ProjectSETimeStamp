@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DGVPrinterHelper;
 
 namespace ProjectSETimeStamp
 {
@@ -61,6 +62,12 @@ namespace ProjectSETimeStamp
                 RunList();
 
             }
+        }
+
+        private void buttonPrint_Click(object sender, EventArgs e)
+        {
+            DGVPrinter printer = new DGVPrinter();
+            printer.Title = "test";
         }
     }
 }
