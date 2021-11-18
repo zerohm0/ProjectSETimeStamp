@@ -16,7 +16,7 @@ namespace ProjectSETimeStamp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new VeriStatus());
+            Application.Run(new MDIForm());
         }
     }
 }

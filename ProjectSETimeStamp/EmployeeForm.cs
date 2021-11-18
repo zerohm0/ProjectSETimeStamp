@@ -43,24 +43,22 @@ namespace ProjectSETimeStamp
             dataGridView.DataSource = ret.ResultObj;
         }
 
-        private void textBoxSearch_TextChanged(object sender, EventArgs e)
-        {
-            textBoxSearch.Text = "";
-
-        }
-
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             //อันนี้ของEdit ของปุ่มในตาราง ไม่ใช่ปุ่ม +
             EditEmployee ARPC = new EditEmployee();
             var value = ARPC.ShowDialog();
-            //AMC.labelStatus.Enabled = false;
-            //AMC.labelStatus.Visible = false;
+           
             if (value.ToString() == "OK")
             {
                 RunList();
 
             }
+        }
+
+        private void textBoxSearch_Click(object sender, EventArgs e)
+        {
+            textBoxSearch.Text = "";
         }
     }
 }

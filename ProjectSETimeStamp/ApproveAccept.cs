@@ -23,13 +23,13 @@ namespace ProjectSETimeStamp
         public string valueRadio;
         private void ApproveAccept_Load(object sender, EventArgs e)
         {
-            //labelName.Text = TS_Global.Employee.EmpFName + "  " + TS_Global.Employee.EmpLName;
-            //labelEN.Text = TS_Global.EmpID.ToString();
-            //labelDepart.Text = TS_Global.Employee.EmpDepart;
-            //labelType.Text = TS_Global.TypeID.ToString();//อันนี้ต้องเป็น Type ที่เป็น value ไม่ใช่ ID
-            //labelDetail.Text = TS_Global.TimestampDes;
-            /*labelDateS.Text = TS_Global.TimestampFDay;
-            labelDateEnd.Text = TS_Global.TimestampLDay;
+            labelName.Text = TS_Global.Employee.EmpFName + "  " + TS_Global.Employee.EmpLName;
+            labelEN.Text = TS_Global.EmpID.ToString();
+            labelDepart.Text = TS_Global.Employee.EmpDepart;
+            labelType.Text = TS_Global.TypeID.ToString();//อันนี้ต้องเป็น Type ที่เป็น value ไม่ใช่ ID
+            labelDetail.Text = TS_Global.TimestampDes;
+            labelDateS.Text = TS_Global.TimestampFDay.ToString();
+            labelDateEnd.Text = TS_Global.TimestampLDay.ToString();
             //labelTimeIN.Text = TS_Global.TimestampIn;
             //labelTimeOUT.Text = TS_Global.TimestampOut;*/
 
@@ -54,12 +54,7 @@ namespace ProjectSETimeStamp
             {
                 valueRadio = radioButton4.Text;
             }
-            /*if (radioButton6.Checked == true)
-            {
-                valueRadio = radioButton6.Text;
-            }*/
-
-        }
+           
 
        
     }
