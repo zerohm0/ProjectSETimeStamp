@@ -37,23 +37,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DocumentFormat.OpenXml, Version=2.7.2.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
-      <HintPath>..\packages\DocumentFormat.OpenXml.2.7.2\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
-    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="EPPlus, Version=4.5.3.3, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
-      <HintPath>..\packages\EPPlus.4.5.3.3\lib\net40\EPPlus.dll</HintPath>
-    </Reference>
-    <Reference Include="ExcelNumberFormat, Version=1.0.10.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
-      <HintPath>..\packages\ExcelNumberFormat.1.0.10\lib\net20\ExcelNumberFormat.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
-    <Reference Include="PresentationCore" />
     <Reference Include="Syncfusion.Grid.Base, Version=19.3460.0.53, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL">
       <HintPath>..\packages\Syncfusion.Grid.Base.19.3.0.53\lib\net46\Syncfusion.Grid.Base.dll</HintPath>
     </Reference>
@@ -82,16 +72,7 @@
       <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
-    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.0.1\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
-      <Private>True</Private>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.IO.Packaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.IO.Packaging.4.0.0\lib\net46\System.IO.Packaging.dll</HintPath>
-    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Windows.Forms.Ribbon, Version=2.0.0.0, Culture=neutral, PublicKeyToken=928736e248aa81f9, processorArchitecture=MSIL">
@@ -106,7 +87,6 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddTimeStamp.cs">
@@ -154,12 +134,6 @@
       <DependentUpon>Database.tt</DependentUpon>
     </Compile>
     <Compile Include="Filter.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Holiday.cs">
       <DependentUpon>Database.tt</DependentUpon>
     </Compile>
@@ -175,7 +149,6 @@
     <Compile Include="MDIForm.Designer.cs">
       <DependentUpon>MDIForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModelAuthen.cs" />
     <Compile Include="Permission.cs">
       <DependentUpon>Database.tt</DependentUpon>
     </Compile>
@@ -252,9 +225,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AskTimeStamp.resx">
       <DependentUpon>AskTimeStamp.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HRMHoliday.resx">
       <DependentUpon>HRMHoliday.cs</DependentUpon>
@@ -333,13 +303,37 @@
     <None Include="Image\CreateRole.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Zoom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Boss.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\user1.png" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <None Include="Resources\User group.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\14475_19080819562258.jpg" />
+    <None Include="Resources\People.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alarm clock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Add1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database.Context.tt">
@@ -352,412 +346,6 @@
       <DependentUpon>Database.edmx</DependentUpon>
       <LastGenOutput>Database.cs</LastGenOutput>
     </Content>
-    <None Include="Resources\About.png" />
-    <None Include="Resources\abort_x.png" />
-    <None Include="Resources\Abort.png" />
-    <None Include="Resources\3d bar chart.png" />
-    <None Include="Resources\3d bar chart.ico" />
-    <None Include="Resources\zoom_out.png" />
-    <None Include="Resources\zoom_in.png" />
-    <None Include="Resources\Zoom.png" />
-    <None Include="Resources\Yes.png" />
-    <None Include="Resources\Yellow tag.png" />
-    <None Include="Resources\Yellow pin.png" />
-    <None Include="Resources\Yellow bookmark.png" />
-    <None Include="Resources\wrench_red.png" />
-    <None Include="Resources\wrench_orange.png" />
-    <None Include="Resources\wrench_green.png" />
-    <None Include="Resources\wrench.png" />
-    <None Include="Resources\wrench.ico" />
-    <None Include="Resources\wordtemplate32.png" />
-    <None Include="Resources\worddocument32.png" />
-    <None Include="Resources\word2003doc32.png" />
-    <None Include="Resources\Warning.png" />
-    <None Include="Resources\Wallet.png" />
-    <None Include="Resources\Volume.png" />
-    <None Include="Resources\View.png" />
-    <None Include="Resources\utac_logo.jpg" />
-    <None Include="Resources\user_suit.png" />
-    <None Include="Resources\user_red.png" />
-    <None Include="Resources\user_orange.png" />
-    <None Include="Resources\user_green.png" />
-    <None Include="Resources\user_edit.png" />
-    <None Include="Resources\user_add.png" />
-    <None Include="Resources\user.png" />
-    <None Include="Resources\User group.png" />
-    <None Include="Resources\Upload.png" />
-    <None Include="Resources\Up-down.png" />
-    <None Include="Resources\Update.png" />
-    <None Include="Resources\Up.png" />
-    <None Include="Resources\unorderedlist16.png" />
-    <None Include="Resources\Unlock.png" />
-    <None Include="Resources\undo16.png" />
-    <None Include="Resources\Undo.png" />
-    <None Include="Resources\underline16.png" />
-    <None Include="Resources\unchecked16.png" />
-    <None Include="Resources\txt_invoice.png" />
-    <None Include="Resources\Twitter.png" />
-    <None Include="Resources\Turn off.png" />
-    <None Include="Resources\Tune.png" />
-    <None Include="Resources\Trash.png" />
-    <None Include="Resources\Trackback.png" />
-    <None Include="Resources\Top.png" />
-    <None Include="Resources\Toolbox.png" />
-    <None Include="Resources\toolbox.ico" />
-    <None Include="Resources\tool_box.png" />
-    <None Include="Resources\Thumbs up.png" />
-    <None Include="Resources\Thumbs down.png" />
-    <None Include="Resources\themefont.png" />
-    <None Include="Resources\textalignright16.png" />
-    <None Include="Resources\textalignleft16.png" />
-    <None Include="Resources\textalignjustify16.png" />
-    <None Include="Resources\textaligncenter16.png" />
-    <None Include="Resources\Text.png" />
-    <None Include="Resources\Text preview.png" />
-    <None Include="Resources\Terminate.png" />
-    <None Include="Resources\Taxi.png" />
-    <None Include="Resources\Target.png" />
-    <None Include="Resources\target.ico" />
-    <None Include="Resources\tag_invoice.png" />
-    <None Include="Resources\table_list.png" />
-    <None Include="Resources\Table.png" />
-    <None Include="Resources\table.ico" />
-    <None Include="Resources\Sync.png" />
-    <None Include="Resources\superindex16.png" />
-    <None Include="Resources\Sum.png" />
-    <None Include="Resources\subindex16.png" />
-    <None Include="Resources\styleset16.png" />
-    <None Include="Resources\stylechange32.png" />
-    <None Include="Resources\style16.png" />
-    <None Include="Resources\strikethru16.png" />
-    <None Include="Resources\Stopwatch.png" />
-    <None Include="Resources\Stop.png" />
-    <None Include="Resources\Stop sign.png" />
-    <None Include="Resources\Stock graph.png" />
-    <None Include="Resources\stock graph.ico" />
-    <None Include="Resources\Sound.png" />
-    <None Include="Resources\sort16.png" />
-    <None Include="Resources\Smile.png" />
-    <None Include="Resources\skill.png" />
-    <None Include="Resources\Silence.png" />
-    <None Include="Resources\Shopping cart.png" />
-    <None Include="Resources\Shield.png" />
-    <None Include="Resources\setting_1.png" />
-    <None Include="Resources\setting.png" />
-    <None Include="Resources\send32.png" />
-    <None Include="Resources\select16.png" />
-    <None Include="Resources\search_1.png" />
-    <None Include="Resources\search_.png" />
-    <None Include="Resources\Search.png" />
-    <None Include="Resources\Script.png" />
-    <None Include="Resources\Schedule.png" />
-    <None Include="Resources\saveas321.png" />
-    <None Include="Resources\saveas32.png" />
-    <None Include="Resources\save32.png" />
-    <None Include="Resources\save16.png" />
-    <None Include="Resources\Save.png" />
-    <None Include="Resources\Sad.png" />
-    <None Include="Resources\Rewind.png" />
-    <None Include="Resources\Retort.png" />
-    <None Include="Resources\restart.png" />
-    <None Include="Resources\Report.png" />
-    <None Include="Resources\replace16.png" />
-    <None Include="Resources\Repair.png" />
-    <None Include="Resources\Remove.png" />
-    <None Include="Resources\Refresh.png" />
-    <None Include="Resources\refresh.ico" />
-    <None Include="Resources\Redo.png" />
-    <None Include="Resources\Red tag.png" />
-    <None Include="Resources\Red star.png" />
-    <None Include="Resources\Red pin.png" />
-    <None Include="Resources\Red mark.png" />
-    <None Include="Resources\Red bookmark.png" />
-    <None Include="Resources\Record.png" />
-    <None Include="Resources\Raise.png" />
-    <None Include="Resources\Radiation.png" />
-    <None Include="Resources\Question.png" />
-    <None Include="Resources\publish32.png" />
-    <None Include="Resources\Project1.ico" />
-    <None Include="Resources\Problem.png" />
-    <None Include="Resources\printquick32.png" />
-    <None Include="Resources\printquick16.png" />
-    <None Include="Resources\printpreview32.png" />
-    <None Include="Resources\print321.png" />
-    <None Include="Resources\print32.png" />
-    <None Include="Resources\Print.png" />
-    <None Include="Resources\Previous.png" />
-    <None Include="Resources\Previous record.png" />
-    <None Include="Resources\prepare32.png" />
-    <None Include="Resources\ppl.png" />
-    <None Include="Resources\Play-music.png" />
-    <None Include="Resources\Playback.png" />
-    <None Include="Resources\Play.png" />
-    <None Include="Resources\Pinion.png" />
-    <None Include="Resources\pie_chart.png" />
-    <None Include="Resources\Pie chart.png" />
-    <None Include="Resources\pie chart.ico" />
-    <None Include="Resources\Picture.png" />
-    <None Include="Resources\Phone.png" />
-    <None Include="Resources\Phone number.png" />
-    <None Include="Resources\personal.png" />
-    <None Include="Resources\Person.png" />
-    <None Include="Resources\person.ico" />
-    <None Include="Resources\Percent.png" />
-    <None Include="Resources\People.png" />
-    <None Include="Resources\Pause.png" />
-    <None Include="Resources\pastespecial16.png" />
-    <None Include="Resources\pastelink16.png" />
-    <None Include="Resources\paste321.png" />
-    <None Include="Resources\paste32.png" />
-    <None Include="Resources\paste16.png" />
-    <None Include="Resources\Paste.png" />
-    <None Include="Resources\paragraphspacing16.png" />
-    <None Include="Resources\palette.png" />
-    <None Include="Resources\pageblank16.png" />
-    <None Include="Resources\orderedlist16.png" />
-    <None Include="Resources\options16.png" />
-    <None Include="Resources\open32.png" />
-    <None Include="Resources\open16.png" />
-    <None Include="Resources\OK.png" />
-    <None Include="Resources\Notes.png" />
-    <None Include="Resources\No-entry.png" />
-    <None Include="Resources\No.png" />
-    <None Include="Resources\Next.png" />
-    <None Include="Resources\Next track.png" />
-    <None Include="Resources\newdocument32.png" />
-    <None Include="Resources\New.png" />
-    <None Include="Resources\New document.png" />
-    <None Include="Resources\network.png" />
-    <None Include="Resources\Network connection.png" />
-    <None Include="Resources\Mute.png" />
-    <None Include="Resources\Music.png" />
-    <None Include="Resources\multilevellist16.png" />
-    <None Include="Resources\Movie.png" />
-    <None Include="Resources\Move.png" />
-    <None Include="Resources\Money.png" />
-    <None Include="Resources\Modify.png" />
-    <None Include="Resources\Mobile-phone.png" />
-    <None Include="Resources\Message.png" />
-    <None Include="Resources\Medium rating.png" />
-    <None Include="Resources\Male.png" />
-    <None Include="Resources\Male symbol.png" />
-    <None Include="Resources\Mail.png" />
-    <None Include="Resources\magnifier.png" />
-    <None Include="Resources\Magic wand.png" />
-    <None Include="Resources\Low rating.png" />
-    <None Include="Resources\lock1.png" />
-    <None Include="Resources\lock_open.png" />
-    <None Include="Resources\lock_2.png" />
-    <None Include="Resources\lock_1.png" />
-    <None Include="Resources\Lock.png" />
-    <None Include="Resources\Load.png" />
-    <None Include="Resources\List.png" />
-    <None Include="Resources\Linux.png" />
-    <None Include="Resources\Liner.png" />
-    <None Include="Resources\liner.ico" />
-    <None Include="Resources\Lightning.png" />
-    <None Include="Resources\Letter.png" />
-    <None Include="Resources\Left-right.png" />
-    <None Include="Resources\Last.png" />
-    <None Include="Resources\Last recor.png" />
-    <None Include="Resources\Key.png" />
-    <None Include="Resources\italic16.png" />
-    <None Include="Resources\Iphone.png" />
-    <None Include="Resources\In-yang.png" />
-    <None Include="Resources\invisiblechars16.png" />
-    <None Include="Resources\information.png" />
-    <None Include="Resources\Info.png" />
-    <None Include="Resources\indentincrease16.png" />
-    <None Include="Resources\indentdecrease161.png" />
-    <None Include="Resources\indentdecrease16.png" />
-    <None Include="Resources\ICON_CHECK.png" />
-    <None Include="Resources\ico_workflow.png" />
-    <None Include="Resources\ico_view.png" />
-    <None Include="Resources\ico_edit.png" />
-    <None Include="Resources\ico_delete.png" />
-    <None Include="Resources\ico_add.png" />
-    <None Include="Resources\Hungup.png" />
-    <None Include="Resources\How-to.png" />
-    <None Include="Resources\house_go.png" />
-    <None Include="Resources\house.png" />
-    <None Include="Resources\Hourglass.png" />
-    <None Include="Resources\Home.png" />
-    <None Include="Resources\home.ico" />
-    <None Include="Resources\History.png" />
-    <None Include="Resources\Hint.png" />
-    <None Include="Resources\hilight16.png" />
-    <None Include="Resources\Help.png" />
-    <None Include="Resources\Help book.png" />
-    <None Include="Resources\Help book 3d.png" />
-    <None Include="Resources\Heart.png" />
-    <None Include="Resources\Hard disk.png" />
-    <None Include="Resources\group_go.png" />
-    <None Include="Resources\group_edit.png" />
-    <None Include="Resources\group_delete.png" />
-    <None Include="Resources\group_add.png" />
-    <None Include="Resources\group.png" />
-    <None Include="Resources\Green tag.png" />
-    <None Include="Resources\Green pin.png" />
-    <None Include="Resources\Green bookmark.png" />
-    <None Include="Resources\goto16.png" />
-    <None Include="Resources\good.png" />
-    <None Include="Resources\Good mark.png" />
-    <None Include="Resources\Go.png" />
-    <None Include="Resources\Go forward.png" />
-    <None Include="Resources\Go back.png" />
-    <None Include="Resources\Globe.png" />
-    <None Include="Resources\globe.ico" />
-    <None Include="Resources\Gift.png" />
-    <None Include="Resources\Free bsd.png" />
-    <None Include="Resources\Forward.png" />
-    <None Include="Resources\Forbidden.png" />
-    <None Include="Resources\fontsizeincrease16.png" />
-    <None Include="Resources\fontsizedecrease16.png" />
-    <None Include="Resources\fontcolor16.png" />
-    <None Include="Resources\folder_magnify.png" />
-    <None Include="Resources\folder_explore.png" />
-    <None Include="Resources\folder_edit.png" />
-    <None Include="Resources\folder_delete.png" />
-    <None Include="Resources\folder_add.png" />
-    <None Include="Resources\Folder.png" />
-    <None Include="Resources\Flash drive.png" />
-    <None Include="Resources\Flag.png" />
-    <None Include="Resources\First.png" />
-    <None Include="Resources\First record.png" />
-    <None Include="Resources\find32.png" />
-    <None Include="Resources\Find.png" />
-    <None Include="Resources\Filter.png" />
-    <None Include="Resources\Film.png" />
-    <None Include="Resources\fill16.png" />
-    <None Include="Resources\Female.png" />
-    <None Include="Resources\Female symbol.png" />
-    <None Include="Resources\Favourites.png" />
-    <None Include="Resources\Fast-forward.png" />
-    <None Include="Resources\Fall.png" />
-    <None Include="Resources\Eye.png" />
-    <None Include="Resources\Expand.png" />
-    <None Include="Resources\exit16.png" />
-    <None Include="Resources\Exit.png" />
-    <None Include="Resources\excel1.png" />
-    <None Include="Resources\excel.png" />
-    <None Include="Resources\eval.png" />
-    <None Include="Resources\Euro.png" />
-    <None Include="Resources\Error.png" />
-    <None Include="Resources\eraseformat16.png" />
-    <None Include="Resources\Erase.png" />
-    <None Include="Resources\Equipment.png" />
-    <None Include="Resources\E-mail.png" />
-    <None Include="Resources\Eject.png" />
-    <None Include="Resources\Earth.png" />
-    <None Include="Resources\earth.ico" />
-    <None Include="Resources\Downloads folder.png" />
-    <None Include="Resources\Download.png" />
-    <None Include="Resources\Down.png" />
-    <None Include="Resources\Door.png" />
-    <None Include="Resources\Dollar.png" />
-    <None Include="Resources\Display.png" />
-    <None Include="Resources\Disaster.png" />
-    <None Include="Resources\Dial.png" />
-    <None Include="Resources\Diagram.png" />
-    <None Include="Resources\diagram.ico" />
-    <None Include="Resources\Delivery.png" />
-    <None Include="Resources\delivery.ico" />
-    <None Include="Resources\Delete.png" />
-    <None Include="Resources\date.png" />
-    <None Include="Resources\database_count.png" />
-    <None Include="Resources\Database.png" />
-    <None Include="Resources\database.ico" />
-    <None Include="Resources\Danger.png" />
-    <None Include="Resources\cut16.png" />
-    <None Include="Resources\Cut.png" />
-    <None Include="Resources\Create.png" />
-    <None Include="Resources\create.ico" />
-    <None Include="Resources\cover12.jpg" />
-    <None Include="Resources\cover11.jpg" />
-    <None Include="Resources\cover1.jpg" />
-    <None Include="Resources\copyformat16.png" />
-    <None Include="Resources\copy16.png" />
-    <None Include="Resources\Copy.png" />
-    <None Include="Resources\Computer.png" />
-    <None Include="Resources\Component.png" />
-    <None Include="Resources\Compass.png" />
-    <None Include="Resources\Company.png" />
-    <None Include="Resources\company.ico" />
-    <None Include="Resources\Comment.png" />
-    <None Include="Resources\Coin.png" />
-    <None Include="Resources\close32.png" />
-    <None Include="Resources\Close_new.png" />
-    <None Include="Resources\Close.png" />
-    <None Include="Resources\Clock.png" />
-    <None Include="Resources\Clipboard.png" />
-    <None Include="Resources\chart.png" />
-    <None Include="Resources\CD.png" />
-    <None Include="Resources\casing16.png" />
-    <None Include="Resources\cart.png" />
-    <None Include="Resources\car.png" />
-    <None Include="Resources\Car key.png" />
-    <None Include="Resources\cancel.png" />
-    <None Include="Resources\Calendar.png" />
-    <None Include="Resources\calendar.ico" />
-    <None Include="Resources\Calculator.png" />
-    <None Include="Resources\buy_item.png" />
-    <None Include="Resources\Buy.png" />
-    <None Include="Resources\buy.ico" />
-    <None Include="Resources\Bubble.png" />
-    <None Include="Resources\Brush.png" />
-    <None Include="Resources\Briefcase.png" />
-    <None Include="Resources\briefcase.ico" />
-    <None Include="Resources\Bottom.png" />
-    <None Include="Resources\Boss.png" />
-    <None Include="Resources\boss.ico" />
-    <None Include="Resources\borderbottom16.png" />
-    <None Include="Resources\Bookmark.png" />
-    <None Include="Resources\Bomb.png" />
-    <None Include="Resources\bold16.png" />
-    <None Include="Resources\Blue tag.png" />
-    <None Include="Resources\Blue pin.png" />
-    <None Include="Resources\Blue key.png" />
-    <None Include="Resources\Blue bookmark.png" />
-    <None Include="Resources\Blog.png" />
-    <None Include="Resources\Black tag.png" />
-    <None Include="Resources\Black pin.png" />
-    <None Include="Resources\Black bookmark.png" />
-    <None Include="Resources\Bee.png" />
-    <None Include="Resources\bad.png" />
-    <None Include="Resources\Bad mark.png" />
-    <None Include="Resources\Back.png" />
-    <None Include="Resources\arrow_refresh.png" />
-    <None Include="Resources\arrow_divide.png" />
-    <None Include="Resources\Apply.png" />
-    <None Include="Resources\apply.ico" />
-    <None Include="Resources\application_view_tile.png" />
-    <None Include="Resources\application_side_expand.png" />
-    <None Include="Resources\application_put.png" />
-    <None Include="Resources\application_form_magnify.png" />
-    <None Include="Resources\application_form_edit.png" />
-    <None Include="Resources\application_form_delete.png" />
-    <None Include="Resources\application_form_add.png" />
-    <None Include="Resources\application_form.png" />
-    <None Include="Resources\application_error.png" />
-    <None Include="Resources\application_edit.png" />
-    <None Include="Resources\application_delete.png" />
-    <None Include="Resources\application_add.png" />
-    <None Include="Resources\Application.png" />
-    <None Include="Resources\application.ico" />
-    <None Include="Resources\Anchor.png" />
-    <None Include="Resources\Alien.png" />
-    <None Include="Resources\alien.ico" />
-    <None Include="Resources\Alert.png" />
-    <None Include="Resources\Alarm.png" />
-    <None Include="Resources\Alarm clock.png" />
-    <None Include="Resources\Address book.png" />
-    <None Include="Resources\addons32.png" />
-    <None Include="Resources\add1.png" />
-    <None Include="Resources\Add.png" />
-    <None Include="Resources\add.ico" />
-    <None Include="Resources\Accounting.png" />
-    <None Include="Resources\accept1.png" />
-    <None Include="Resources\accept.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

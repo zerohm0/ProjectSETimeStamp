@@ -8,26 +8,6 @@ namespace ProjectSETimeStamp
 {
     public class Service
     {
-
-        public Container getOneManLogin(Container container)
-        {
-            var ret = new Container();
-            var filter = container.Filter;
-            using (TimestampEntities2 ctx = new TimestampEntities2())
-            {
-                var res = from Employ in ctx.Employee where Employ.EmpID.ToString() == filter.ID select new { id = Employ.EmpID, namess = Employ.EmpFName + " " + Employ.EmpLName ,dep=Employ.EmpDepart,pos=Employ.EmpPosit};
-
-                if (res.Count() >0)
-                {
-                    ret.Status = true;
-                    ret.ResultObj = res.FirstOrDefault();
-                    ret.Message = res.FirstOrDefault().namess;
-                    filter.Department = res.FirstOrDefault().dep;
-                    filter.Detial = res.FirstOrDefault().pos;
-                }
-            }
-            return ret;
-        }
          public Container Login(string User, string Pass)
         {
             var ret = new Container();
@@ -35,7 +15,7 @@ namespace ProjectSETimeStamp
 
 
 
-            using (TimestampEntities2 ctx = new TimestampEntities2())
+            using (Entities ctx = new Entities())
             {
                 var obj = ctx.Employee.Where(x => x.EmpID.ToString() == User && x.EmpPass.ToString() == Pass).AsQueryable();
                 if (obj.Count() > 0)
@@ -55,37 +35,15 @@ namespace ProjectSETimeStamp
 
             return ret;
         }
-        
+
         public Container GetAuthen()
         {
             var ret = new Container();
-            using (TimestampEntities2 tx = new TimestampEntities2())
+            using (Entities tx = new Entities())
             {
                 var obj = from Emp in tx.Employee
                           join Permis in tx.Permission on Emp.PermisID equals Permis.PermisID
-                          select new { รหัสพนักงาน = Emp.EmpID.ToString(), ชื่อ = Emp.EmpFName, นามสกุล = Emp.EmpLName, อีเมล = Emp.EmpEmail, รหัสผ่าน = Emp.EmpPass, สิทธิ์การใช้งาน = Permis.PermisLevel };
-                if (obj.Count() > 0)
-                {
-                    ret.Status = true;
-                    ret.ResultObj = obj.ToList();
-                    ret.Message = "Get Successes";
-                }
-                else
-                {
-                    ret.Status = false;
-                    ret.Message = "Get Failed";
-                }
-            }
-            return ret;
-        }
-        public Container GetAuthen(Container container)
-        {
-            var ret = new Container();
-            using (TimestampEntities2 tx = new TimestampEntities2())
-            {
-                var obj = from Emp in tx.Employee
-                          join Permis in tx.Permission on Emp.PermisID equals Permis.PermisID
-                          select Emp;
+                          select new { รหัสพนักงาน = Emp.EmpID, ชื่อ = Emp.EmpFName, นามสกุล = Emp.EmpLName, อีเมล = Emp.EmpEmail, รหัสผ่าน = Emp.EmpPass, สิทธิ์การใช้งาน = Permis.PermisLevel };
                 if (obj.Count() > 0)
                 {
                     ret.Status = true;
@@ -104,13 +62,13 @@ namespace ProjectSETimeStamp
         public Container GetAPTTimestamp()
         {
             var ret = new Container();
-            using (TimestampEntities2 tx = new TimestampEntities2())
+            using (Entities tx = new Entities())
             {
                 var obj = from TS in tx.Timestamp
                           join Ty in tx.TimestampType on TS.TypeID equals Ty.TypeID
                           join Emp in tx.Employee on TS.EmpID equals Emp.EmpID
                           join St in tx.TimestampStatus on TS.StatusID equals St.StatusID
-                          select new { รหัสTimestamp = TS.TimestampID, ชื่อ = Emp.EmpFName,นามสกุล = Emp.EmpLName,ประเภท = Ty.TypeName,วันที่เริ่ม = TS.TimestampFDay,วันสุดท้าย = TS.TimestampLDay, เวลาเข้างาน = TS.TimestampIn, เวลาออก = TS.TimestampOut, สถานะ = St.Status,วันที่Approve = TS.TimestampKDay};
+                          select new { รหัสTimestamp = TS.TimestampID, ชื่อ = Emp.EmpFName,นามสกุล = Emp.EmpLName,ประเภท = Ty.TypeName,วันที่เริ่ม = TS.TimestampFDay,วันสุดท้าย = TS.TimestampLDay,/*เวลาเข้างาน = TS.TimestampIN,เวลาออก = TS.TimestampOut,*/สถานะ= St.Status,วันที่Approve = TS.TimestampKDay};
                 if (obj.Count() > 0)
                 {
                     ret.Status = true;
@@ -129,7 +87,7 @@ namespace ProjectSETimeStamp
         public Container GetTimesType()
         {
             var ret = new Container();
-            using (TimestampEntities2 tx = new TimestampEntities2())
+            using (Entities tx = new Entities())
             {
                 var obj = from Emp in tx.TimestampType
                           select new { ลำดับ = Emp.TypeID, ประเภท = Emp.TypeName, รายละเอียด = Emp.TypeDetail};
@@ -151,7 +109,7 @@ namespace ProjectSETimeStamp
         public Container GetEmp()
         {
             var ret = new Container();
-            using (TimestampEntities2 tx = new TimestampEntities2())
+            using (Entities tx = new Entities())
             {
                 var obj = from Emp in tx.Employee
                           select new { รหัสพนักงาน = Emp.EmpID, ชื่อ = Emp.EmpFName, นามสกุล = Emp.EmpLName, อีเมล = Emp.EmpEmail, แผนก = Emp.EmpDepart/*,ตำแหน่ง=Emp.EmpPosit*/ };
@@ -173,7 +131,7 @@ namespace ProjectSETimeStamp
         public Container GetTimestampOfMine(int IDD)
         {
             var ret = new Container();
-            using (TimestampEntities2 tx = new TimestampEntities2())
+            using (Entities tx = new Entities())
             {
                 var obj = from Emp in tx.Timestamp
                           join TTy in tx.TimestampType on Emp.TypeID equals TTy.TypeID
@@ -198,7 +156,7 @@ namespace ProjectSETimeStamp
         public Container GetHoliday()
         {
             var ret = new Container();
-            using(TimestampEntities2 en = new TimestampEntities2())
+            using(Entities en = new Entities())
             {
                 var obj = from his in en.Holiday
                           join Emp in en.Employee on his.EmpID equals Emp.EmpID
@@ -222,7 +180,7 @@ namespace ProjectSETimeStamp
         public Container AuthenSearch(string keyword)
         {
             var ret = new Container();
-            using (TimestampEntities2 tx = new TimestampEntities2())
+            using (Entities tx = new Entities())
             {
                 var obj = from Emp in tx.Employee
                           join Permis in tx.Permission on Emp.PermisID equals Permis.PermisID
@@ -249,7 +207,7 @@ namespace ProjectSETimeStamp
         public Container TimestampTypeSearch(string keyword)
         {
             var ret = new Container();
-            using (TimestampEntities2 tx = new TimestampEntities2())
+            using (Entities tx = new Entities())
             {
                 var obj = from Emp in tx.TimestampType
                           where Emp.TypeName.ToString().Contains(keyword)
@@ -277,7 +235,7 @@ namespace ProjectSETimeStamp
         public Container TimestampofMineSeaarch(string keyword,int IDD)
         {
             var ret = new Container();
-            using (TimestampEntities2 tx = new TimestampEntities2())
+            using (Entities tx = new Entities())
             {
                 var obj = from Emp in tx.Timestamp
                 join TTy in tx.TimestampType on Emp.TypeID equals TTy.TypeID
@@ -306,7 +264,7 @@ namespace ProjectSETimeStamp
         public Container EmpSearch(string keyword)
         {
             var ret = new Container();
-            using (TimestampEntities2 tx = new TimestampEntities2())
+            using (Entities tx = new Entities())
             {
                 var obj = from Emp in tx.Employee
                           where Emp.EmpID.ToString().Contains(keyword) || Emp.EmpFName.ToString().Contains(keyword) || Emp.EmpLName.ToString().Contains(keyword) || Emp.EmpPass.Contains(keyword)
@@ -316,7 +274,6 @@ namespace ProjectSETimeStamp
                 {
                     ret.Status = true;
                     ret.ResultObj = obj.ToList();
-                    ret.ExceptMessage = obj.FirstOrDefault().แผนก;
                     ret.Message = "SearchSuccesses";
 
                 }
@@ -334,7 +291,7 @@ namespace ProjectSETimeStamp
         public Container StampSearch(string keyword)
         {
             var ret = new Container();
-            using (TimestampEntities2 tx = new TimestampEntities2())
+            using (Entities tx = new Entities())
             {
                 var obj = from TS in tx.Timestamp
                           join Ty in tx.TimestampType on TS.TypeID equals Ty.TypeID
@@ -363,18 +320,18 @@ namespace ProjectSETimeStamp
         public Container getList()
         {
             var ret = new Container();
-            using (TimestampEntities2 tx = new TimestampEntities2())
+            using (Entities tx = new Entities())
             {
                 var objDP = from emp in tx.Employee select emp.EmpDepart;
-                var objIDD = tx.Employee.Select(x=>x.EmpID.ToString());
-                var objLevel = from per in tx.Permission where per.PermisStat=="Active" select per.PermisLevel;
-                ret.Status = true;
+                var objIDD = from emp in tx.Employee select emp.EmpID;
+                var objLevel = from per in tx.Permission select per.PermisLevel;
+
 
                 if (objDP.Count() > 0 && objIDD.Count() > 0 && objLevel.Count() > 0)
                 {
-                    ret.ResultObj = objDP.ToArray();
-                    ret.ResultID = objIDD.ToArray();
-                    ret.ResultAnotherOneBiteTheDust = objLevel.ToArray();
+                    ret.ResultObj = objDP.ToList();
+                    ret.ResultObj = objIDD.ToList();
+                    ret.ResultAnotherOneBiteTheDust = objLevel.ToList();
                 }
             }
 
@@ -383,7 +340,7 @@ namespace ProjectSETimeStamp
         public Container getList2()
         {
             var ret = new Container();
-            using (TimestampEntities2 tx = new TimestampEntities2())
+            using (Entities tx = new Entities())
             {
                 var objDP = from emp in tx.Employee select emp.EmpDepart;
                 var objIDD = from emp in tx.Employee select emp.EmpID;
@@ -407,7 +364,7 @@ namespace ProjectSETimeStamp
             if (container.Filter != null)
             {
                 var filter = container.Filter;
-                using (TimestampEntities2 tx = new TimestampEntities2())
+                using (Entities tx = new Entities())
                 {
                     var obj = tx.Employee.Where(x => (x.EmpID.ToString() == filter.ID)).FirstOrDefault();
                     if (obj != null)
@@ -438,7 +395,7 @@ namespace ProjectSETimeStamp
             if (container.Filter != null)
             {
                 var filter = container.Filter;
-                using (TimestampEntities2 tx = new TimestampEntities2())
+                using (Entities tx = new Entities())
                 {
                     var obj = tx.Employee.Where(x => (x.EmpID.ToString() == filter.ID)).FirstOrDefault();
                     if (obj != null)
@@ -466,7 +423,7 @@ namespace ProjectSETimeStamp
         public Container AddTimestampType(string Type,string Detail)
         {
             var ret = new Container();
-            using(TimestampEntities2 tx = new TimestampEntities2())
+            using(Entities tx = new Entities())
             {
                 var getlastID = from tt in tx.TimestampType orderby tt.TypeID descending select tt.TypeID;
 
@@ -496,7 +453,7 @@ namespace ProjectSETimeStamp
             {
                 var filter = container.Filter;
 
-                using(TimestampEntities2 te = new TimestampEntities2())
+                using(Entities te = new Entities())
                 {
                     Holiday hld = new Holiday();
 
@@ -527,7 +484,7 @@ namespace ProjectSETimeStamp
                 var filter = container.Filter;
 
 
-                using (TimestampEntities2 te = new TimestampEntities2())
+                using (Entities te = new Entities())
                 {
                     ret.Status = true;
 
@@ -568,7 +525,7 @@ namespace ProjectSETimeStamp
         public Container TimestampUpdateStatus(int ID,string status)
         {
             var ret = new Container();
-            using (TimestampEntities2 te = new TimestampEntities2())
+            using (Entities te = new Entities())
             {
                 var Tims = te.Timestamp.Where(x => (x.TimestampID == ID)).FirstOrDefault();
                 var stat = te.TimestampStatus.Where(x => (x.Status == status)).Select(x=>x.StatusID).FirstOrDefault();
@@ -593,7 +550,7 @@ namespace ProjectSETimeStamp
         {
             var ret = new Container();
 
-            using(TimestampEntities2 te = new TimestampEntities2())
+            using(Entities te = new Entities())
             {
                 var obj = te.Timestamp.Where(o => (o.TimestampID == ID)).FirstOrDefault();
 

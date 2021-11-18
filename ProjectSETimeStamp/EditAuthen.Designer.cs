@@ -39,17 +39,18 @@ namespace ProjectSETimeStamp
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label3 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBoxName = new System.Windows.Forms.TextBox();
-            this.textBoxLName = new System.Windows.Forms.TextBox();
+            this.buttonAddPermiss = new System.Windows.Forms.Button();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.buttonSubmit = new System.Windows.Forms.Button();
             this.buttonCancel = new System.Windows.Forms.Button();
+            this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.textBoxName = new System.Windows.Forms.TextBox();
+            this.textBoxLName = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            this.tableLayoutPanel5.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
+            this.tableLayoutPanel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -180,6 +181,7 @@ namespace ProjectSETimeStamp
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel3.Controls.Add(this.label3, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.buttonAddPermiss, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(4, 312);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
@@ -200,36 +202,14 @@ namespace ProjectSETimeStamp
             this.label3.TabIndex = 6;
             this.label3.Text = "สิทธิ็การใช้งาน";
             // 
-            // tableLayoutPanel5
+            // buttonAddPermiss
             // 
-            this.tableLayoutPanel5.ColumnCount = 2;
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Controls.Add(this.textBoxName, 0, 0);
-            this.tableLayoutPanel5.Controls.Add(this.textBoxLName, 1, 0);
-            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 147);
-            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
-            this.tableLayoutPanel5.RowCount = 1;
-            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(708, 30);
-            this.tableLayoutPanel5.TabIndex = 14;
-            // 
-            // textBoxName
-            // 
-            this.textBoxName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxName.Location = new System.Drawing.Point(3, 5);
-            this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(348, 20);
-            this.textBoxName.TabIndex = 0;
-            // 
-            // textBoxLName
-            // 
-            this.textBoxLName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxLName.Location = new System.Drawing.Point(357, 5);
-            this.textBoxLName.Name = "textBoxLName";
-            this.textBoxLName.Size = new System.Drawing.Size(348, 20);
-            this.textBoxLName.TabIndex = 1;
+            this.buttonAddPermiss.Location = new System.Drawing.Point(640, 3);
+            this.buttonAddPermiss.Name = "buttonAddPermiss";
+            this.buttonAddPermiss.Size = new System.Drawing.Size(65, 23);
+            this.buttonAddPermiss.TabIndex = 7;
+            this.buttonAddPermiss.Text = "เพิ่ม";
+            this.buttonAddPermiss.UseVisualStyleBackColor = true;
             // 
             // tableLayoutPanel5
             // 
@@ -331,6 +311,37 @@ namespace ProjectSETimeStamp
             this.buttonCancel.Text = "ยกเลิก";
             this.buttonCancel.UseVisualStyleBackColor = true;
             // 
+            // tableLayoutPanel5
+            // 
+            this.tableLayoutPanel5.ColumnCount = 2;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Controls.Add(this.textBoxName, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.textBoxLName, 1, 0);
+            this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel5.Location = new System.Drawing.Point(3, 147);
+            this.tableLayoutPanel5.Name = "tableLayoutPanel5";
+            this.tableLayoutPanel5.RowCount = 1;
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(708, 30);
+            this.tableLayoutPanel5.TabIndex = 14;
+            // 
+            // textBoxName
+            // 
+            this.textBoxName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxName.Location = new System.Drawing.Point(3, 5);
+            this.textBoxName.Name = "textBoxName";
+            this.textBoxName.Size = new System.Drawing.Size(348, 20);
+            this.textBoxName.TabIndex = 0;
+            // 
+            // textBoxLName
+            // 
+            this.textBoxLName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxLName.Location = new System.Drawing.Point(357, 5);
+            this.textBoxLName.Name = "textBoxLName";
+            this.textBoxLName.Size = new System.Drawing.Size(348, 20);
+            this.textBoxLName.TabIndex = 1;
+            // 
             // EditAuthen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -347,9 +358,9 @@ namespace ProjectSETimeStamp
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
+            this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
-            this.tableLayoutPanel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -359,19 +370,20 @@ namespace ProjectSETimeStamp
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.ComboBox comboBoxPermissLev;
+        private System.Windows.Forms.ComboBox comboBoxDepart;
+        private System.Windows.Forms.ComboBox comboBoxEmpID;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button buttonAddPermiss;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Button buttonSubmit;
         private System.Windows.Forms.Button buttonCancel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        public System.Windows.Forms.ComboBox comboBoxPermissLev;
-        public System.Windows.Forms.ComboBox comboBoxDepart;
-        public System.Windows.Forms.ComboBox comboBoxEmpID;
-        public System.Windows.Forms.TextBox textBoxName;
-        public System.Windows.Forms.TextBox textBoxLName;
+        private System.Windows.Forms.TextBox textBoxName;
+        private System.Windows.Forms.TextBox textBoxLName;
     }
 }

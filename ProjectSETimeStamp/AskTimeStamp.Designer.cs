@@ -260,7 +260,7 @@ namespace ProjectSETimeStamp
             // 
             // dateTimePickerE
             // 
-            this.dateTimePickerE.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePickerE.CustomFormat = "dd/MM/yy";
             this.dateTimePickerE.Location = new System.Drawing.Point(317, 29);
             this.dateTimePickerE.Name = "dateTimePickerE";
             this.dateTimePickerE.Size = new System.Drawing.Size(265, 22);
@@ -290,7 +290,7 @@ namespace ProjectSETimeStamp
             // 
             // dateTimePickerS
             // 
-            this.dateTimePickerS.CustomFormat = "yyyy-MM-dd";
+            this.dateTimePickerS.CustomFormat = "dd/MM/yy";
             this.dateTimePickerS.Location = new System.Drawing.Point(3, 29);
             this.dateTimePickerS.Name = "dateTimePickerS";
             this.dateTimePickerS.Size = new System.Drawing.Size(265, 22);
