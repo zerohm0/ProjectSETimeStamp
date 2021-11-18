@@ -35,7 +35,6 @@ namespace ProjectSETimeStamp
             this.textBoxEmpSearch = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.buttonSearch = new System.Windows.Forms.Button();
-            this.buttonAdd = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewAuthen)).BeginInit();
@@ -65,12 +64,16 @@ namespace ProjectSETimeStamp
             // 
             // dataGridViewAuthen
             // 
+            this.dataGridViewAuthen.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewAuthen.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridViewAuthen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewAuthen.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewAuthen.Location = new System.Drawing.Point(46, 81);
             this.dataGridViewAuthen.Name = "dataGridViewAuthen";
             this.dataGridViewAuthen.Size = new System.Drawing.Size(776, 495);
             this.dataGridViewAuthen.TabIndex = 0;
+            this.dataGridViewAuthen.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewAuthen_CellClick);
+            this.dataGridViewAuthen.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dataGridViewAuthen_CellPainting);
             // 
             // tableLayoutPanel2
             // 
@@ -98,12 +101,12 @@ namespace ProjectSETimeStamp
             // 
             // tableLayoutPanel3
             // 
-            this.tableLayoutPanel3.ColumnCount = 3;
+            this.tableLayoutPanel3.ColumnCount = 4;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel3.Controls.Add(this.buttonSearch, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.buttonAdd, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(391, 3);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -123,18 +126,6 @@ namespace ProjectSETimeStamp
             this.buttonSearch.Text = " ";
             this.buttonSearch.UseVisualStyleBackColor = true;
             this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
-            // 
-            // buttonAdd
-            // 
-            this.buttonAdd.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonAdd.Image = global::ProjectSETimeStamp.Properties.Resources.Add;
-            this.buttonAdd.Location = new System.Drawing.Point(41, 3);
-            this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(32, 30);
-            this.buttonAdd.TabIndex = 1;
-            this.buttonAdd.Text = " ";
-            this.buttonAdd.UseVisualStyleBackColor = true;
-            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // label1
             // 
@@ -173,7 +164,6 @@ namespace ProjectSETimeStamp
         private System.Windows.Forms.TextBox textBoxEmpSearch;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Button buttonSearch;
-        private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Label label1;
     }
 }

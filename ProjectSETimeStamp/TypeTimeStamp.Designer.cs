@@ -35,8 +35,8 @@ namespace ProjectSETimeStamp
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.buttonSearch = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
+            this.buttonSearch = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.tableLayoutPanel2.SuspendLayout();
@@ -65,6 +65,8 @@ namespace ProjectSETimeStamp
             // 
             // dataGridView
             // 
+            this.dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView.Location = new System.Drawing.Point(43, 83);
@@ -122,17 +124,6 @@ namespace ProjectSETimeStamp
             this.label1.TabIndex = 2;
             this.label1.Text = "ข้อมูลประเภท TimeStamp";
             // 
-            // buttonSearch
-            // 
-            this.buttonSearch.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonSearch.Image = global::ProjectSETimeStamp.Properties.Resources.Zoom;
-            this.buttonSearch.Location = new System.Drawing.Point(3, 3);
-            this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(29, 31);
-            this.buttonSearch.TabIndex = 1;
-            this.buttonSearch.UseVisualStyleBackColor = true;
-            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
-            // 
             // buttonAdd
             // 
             this.buttonAdd.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -143,6 +134,17 @@ namespace ProjectSETimeStamp
             this.buttonAdd.TabIndex = 2;
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
+            // 
+            // buttonSearch
+            // 
+            this.buttonSearch.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonSearch.Image = global::ProjectSETimeStamp.Properties.Resources.Zoom;
+            this.buttonSearch.Location = new System.Drawing.Point(3, 3);
+            this.buttonSearch.Name = "buttonSearch";
+            this.buttonSearch.Size = new System.Drawing.Size(29, 31);
+            this.buttonSearch.TabIndex = 1;
+            this.buttonSearch.UseVisualStyleBackColor = true;
+            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
             // TypeTimeStamp
             // 

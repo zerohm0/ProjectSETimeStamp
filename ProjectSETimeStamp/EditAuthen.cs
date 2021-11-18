@@ -21,7 +21,8 @@ namespace ProjectSETimeStamp
             service = new Service();
             InitializeComponent();
         }
-
+        public string ID;
+        public string Authen;
         private void buttonSubmit_Click(object sender, EventArgs e)
         {
             var filter = new Filter();
@@ -46,17 +47,36 @@ namespace ProjectSETimeStamp
 
         private void EditAuthen_Load(object sender, EventArgs e)
         {
+           
+
+            
             var ret = service.getList();
             if (ret.Status)
             {
-                comboBoxEmpID.Items.AddRange(ret.ResultID.ToArray());
-                comboBoxDepart.Items.AddRange(ret.ResultObj.ToArray());
-                comboBoxPermissLev.Items.AddRange(ret.ResultAnotherOneBiteTheDust.ToArray());
+                string[] s1 = ret.ResultID;
+                string[] s2 = ret.ResultObj;
+                string[] s3 = ret.ResultAnotherOneBiteTheDust;
+
+                comboBoxEmpID.Items.AddRange(s1);
+                comboBoxDepart.Items.AddRange(s2);
+                comboBoxPermissLev.Items.AddRange(s3);
             }
             else
             {
                 MessageBox.Show(ret.Message);
             }
+            if (textBoxName.Text != null)
+            {
+                var ret2 = service.EmpSearch(comboBoxEmpID.Text);
+                comboBoxDepart.Text = ret2.ExceptMessage;
+                comboBoxEmpID.SelectedItem = ID;
+                comboBoxPermissLev.SelectedItem = Authen;
+            }
+        }
+
+        private void buttonAddPermiss_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -27,8 +27,8 @@ namespace ProjectSETimeStamp
             labelDepart.Text = TS_Global.Employee.EmpDepart;
             labelType.Text = TS_Global.TypeID.ToString();//อันนี้ต้องเป็น Type ที่เป็น value ไม่ใช่ ID
             labelDetail.Text = TS_Global.TimestampDes;
-            labelDateS.Text = TS_Global.TimestampFDay;
-            labelDateEnd.Text = TS_Global.TimestampLDay;
+            labelDateS.Text = TS_Global.TimestampFDay.ToString();
+            labelDateEnd.Text = TS_Global.TimestampLDay.ToString();
             //labelTimeIN.Text = TS_Global.TimestampIn;
             //labelTimeOUT.Text = TS_Global.TimestampOut;
 
@@ -53,10 +53,7 @@ namespace ProjectSETimeStamp
             {
                 valueRadio = radioButton4.Text;
             }
-            if (radioButton6.Checked == true)
-            {
-                valueRadio = radioButton6.Text;
-            }
+           
 
         }
     }

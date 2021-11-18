@@ -14,6 +14,8 @@ namespace ProjectSETimeStamp
 {
     public partial class LoginEN : Form
     {
+        public bool globalresult = false;
+
         private Service service;
         public LoginEN()
         {
@@ -51,7 +53,6 @@ namespace ProjectSETimeStamp
         {
             this.Cursor = Cursors.Arrow;
             Password_TB.UseSystemPasswordChar = true;
-            Showpassword_CB.Text = "Show Password";
 
         }
         private void Submit_BT_Click(object sender, EventArgs e)
@@ -157,13 +158,16 @@ namespace ProjectSETimeStamp
             {
                 MessageBox.Show(ret.Message);
                 var frm = new MDIForm();
-
-                frm.Show();
+                globalresult = ret.Status;
+                this.Close();
             }
             else
             {
+                globalresult = ret.Status;
+
                 MessageBox.Show(ret.Message);
             }
+
         }
 
         private void Submit_BT_MouseMove(object sender, MouseEventArgs e)
@@ -208,16 +212,16 @@ namespace ProjectSETimeStamp
 
         private void Showpassword_CB_CheckedChanged(object sender, EventArgs e)
         {
-            if (Showpassword_CB.Checked)
-            {
-                Password_TB.UseSystemPasswordChar = false;
-                Showpassword_CB.Text = "Hide Password";
-            }
-            else
-            {
-                Password_TB.UseSystemPasswordChar = true;
-                Showpassword_CB.Text = "Show Password";
-            }
+            //if (Showpassword_CB.Checked)
+            //{
+            //    Password_TB.UseSystemPasswordChar = false;
+            //    Showpassword_CB.Text = "Hide Password";
+            //}
+            //else
+            //{
+            //    Password_TB.UseSystemPasswordChar = true;
+            //    Showpassword_CB.Text = "Show Password";
+            //}
         }
 
         private void Submit_BT_MouseLeave(object sender, EventArgs e)
@@ -227,7 +231,7 @@ namespace ProjectSETimeStamp
 
         private void CloseForm_BT_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void CloseForm_BT_MouseHover(object sender, EventArgs e)

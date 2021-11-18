@@ -48,12 +48,8 @@ namespace ProjectSETimeStamp
             this.labelName = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.labelFile = new System.Windows.Forms.Label();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
@@ -61,11 +57,14 @@ namespace ProjectSETimeStamp
             this.labelTimeIN = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.labelTimeOUT = new System.Windows.Forms.Label();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
+            this.tableLayoutPanel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -301,7 +300,6 @@ namespace ProjectSETimeStamp
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel3.Controls.Add(this.radioButton6, 5, 0);
             this.tableLayoutPanel3.Controls.Add(this.radioButton4, 3, 0);
             this.tableLayoutPanel3.Controls.Add(this.radioButton2, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -311,19 +309,6 @@ namespace ProjectSETimeStamp
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(566, 33);
             this.tableLayoutPanel3.TabIndex = 18;
-            // 
-            // radioButton6
-            // 
-            this.radioButton6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(473, 8);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(90, 17);
-            this.radioButton6.TabIndex = 5;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "Reject";
-            this.radioButton6.UseVisualStyleBackColor = true;
-            this.radioButton6.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // radioButton4
             // 
@@ -350,45 +335,6 @@ namespace ProjectSETimeStamp
             this.radioButton2.Text = "Approve";
             this.radioButton2.UseVisualStyleBackColor = true;
             this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
-            // 
-            // tableLayoutPanel4
-            // 
-            this.tableLayoutPanel4.ColumnCount = 3;
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.16867F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.66265F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.16867F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel4.Controls.Add(this.button1, 1, 0);
-            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel4.Location = new System.Drawing.Point(43, 396);
-            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 1;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(714, 28);
-            this.tableLayoutPanel4.TabIndex = 4;
-            // 
-            // button1
-            // 
-            this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.button1.Location = new System.Drawing.Point(304, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 22);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "ตกลง";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(43, 25);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(714, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "อนุมัติ Timestamp :";
             // 
             // label3
             // 
@@ -471,6 +417,45 @@ namespace ProjectSETimeStamp
             this.labelTimeOUT.TabIndex = 16;
             this.labelTimeOUT.Text = "เวลาออก";
             // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 3;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.16867F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.66265F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.16867F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel4.Controls.Add(this.button1, 1, 0);
+            this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(43, 396);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(714, 28);
+            this.tableLayoutPanel4.TabIndex = 4;
+            // 
+            // button1
+            // 
+            this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button1.Location = new System.Drawing.Point(304, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(105, 22);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "ตกลง";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(43, 25);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(714, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "อนุมัติ Timestamp :";
+            // 
             // ApproveAccept
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -486,9 +471,9 @@ namespace ProjectSETimeStamp
             this.tableLayoutPanel2.PerformLayout();
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
+            this.tableLayoutPanel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -516,7 +501,6 @@ namespace ProjectSETimeStamp
         private System.Windows.Forms.Label labelName;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.RadioButton radioButton6;
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.Button button1;
