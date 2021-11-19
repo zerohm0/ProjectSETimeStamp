@@ -153,8 +153,8 @@ namespace ProjectSETimeStamp
             var ret = new Container();
             using (TimestampEntities2 tx = new TimestampEntities2())
             {
-                var obj = from Emp in tx.Employee
-                          select new { รหัสพนักงาน = Emp.EmpID, ชื่อ = Emp.EmpFName, นามสกุล = Emp.EmpLName, อีเมล = Emp.EmpEmail, แผนก = Emp.EmpDepart/*,ตำแหน่ง=Emp.EmpPosit*/ };
+                 var obj = from Emp in tx.Employee
+                          select new { รหัสพนักงาน = Emp.EmpID, ชื่อ = Emp.EmpFName, นามสกุล = Emp.EmpLName, อีเมล = Emp.EmpEmail, แผนก = Emp.EmpDepart/*, ตำแหน่ง = Emp.EmpPosit*/ };
                 if (obj.Count() > 0)
                 {
                     ret.Status = true;

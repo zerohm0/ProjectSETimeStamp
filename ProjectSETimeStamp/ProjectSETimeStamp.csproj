@@ -149,6 +149,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Database.edmx</DependentUpon>
     </Compile>
+    <Compile Include="DGVPrinter.cs" />
     <Compile Include="Employee.cs">
       <DependentUpon>Database.tt</DependentUpon>
     </Compile>
@@ -351,6 +352,15 @@
       <DependentUpon>Database.edmx</DependentUpon>
       <LastGenOutput>Database.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\Zoom.png" />
+    <None Include="Resources\user.png" />
+    <None Include="Resources\User group.png" />
+    <None Include="Resources\People.png" />
+    <None Include="Resources\group.png" />
+    <None Include="Resources\Boss.png" />
+    <None Include="Resources\Alarm clock.png" />
+    <None Include="Resources\add1.png" />
+    <None Include="Resources\Add.png" />
     <None Include="Resources\About.png" />
     <None Include="Resources\abort_x.png" />
     <None Include="Resources\Abort.png" />
@@ -358,7 +368,6 @@
     <None Include="Resources\3d bar chart.ico" />
     <None Include="Resources\zoom_out.png" />
     <None Include="Resources\zoom_in.png" />
-    <None Include="Resources\Zoom.png" />
     <None Include="Resources\Yes.png" />
     <None Include="Resources\Yellow tag.png" />
     <None Include="Resources\Yellow pin.png" />
@@ -382,8 +391,6 @@
     <None Include="Resources\user_green.png" />
     <None Include="Resources\user_edit.png" />
     <None Include="Resources\user_add.png" />
-    <None Include="Resources\user.png" />
-    <None Include="Resources\User group.png" />
     <None Include="Resources\Upload.png" />
     <None Include="Resources\Up-down.png" />
     <None Include="Resources\Update.png" />
@@ -502,7 +509,6 @@
     <None Include="Resources\Person.png" />
     <None Include="Resources\person.ico" />
     <None Include="Resources\Percent.png" />
-    <None Include="Resources\People.png" />
     <None Include="Resources\Pause.png" />
     <None Include="Resources\pastespecial16.png" />
     <None Include="Resources\pastelink16.png" />
@@ -594,7 +600,6 @@
     <None Include="Resources\group_edit.png" />
     <None Include="Resources\group_delete.png" />
     <None Include="Resources\group_add.png" />
-    <None Include="Resources\group.png" />
     <None Include="Resources\Green tag.png" />
     <None Include="Resources\Green pin.png" />
     <None Include="Resources\Green bookmark.png" />
@@ -707,7 +712,6 @@
     <None Include="Resources\Briefcase.png" />
     <None Include="Resources\briefcase.ico" />
     <None Include="Resources\Bottom.png" />
-    <None Include="Resources\Boss.png" />
     <None Include="Resources\boss.ico" />
     <None Include="Resources\borderbottom16.png" />
     <None Include="Resources\Bookmark.png" />
@@ -748,11 +752,8 @@
     <None Include="Resources\alien.ico" />
     <None Include="Resources\Alert.png" />
     <None Include="Resources\Alarm.png" />
-    <None Include="Resources\Alarm clock.png" />
     <None Include="Resources\Address book.png" />
     <None Include="Resources\addons32.png" />
-    <None Include="Resources\add1.png" />
-    <None Include="Resources\Add.png" />
     <None Include="Resources\add.ico" />
     <None Include="Resources\Accounting.png" />
     <None Include="Resources\accept1.png" />

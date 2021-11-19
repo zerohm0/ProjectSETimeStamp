@@ -61,16 +61,6 @@ namespace ProjectSETimeStamp.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap _14475_19080819562258 {
-            get {
-                object obj = ResourceManager.GetObject("14475_19080819562258", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
         internal static System.Drawing.Icon _3d_bar_chart {
@@ -151,12 +141,12 @@ namespace ProjectSETimeStamp.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
-        internal static System.Drawing.Bitmap Add {
+        internal static System.Drawing.Icon add {
             get {
-                object obj = ResourceManager.GetObject("Add", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                object obj = ResourceManager.GetObject("add", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
             }
         }
         
@@ -171,12 +161,12 @@ namespace ProjectSETimeStamp.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Icon add2 {
+        internal static System.Drawing.Bitmap Add2 {
             get {
-                object obj = ResourceManager.GetObject("add2", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
+                object obj = ResourceManager.GetObject("Add2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -611,11 +601,21 @@ namespace ProjectSETimeStamp.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Boss1 {
+            get {
+                object obj = ResourceManager.GetObject("Boss1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
-        internal static System.Drawing.Icon boss1 {
+        internal static System.Drawing.Icon boss2 {
             get {
-                object obj = ResourceManager.GetObject("boss1", resourceCulture);
+                object obj = ResourceManager.GetObject("boss2", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
             }
         }
@@ -1006,16 +1006,6 @@ namespace ProjectSETimeStamp.Properties {
         internal static System.Drawing.Bitmap CreatePass {
             get {
                 object obj = ResourceManager.GetObject("CreatePass", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap CreateRole {
-            get {
-                object obj = ResourceManager.GetObject("CreateRole", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2026,16 +2016,6 @@ namespace ProjectSETimeStamp.Properties {
         internal static System.Drawing.Bitmap ICON_CHECK {
             get {
                 object obj = ResourceManager.GetObject("ICON_CHECK", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap iconEmployee {
-            get {
-                object obj = ResourceManager.GetObject("iconEmployee", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

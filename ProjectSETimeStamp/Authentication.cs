@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using OfficeOpenXml;
+using DGVPrinterHelper;
 
 
 
@@ -126,7 +127,30 @@ namespace ProjectSETimeStamp
             }
         }
 
-        
+        private void buttonPrint_Click(object sender, EventArgs e)
+        {
+            DGVPrinter printer = new DGVPrinter();
+
+
+
+            printer.Title = "รายงานสิทธิ์การใช้งานระบบ";
+            printer.SubTitle = string.Format("วันที่: {0}", DateTime.Now.Date.ToShortDateString());
+            printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+            printer.PageNumbers = true;
+            printer.PageNumberInHeader = false;
+            printer.PorportionalColumns = true;
+            printer.HeaderCellAlignment = StringAlignment.Near;
+            printer.printDocument.DefaultPageSettings.Landscape = true;
+
+            this.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            this.Hide();
+            printer.PrintPreviewDataGridView(dataGridViewAuthen);
+
+
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+
+            this.Show();
+        }
     }
    
 }

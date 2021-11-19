@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DGVPrinterHelper;
 
 namespace ProjectSETimeStamp
 {
@@ -18,7 +20,6 @@ namespace ProjectSETimeStamp
             service = new Service();
             InitializeComponent();
         }
-
         private void EmployeeForm_Load(object sender, EventArgs e)
         {
             RunList();
@@ -120,6 +121,37 @@ namespace ProjectSETimeStamp
                 e.Graphics.DrawImage(someImage, new Rectangle(x, y, w, h));
                 e.Handled = true;
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //dataGridView.AutoSizeColumnsMode =DataGridViewAutoSizeColumnsMode.None;
+            //dataGridView.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
+            //dataGridView.AutoResizeColumns();
+            DGVPrinter printer = new DGVPrinter();
+
+
+
+            printer.Title = "รายงานพนักงาน";
+            printer.SubTitle = string.Format("วันที่: {0}", DateTime.Now.Date.ToShortDateString());
+            printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+            printer.PageNumbers = true; 
+            printer.PageNumberInHeader = false;
+            printer.PorportionalColumns = true;
+            printer.HeaderCellAlignment = StringAlignment.Near;
+            printer.printDocument.DefaultPageSettings.Landscape = true;
+
+            this.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            this.Hide();
+            printer.PrintPreviewDataGridView(dataGridView);
+            
+
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            
+            this.Show();
+            
+
+
         }
     }
 }
