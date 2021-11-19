@@ -342,16 +342,6 @@
     <None Include="Resources\14475_19080819562258.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Database.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Database.edmx</DependentUpon>
-      <LastGenOutput>Database.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Database.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Database.edmx</DependentUpon>
-      <LastGenOutput>Database.cs</LastGenOutput>
-    </Content>
     <None Include="Resources\Zoom.png" />
     <None Include="Resources\user.png" />
     <None Include="Resources\User group.png" />
@@ -758,6 +748,18 @@
     <None Include="Resources\Accounting.png" />
     <None Include="Resources\accept1.png" />
     <None Include="Resources\accept.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Database.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Database.edmx</DependentUpon>
+      <LastGenOutput>Database.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Database.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Database.edmx</DependentUpon>
+      <LastGenOutput>Database.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -36,7 +36,6 @@ namespace ProjectSETimeStamp
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.buttonPrint = new System.Windows.Forms.Button();
             this.buttonSearch = new System.Windows.Forms.Button();
-            this.buttonAdd = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
@@ -156,18 +155,6 @@ namespace ProjectSETimeStamp
             this.buttonSearch.TabIndex = 0;
             this.buttonSearch.UseVisualStyleBackColor = true;
             this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
-            // 
-            // label1
-            // 
-            this.buttonAdd.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buttonAdd.Image = global::ProjectSETimeStamp.Properties.Resources.Add1;
-            this.buttonAdd.Location = new System.Drawing.Point(55, 4);
-            this.buttonAdd.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(43, 61);
-            this.buttonAdd.TabIndex = 1;
-            this.buttonAdd.UseVisualStyleBackColor = true;
-            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // label1
             // 
