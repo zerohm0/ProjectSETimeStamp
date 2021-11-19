@@ -64,7 +64,7 @@ namespace ProjectSETimeStamp
             this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel4, 1, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
@@ -78,6 +78,7 @@ namespace ProjectSETimeStamp
             // 
             this.label1.AutoSize = true;
             this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label1.Location = new System.Drawing.Point(57, 10);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
@@ -99,7 +100,7 @@ namespace ProjectSETimeStamp
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel5, 0, 4);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(57, 31);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 10;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -120,8 +121,8 @@ namespace ProjectSETimeStamp
             this.comboBoxPosition.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxPosition.FormattingEnabled = true;
-            this.comboBoxPosition.Location = new System.Drawing.Point(4, 362);
-            this.comboBoxPosition.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxPosition.Location = new System.Drawing.Point(4, 361);
+            this.comboBoxPosition.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxPosition.Name = "comboBoxPosition";
             this.comboBoxPosition.Size = new System.Drawing.Size(944, 24);
             this.comboBoxPosition.TabIndex = 12;
@@ -131,8 +132,8 @@ namespace ProjectSETimeStamp
             this.comboBoxDepartment.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDepartment.FormattingEnabled = true;
-            this.comboBoxDepartment.Location = new System.Drawing.Point(4, 274);
-            this.comboBoxDepartment.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxDepartment.Location = new System.Drawing.Point(4, 273);
+            this.comboBoxDepartment.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxDepartment.Name = "comboBoxDepartment";
             this.comboBoxDepartment.Size = new System.Drawing.Size(944, 24);
             this.comboBoxDepartment.TabIndex = 11;
@@ -142,8 +143,8 @@ namespace ProjectSETimeStamp
             this.comboBoxEmpID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxEmpID.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxEmpID.FormattingEnabled = true;
-            this.comboBoxEmpID.Location = new System.Drawing.Point(4, 98);
-            this.comboBoxEmpID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBoxEmpID.Location = new System.Drawing.Point(4, 97);
+            this.comboBoxEmpID.Margin = new System.Windows.Forms.Padding(4);
             this.comboBoxEmpID.Name = "comboBoxEmpID";
             this.comboBoxEmpID.Size = new System.Drawing.Size(944, 24);
             this.comboBoxEmpID.TabIndex = 9;
@@ -189,7 +190,7 @@ namespace ProjectSETimeStamp
             this.tableLayoutPanel3.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(4, 312);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -216,7 +217,7 @@ namespace ProjectSETimeStamp
             this.tableLayoutPanel5.Controls.Add(this.textBoxLName, 1, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(4, 180);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -227,7 +228,7 @@ namespace ProjectSETimeStamp
             // 
             this.textBoxName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBoxName.Location = new System.Drawing.Point(4, 4);
-            this.textBoxName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxName.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(464, 22);
             this.textBoxName.TabIndex = 0;
@@ -236,7 +237,7 @@ namespace ProjectSETimeStamp
             // 
             this.textBoxLName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBoxLName.Location = new System.Drawing.Point(476, 4);
-            this.textBoxLName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBoxLName.Margin = new System.Windows.Forms.Padding(4);
             this.textBoxLName.Name = "textBoxLName";
             this.textBoxLName.Size = new System.Drawing.Size(464, 22);
             this.textBoxLName.TabIndex = 1;
@@ -253,7 +254,7 @@ namespace ProjectSETimeStamp
             this.tableLayoutPanel4.Controls.Add(this.button3, 3, 0);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(57, 485);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -262,36 +263,43 @@ namespace ProjectSETimeStamp
             // 
             // buttonSubmit
             // 
+            this.buttonSubmit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.buttonSubmit.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.buttonSubmit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonSubmit.Image = global::ProjectSETimeStamp.Properties.Resources.Apply1;
+            this.buttonSubmit.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonSubmit.Location = new System.Drawing.Point(337, 4);
-            this.buttonSubmit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonSubmit.Margin = new System.Windows.Forms.Padding(4);
             this.buttonSubmit.Name = "buttonSubmit";
             this.buttonSubmit.Size = new System.Drawing.Size(115, 28);
             this.buttonSubmit.TabIndex = 0;
             this.buttonSubmit.Text = "บันทึก";
-            this.buttonSubmit.UseVisualStyleBackColor = true;
+            this.buttonSubmit.UseVisualStyleBackColor = false;
             this.buttonSubmit.Click += new System.EventHandler(this.buttonSubmit_Click);
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.button3.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.button3.Image = global::ProjectSETimeStamp.Properties.Resources.Delete;
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button3.Location = new System.Drawing.Point(498, 4);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(115, 28);
             this.button3.TabIndex = 1;
             this.button3.Text = "ยกเลิก";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // EditEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "EditEmployee";
             this.Text = "EditEmployee";
             this.Load += new System.EventHandler(this.EditEmployee_Load);
