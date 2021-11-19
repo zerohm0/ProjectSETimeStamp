@@ -45,6 +45,7 @@ namespace ProjectSETimeStamp
             // 
             // tableLayoutPanel1
             // 
+            this.tableLayoutPanel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90F));
@@ -133,15 +134,18 @@ namespace ProjectSETimeStamp
             // buttonPrint
             // 
             this.buttonPrint.AutoSize = true;
+            this.buttonPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.buttonPrint.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.buttonPrint.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buttonPrint.Image = global::ProjectSETimeStamp.Properties.Resources.Print;
+            this.buttonPrint.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.buttonPrint.Location = new System.Drawing.Point(466, 4);
             this.buttonPrint.Margin = new System.Windows.Forms.Padding(4);
             this.buttonPrint.Name = "buttonPrint";
             this.buttonPrint.Size = new System.Drawing.Size(45, 61);
             this.buttonPrint.TabIndex = 3;
             this.buttonPrint.Text = "พิมพ์";
-            this.buttonPrint.UseVisualStyleBackColor = true;
+            this.buttonPrint.UseVisualStyleBackColor = false;
             this.buttonPrint.Click += new System.EventHandler(this.button1_Click);
             // 
             // buttonSearch
@@ -160,6 +164,7 @@ namespace ProjectSETimeStamp
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label1.Location = new System.Drawing.Point(62, 8);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
