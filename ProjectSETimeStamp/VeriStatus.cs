@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DGVPrinterHelper;
 
 namespace ProjectSETimeStamp
 {
@@ -25,7 +26,7 @@ namespace ProjectSETimeStamp
         private void VeriStatus_Load(object sender, EventArgs e)
         {
             MDIForm mdi = new MDIForm();
-           // Eid = Convert.ToInt32(mdi.toolStripStatusLabelEN.Text);
+            Eid = Convert.ToInt32(mdi.toolStripStatusLabelEN.Text);
 
             RunList();
 
@@ -64,6 +65,31 @@ namespace ProjectSETimeStamp
                 //do something else
             }
             
+        }
+
+        private void buttonPrint_Click(object sender, EventArgs e)
+        {
+            DGVPrinter printer = new DGVPrinter();
+
+
+
+            printer.Title = "รายงานสถานะ Time Stamp";
+            printer.SubTitle = string.Format("วันที่: {0}", DateTime.Now.Date.ToShortDateString());
+            printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+            printer.PageNumbers = true;
+            printer.PageNumberInHeader = false;
+            printer.PorportionalColumns = true;
+            printer.HeaderCellAlignment = StringAlignment.Near;
+            printer.printDocument.DefaultPageSettings.Landscape = true;
+
+            this.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            this.Hide();
+            printer.PrintPreviewDataGridView(dataGridView1);
+
+
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+
+            this.Show();
         }
     }
 }

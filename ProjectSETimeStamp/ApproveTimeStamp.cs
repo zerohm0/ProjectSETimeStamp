@@ -67,15 +67,30 @@ namespace ProjectSETimeStamp
             
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void buttonPrint_Click(object sender, EventArgs e)
         {
+            //dataGridView.AutoResizeColumns();
             DGVPrinter printer = new DGVPrinter();
-            printer.Title = "report";
+
+
+
+            printer.Title = "รายงานอนุมัติ Time Stamp";
+            printer.SubTitle = string.Format("วันที่: {0}", DateTime.Now.Date.ToShortDateString());
+            printer.SubTitleFormatFlags = StringFormatFlags.LineLimit | StringFormatFlags.NoClip;
+            printer.PageNumbers = true;
+            printer.PageNumberInHeader = false;
+            printer.PorportionalColumns = true;
+            printer.HeaderCellAlignment = StringAlignment.Near;
+            printer.printDocument.DefaultPageSettings.Landscape = true;
+
+            this.WindowState = System.Windows.Forms.FormWindowState.Normal;
+            this.Hide();
+            printer.PrintPreviewDataGridView(dataGridView1);
+
+
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+
+            this.Show();
         }
     }
 }
