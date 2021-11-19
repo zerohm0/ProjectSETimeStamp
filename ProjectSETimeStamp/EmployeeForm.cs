@@ -22,6 +22,17 @@ namespace ProjectSETimeStamp
         private void EmployeeForm_Load(object sender, EventArgs e)
         {
             RunList();
+
+            DataGridViewButtonColumn editButtonColumn = new DataGridViewButtonColumn();
+            editButtonColumn.Name = "Edit";
+            editButtonColumn.Text = "Edit";
+
+            if (dataGridView.Columns["Edit"] == null)
+            {
+                dataGridView.Columns.Insert(0, editButtonColumn);
+            }
+            //dataGridViewAuthen.CellClick += dataGridViewAuthen_CellClick;
+            this.dataGridView.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
         }
         public void RunList()
         {
@@ -59,6 +70,56 @@ namespace ProjectSETimeStamp
         private void textBoxSearch_Click(object sender, EventArgs e)
         {
             textBoxSearch.Text = "";
+        }
+
+        private void dataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dataGridView.Columns["Edit"].Index)
+            {
+
+                string ID = dataGridView.Rows[e.RowIndex].Cells["รหัสพนักงาน"].Value.ToString();
+                string Fnam = dataGridView.Rows[e.RowIndex].Cells["ชื่อ"].Value.ToString();
+                string Lnam = dataGridView.Rows[e.RowIndex].Cells["นามสกุล"].Value.ToString();
+                string Depart = dataGridView.Rows[e.RowIndex].Cells["แผนก"].Value.ToString();
+
+
+
+
+                EditEmployee ARPC = new EditEmployee();
+                ARPC.ID = ID;
+                ARPC.textBoxName.Text = Fnam;
+                ARPC.textBoxLName.Text = Lnam;
+                ARPC.Depart = Depart;
+                var value = ARPC.ShowDialog();
+
+                //MessageBox.Show(value.ToString());
+                if (value.ToString() == "OK")
+                {
+                    RunList();
+
+                }
+
+
+            }
+        }
+
+        private void dataGridView_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            if (e.RowIndex < 0)
+                return;
+            if (e.ColumnIndex == 0)
+            {
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+                Image someImage = Properties.Resources.application_edit;
+
+                var w = Properties.Resources.application_edit.Width;
+                var h = Properties.Resources.application_edit.Height;
+                var x = e.CellBounds.Left + (e.CellBounds.Width - w) / 2;
+                var y = e.CellBounds.Top + (e.CellBounds.Height - h) / 2;
+
+                e.Graphics.DrawImage(someImage, new Rectangle(x, y, w, h));
+                e.Handled = true;
+            }
         }
     }
 }

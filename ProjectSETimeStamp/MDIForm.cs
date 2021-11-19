@@ -74,8 +74,9 @@ namespace ProjectSETimeStamp
             Form form = new VeriStatus
             {
                 MdiParent = this
+               
             };
-            
+            form.Text = toolStripStatusLabelEN.Text;
             form.WindowState = FormWindowState.Maximized;
             form.Show();
         }
@@ -120,6 +121,73 @@ namespace ProjectSETimeStamp
             {
                 log.ShowDialog();
             }
+        }
+
+        private void ribbonTab2_ActiveChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ribbonButton4_Click(object sender, EventArgs e)
+        {
+            foreach (Form f in MdiChildren)
+            {
+                if (f.GetType() == typeof(TypeTimeStamp))
+                {
+                    f.Activate();
+                    f.WindowState = FormWindowState.Maximized;
+                    return;
+                }
+            }
+            Form form = new TypeTimeStamp
+            {
+                MdiParent = this
+            };
+            form.WindowState = FormWindowState.Maximized;
+            form.Show();
+        }
+
+        private void ribbonButtonAsk_Click(object sender, EventArgs e)
+        {
+            foreach (Form f in MdiChildren)
+            {
+                if (f.GetType() == typeof(AskTimeStamp))
+                {
+                    f.Activate();
+                    f.WindowState = FormWindowState.Maximized;
+                    return;
+                }
+            }
+            Form form = new AskTimeStamp
+            {
+                MdiParent = this
+            };
+            form.WindowState = FormWindowState.Maximized;
+            form.Show();
+        }
+
+        private void ribbonButtonApprove_Click(object sender, EventArgs e)
+        {
+            foreach (Form f in MdiChildren)
+            {
+                if (f.GetType() == typeof(ApproveTimeStamp))
+                {
+                    f.Activate();
+                    f.WindowState = FormWindowState.Maximized;
+                    return;
+                }
+            }
+            Form form = new ApproveTimeStamp
+            {
+                MdiParent = this
+            };
+            form.WindowState = FormWindowState.Maximized;
+            form.Show();
+        }
+
+        private void ribbonTab4_ActiveChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

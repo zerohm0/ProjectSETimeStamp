@@ -81,7 +81,7 @@ namespace ProjectSETimeStamp
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(714, 13);
             this.label1.TabIndex = 2;
-            this.label1.Text = "ข้อมูลพนักงาน > เพิ่มข้อมูล";
+            this.label1.Text = "ข้อมูลพนักงาน > แก้ไขข้อมูล";
             // 
             // tableLayoutPanel2
             // 
@@ -307,7 +307,7 @@ namespace ProjectSETimeStamp
         private System.Windows.Forms.Button buttonSubmit;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
-        private System.Windows.Forms.TextBox textBoxName;
-        private System.Windows.Forms.TextBox textBoxLName;
+        public System.Windows.Forms.TextBox textBoxName;
+        public System.Windows.Forms.TextBox textBoxLName;
     }
 }

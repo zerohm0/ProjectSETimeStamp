@@ -310,7 +310,7 @@ namespace ProjectSETimeStamp
             {
                 var obj = from Emp in tx.Employee
                           where Emp.EmpID.ToString().Contains(keyword) || Emp.EmpFName.ToString().Contains(keyword) || Emp.EmpLName.ToString().Contains(keyword) || Emp.EmpPass.Contains(keyword)
-                          select new { รหัสพนักงาน = Emp.EmpID, ชื่อ = Emp.EmpFName, นามสกุล = Emp.EmpLName, อีเมล = Emp.EmpEmail,แผนก=Emp.EmpDepart/*,ตำแหน่ง=Emp.EmpPosit*/};
+                          select new { รหัสพนักงาน = Emp.EmpID, ชื่อ = Emp.EmpFName, นามสกุล = Emp.EmpLName, อีเมล = Emp.EmpEmail,แผนก=Emp.EmpDepart, ตำแหน่ง = Emp.EmpPosit };
 
                 if (obj.Count() > 0)
                 {
@@ -318,7 +318,7 @@ namespace ProjectSETimeStamp
                     ret.ResultObj = obj.ToList();
                     ret.ExceptMessage = obj.FirstOrDefault().แผนก;
                     ret.Message = "SearchSuccesses";
-
+                    ret.Message2 = obj.FirstOrDefault().ตำแหน่ง;
                 }
                 //else
                 //{
@@ -386,15 +386,16 @@ namespace ProjectSETimeStamp
             using (TimestampEntities2 tx = new TimestampEntities2())
             {
                 var objDP = from emp in tx.Employee select emp.EmpDepart;
-                var objIDD = from emp in tx.Employee select emp.EmpID;
+                var objIDD = tx.Employee.Select(x => x.EmpID.ToString());
                 var objLevel = from emp in tx.Employee select emp.EmpPosit;
+                ret.Status = true;
 
 
                 if (objDP.Count() > 0 && objIDD.Count() > 0 && objLevel.Count() > 0)
                 {
-                    ret.ResultObj = objDP.ToList();
-                    ret.ResultObj = objIDD.ToList();
-                    ret.ResultAnotherOneBiteTheDust = objLevel.ToList();
+                    ret.ResultObj = objDP.ToArray();
+                    ret.ResultID = objIDD.ToArray();
+                    ret.ResultAnotherOneBiteTheDust = objLevel.ToArray();
                 }
             }
 
