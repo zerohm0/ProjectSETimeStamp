@@ -352,6 +352,8 @@
       <DependentUpon>Database.edmx</DependentUpon>
       <LastGenOutput>Database.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\logo_200x200 %281%292.png" />
+    <None Include="Resources\logo_200x200 %281%291.png" />
     <None Include="Resources\Zoom.png" />
     <None Include="Resources\user.png" />
     <None Include="Resources\User group.png" />

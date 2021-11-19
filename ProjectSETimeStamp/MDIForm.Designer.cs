@@ -57,6 +57,7 @@ namespace ProjectSETimeStamp
             // 
             this.ribbon1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ribbon1.Location = new System.Drawing.Point(0, 0);
+            this.ribbon1.Margin = new System.Windows.Forms.Padding(4);
             this.ribbon1.Minimized = false;
             this.ribbon1.Name = "ribbon1";
             // 
@@ -68,7 +69,7 @@ namespace ProjectSETimeStamp
             this.ribbon1.OrbDropDown.Size = new System.Drawing.Size(527, 447);
             this.ribbon1.OrbDropDown.TabIndex = 0;
             this.ribbon1.RibbonTabFont = new System.Drawing.Font("Trebuchet MS", 9F);
-            this.ribbon1.Size = new System.Drawing.Size(916, 159);
+            this.ribbon1.Size = new System.Drawing.Size(1221, 196);
             this.ribbon1.TabIndex = 1;
             this.ribbon1.Tabs.Add(this.ribbonTab1);
             this.ribbon1.Tabs.Add(this.ribbonTab2);
@@ -121,8 +122,8 @@ namespace ProjectSETimeStamp
             // 
             // ribbonButton4
             // 
-            this.ribbonButton4.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButton4.Image")));
-            this.ribbonButton4.LargeImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton4.LargeImage")));
+            this.ribbonButton4.Image = global::ProjectSETimeStamp.Properties.Resources.Alarm;
+            this.ribbonButton4.LargeImage = global::ProjectSETimeStamp.Properties.Resources.Alarm;
             this.ribbonButton4.Name = "ribbonButton4";
             this.ribbonButton4.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButton4.SmallImage")));
             this.ribbonButton4.Text = "ประเภทTimestamp";
@@ -143,19 +144,17 @@ namespace ProjectSETimeStamp
             // 
             // ribbonButtonAsk
             // 
-            this.ribbonButtonAsk.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButtonAsk.Image")));
-            this.ribbonButtonAsk.LargeImage = ((System.Drawing.Image)(resources.GetObject("ribbonButtonAsk.LargeImage")));
+            this.ribbonButtonAsk.Image = global::ProjectSETimeStamp.Properties.Resources.paste321;
+            this.ribbonButtonAsk.LargeImage = global::ProjectSETimeStamp.Properties.Resources.paste321;
             this.ribbonButtonAsk.Name = "ribbonButtonAsk";
-            this.ribbonButtonAsk.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButtonAsk.SmallImage")));
             this.ribbonButtonAsk.Text = "ขอTimestamp";
             this.ribbonButtonAsk.Click += new System.EventHandler(this.ribbonButtonAsk_Click);
             // 
             // ribbonButtonApprove
             // 
-            this.ribbonButtonApprove.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButtonApprove.Image")));
-            this.ribbonButtonApprove.LargeImage = ((System.Drawing.Image)(resources.GetObject("ribbonButtonApprove.LargeImage")));
+            this.ribbonButtonApprove.Image = global::ProjectSETimeStamp.Properties.Resources.prepare32;
+            this.ribbonButtonApprove.LargeImage = global::ProjectSETimeStamp.Properties.Resources.prepare32;
             this.ribbonButtonApprove.Name = "ribbonButtonApprove";
-            this.ribbonButtonApprove.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButtonApprove.SmallImage")));
             this.ribbonButtonApprove.Text = "อนุมัติTimestamp";
             this.ribbonButtonApprove.Click += new System.EventHandler(this.ribbonButtonApprove_Click);
             // 
@@ -173,8 +172,8 @@ namespace ProjectSETimeStamp
             // 
             // ribbonButtonCheckStatus
             // 
-            this.ribbonButtonCheckStatus.Image = ((System.Drawing.Image)(resources.GetObject("ribbonButtonCheckStatus.Image")));
-            this.ribbonButtonCheckStatus.LargeImage = ((System.Drawing.Image)(resources.GetObject("ribbonButtonCheckStatus.LargeImage")));
+            this.ribbonButtonCheckStatus.Image = global::ProjectSETimeStamp.Properties.Resources.Find;
+            this.ribbonButtonCheckStatus.LargeImage = global::ProjectSETimeStamp.Properties.Resources.Find;
             this.ribbonButtonCheckStatus.Name = "ribbonButtonCheckStatus";
             this.ribbonButtonCheckStatus.SmallImage = ((System.Drawing.Image)(resources.GetObject("ribbonButtonCheckStatus.SmallImage")));
             this.ribbonButtonCheckStatus.Text = "ตรวจสอบสถานะ";
@@ -182,50 +181,53 @@ namespace ProjectSETimeStamp
             // 
             // statusStrip1
             // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabelEN,
             this.toolStripStatusLabelNAME,
             this.toolStripStatusLabelDEP,
             this.toolStripStatusLabelPOS});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 532);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 656);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(916, 22);
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(1221, 26);
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // toolStripStatusLabelEN
             // 
             this.toolStripStatusLabelEN.Name = "toolStripStatusLabelEN";
-            this.toolStripStatusLabelEN.Size = new System.Drawing.Size(64, 17);
+            this.toolStripStatusLabelEN.Size = new System.Drawing.Size(82, 20);
             this.toolStripStatusLabelEN.Text = "รหัสพนักงาน";
             // 
             // toolStripStatusLabelNAME
             // 
             this.toolStripStatusLabelNAME.Name = "toolStripStatusLabelNAME";
-            this.toolStripStatusLabelNAME.Size = new System.Drawing.Size(39, 17);
+            this.toolStripStatusLabelNAME.Size = new System.Drawing.Size(51, 20);
             this.toolStripStatusLabelNAME.Text = "ชื่อสกุล";
             // 
             // toolStripStatusLabelDEP
             // 
             this.toolStripStatusLabelDEP.Name = "toolStripStatusLabelDEP";
-            this.toolStripStatusLabelDEP.Size = new System.Drawing.Size(34, 17);
+            this.toolStripStatusLabelDEP.Size = new System.Drawing.Size(43, 20);
             this.toolStripStatusLabelDEP.Text = "แผนก";
             // 
             // toolStripStatusLabelPOS
             // 
             this.toolStripStatusLabelPOS.Name = "toolStripStatusLabelPOS";
-            this.toolStripStatusLabelPOS.Size = new System.Drawing.Size(44, 17);
+            this.toolStripStatusLabelPOS.Size = new System.Drawing.Size(56, 20);
             this.toolStripStatusLabelPOS.Text = "ตำแหน่ง";
             // 
             // MDIForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(916, 554);
+            this.ClientSize = new System.Drawing.Size(1221, 682);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.ribbon1);
             this.IsMdiContainer = true;
             this.KeyPreview = true;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MDIForm";
             this.Text = "MDIForm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
