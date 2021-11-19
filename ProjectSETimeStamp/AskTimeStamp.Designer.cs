@@ -259,10 +259,10 @@ namespace ProjectSETimeStamp
             // dateTimePickerE
             // 
             this.dateTimePickerE.CustomFormat = "yyyy-MM-dd";
-            this.dateTimePickerE.Location = new System.Drawing.Point(422, 32);
-            this.dateTimePickerE.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePickerE.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dateTimePickerE.Location = new System.Drawing.Point(317, 29);
             this.dateTimePickerE.Name = "dateTimePickerE";
-            this.dateTimePickerE.Size = new System.Drawing.Size(265, 22);
+            this.dateTimePickerE.Size = new System.Drawing.Size(308, 20);
             this.dateTimePickerE.TabIndex = 3;
             // 
             // label9
@@ -290,10 +290,10 @@ namespace ProjectSETimeStamp
             // dateTimePickerS
             // 
             this.dateTimePickerS.CustomFormat = "yyyy-MM-dd";
-            this.dateTimePickerS.Location = new System.Drawing.Point(4, 32);
-            this.dateTimePickerS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePickerS.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dateTimePickerS.Location = new System.Drawing.Point(3, 29);
             this.dateTimePickerS.Name = "dateTimePickerS";
-            this.dateTimePickerS.Size = new System.Drawing.Size(265, 22);
+            this.dateTimePickerS.Size = new System.Drawing.Size(308, 20);
             this.dateTimePickerS.TabIndex = 2;
             // 
             // tableLayoutPanel5
@@ -421,6 +421,7 @@ namespace ProjectSETimeStamp
             this.label12.Size = new System.Drawing.Size(97, 17);
             this.label12.TabIndex = 0;
             this.label12.Text = "เวลาเข้า";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label13
             // 
@@ -432,6 +433,7 @@ namespace ProjectSETimeStamp
             this.label13.Size = new System.Drawing.Size(97, 17);
             this.label13.TabIndex = 0;
             this.label13.Text = "เวลาออก";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label10
             // 
@@ -443,6 +445,7 @@ namespace ProjectSETimeStamp
             this.label10.Size = new System.Drawing.Size(203, 17);
             this.label10.TabIndex = 0;
             this.label10.Text = "ตัวอย่าง: 08:00";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label11
             // 
@@ -454,6 +457,7 @@ namespace ProjectSETimeStamp
             this.label11.Size = new System.Drawing.Size(203, 17);
             this.label11.TabIndex = 0;
             this.label11.Text = "ตัวอย่าง: 17:45";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // textBoxIn
             // 

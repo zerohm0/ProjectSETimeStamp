@@ -67,20 +67,9 @@ namespace ProjectSETimeStamp
 
         }
 
-        private void buttonAdd_Click(object sender, EventArgs e)
-        {
-            //อันนี้ของEdit ของปุ่มในตาราง ไม่ใช่ปุ่ม +
+        
 
-
-
-
-        }
-
-        private Container<List<ModelAuthen>> GetWIPOperations(Container obj)
-        {
-            var ctnIEDatabases = service.GetAuthen(obj);
-            return ctnIEDatabases.ResultObj();
-        }
+        
 
         
 

@@ -288,7 +288,8 @@ namespace ProjectSETimeStamp
             this.buttonCancel.Size = new System.Drawing.Size(115, 28);
             this.buttonCancel.TabIndex = 1;
             this.buttonCancel.Text = "ยกเลิก";
-            this.buttonCancel.UseVisualStyleBackColor = false;
+            this.buttonCancel.UseVisualStyleBackColor = true;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // EditAuthen
             // 

@@ -11,6 +11,7 @@ namespace ProjectSETimeStamp
         public bool Status { get; set; }
         public string Message { get; set; }
         public string ExceptMessage { get; set; }
+        public string Message2 { get; set; }
         public dynamic ResultObj { get; set; }
 
         public dynamic ResultID { get; set; }

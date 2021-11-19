@@ -22,6 +22,8 @@ namespace ProjectSETimeStamp
 
             InitializeComponent();
         }
+        public string ID;
+        public string Depart;
         //Code ข้างล่างคือของ Authen Edit เด๋วค่อยย้าย
         private void buttonSubmit_Click(object sender, EventArgs e)
         {
@@ -50,14 +52,27 @@ namespace ProjectSETimeStamp
             var ret = service.getList2();
             if (ret.Status)
             {
-                comboBoxEmpID.Items.AddRange(ret.ResultID.ToArray());
-                comboBoxDepartment.Items.AddRange(ret.ResultObj.ToArray());
-                comboBoxPosition.Items.AddRange(ret.ResultAnotherOneBiteTheDust.ToArray());
+                string[] s1 = ret.ResultID;
+                string[] s2 = ret.ResultObj;
+                string[] s3 = ret.ResultAnotherOneBiteTheDust;
+
+                comboBoxEmpID.Items.AddRange(s1);
+                comboBoxDepartment.Items.AddRange(s2);
+                comboBoxPosition.Items.AddRange(s3);
             }
             else
             {
                 MessageBox.Show(ret.Message);
             }
+            if (textBoxName.Text != null)
+            {
+                var ret2 = service.EmpSearch(comboBoxEmpID.Text);
+                comboBoxDepartment.Text = Depart;
+                comboBoxEmpID.SelectedItem = ID;
+                comboBoxPosition.SelectedItem = ret2.Message2;
+            }
+
+
         }
     }
 }

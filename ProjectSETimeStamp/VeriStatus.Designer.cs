@@ -158,6 +158,16 @@ namespace ProjectSETimeStamp
             this.buttonPrint.UseVisualStyleBackColor = false;
             this.buttonPrint.Click += new System.EventHandler(this.buttonPrint_Click);
             // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(43, 7);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(721, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "ตรวจสอบ TimeStamp";
+            // 
             // VeriStatus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -183,10 +193,10 @@ namespace ProjectSETimeStamp
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Button buttonSearch;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonPrint;
+        public System.Windows.Forms.TextBox textBox1;
     }
 }

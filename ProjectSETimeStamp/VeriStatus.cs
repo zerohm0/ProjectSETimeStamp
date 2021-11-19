@@ -26,7 +26,7 @@ namespace ProjectSETimeStamp
         private void VeriStatus_Load(object sender, EventArgs e)
         {
             MDIForm mdi = new MDIForm();
-            Eid = Convert.ToInt32(mdi.toolStripStatusLabelEN.Text);
+            Eid = Convert.ToInt32(Convert.ToInt32(this.Text));
 
             RunList();
 

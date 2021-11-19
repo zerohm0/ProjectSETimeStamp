@@ -59,6 +59,9 @@ namespace ProjectSETimeStamp
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 83F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 82F));
@@ -81,6 +84,8 @@ namespace ProjectSETimeStamp
             this.dataGridView.RowHeadersWidth = 51;
             this.dataGridView.Size = new System.Drawing.Size(1045, 696);
             this.dataGridView.TabIndex = 0;
+            this.dataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellClick);
+            this.dataGridView.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.dataGridView_CellPainting);
             // 
             // tableLayoutPanel2
             // 
@@ -118,7 +123,6 @@ namespace ProjectSETimeStamp
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel3.Controls.Add(this.buttonPrint, 3, 0);
             this.tableLayoutPanel3.Controls.Add(this.buttonSearch, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.buttonAdd, 1, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(526, 4);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
@@ -157,7 +161,7 @@ namespace ProjectSETimeStamp
             this.buttonSearch.UseVisualStyleBackColor = true;
             this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
-            // buttonAdd
+            // label1
             // 
             this.buttonAdd.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonAdd.Image = global::ProjectSETimeStamp.Properties.Resources.Add1;
@@ -210,7 +214,6 @@ namespace ProjectSETimeStamp
         private System.Windows.Forms.TextBox textBoxSearch;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Button buttonSearch;
-        private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonPrint;
     }
