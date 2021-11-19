@@ -84,7 +84,7 @@ namespace ProjectSETimeStamp
             this.tableLayoutPanel1.Controls.Add(this.buttonCancel, 2, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3F));
@@ -124,7 +124,7 @@ namespace ProjectSETimeStamp
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel5, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(57, 26);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 11;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8F));
@@ -145,7 +145,7 @@ namespace ProjectSETimeStamp
             // 
             this.textBoxDetail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBoxDetail.Location = new System.Drawing.Point(4, 502);
-            this.textBoxDetail.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxDetail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxDetail.Multiline = true;
             this.textBoxDetail.Name = "textBoxDetail";
             this.textBoxDetail.Size = new System.Drawing.Size(837, 54);
@@ -232,8 +232,8 @@ namespace ProjectSETimeStamp
             // 
             this.comboBoxType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.comboBoxType.FormattingEnabled = true;
-            this.comboBoxType.Location = new System.Drawing.Point(4, 404);
-            this.comboBoxType.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBoxType.Location = new System.Drawing.Point(4, 405);
+            this.comboBoxType.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboBoxType.Name = "comboBoxType";
             this.comboBoxType.Size = new System.Drawing.Size(837, 24);
             this.comboBoxType.TabIndex = 10;
@@ -249,7 +249,7 @@ namespace ProjectSETimeStamp
             this.tableLayoutPanel4.Controls.Add(this.dateTimePickerS, 0, 1);
             this.tableLayoutPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel4.Location = new System.Drawing.Point(4, 564);
-            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -306,7 +306,7 @@ namespace ProjectSETimeStamp
             this.tableLayoutPanel5.Controls.Add(this.labelName, 0, 0);
             this.tableLayoutPanel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel5.Location = new System.Drawing.Point(4, 54);
-            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -346,7 +346,7 @@ namespace ProjectSETimeStamp
             this.tableLayoutPanel3.Controls.Add(this.buttonUpload, 2, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(57, 703);
-            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -358,7 +358,7 @@ namespace ProjectSETimeStamp
             // 
             this.textBoxFile.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textBoxFile.Location = new System.Drawing.Point(173, 4);
-            this.textBoxFile.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxFile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxFile.Name = "textBoxFile";
             this.textBoxFile.Size = new System.Drawing.Size(583, 22);
             this.textBoxFile.TabIndex = 0;
@@ -380,7 +380,7 @@ namespace ProjectSETimeStamp
             // 
             this.buttonUpload.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buttonUpload.Location = new System.Drawing.Point(764, 4);
-            this.buttonUpload.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonUpload.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonUpload.Name = "buttonUpload";
             this.buttonUpload.Size = new System.Drawing.Size(77, 30);
             this.buttonUpload.TabIndex = 2;
@@ -405,7 +405,7 @@ namespace ProjectSETimeStamp
             this.tableLayoutPanel6.Controls.Add(this.textBoxOut, 5, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(57, 659);
-            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -464,7 +464,7 @@ namespace ProjectSETimeStamp
             // 
             this.textBoxIn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxIn.Location = new System.Drawing.Point(320, 7);
-            this.textBoxIn.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxIn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxIn.Name = "textBoxIn";
             this.textBoxIn.Size = new System.Drawing.Size(97, 22);
             this.textBoxIn.TabIndex = 1;
@@ -473,7 +473,7 @@ namespace ProjectSETimeStamp
             // 
             this.textBoxOut.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxOut.Location = new System.Drawing.Point(741, 7);
-            this.textBoxOut.Margin = new System.Windows.Forms.Padding(4);
+            this.textBoxOut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBoxOut.Name = "textBoxOut";
             this.textBoxOut.Size = new System.Drawing.Size(100, 22);
             this.textBoxOut.TabIndex = 2;
@@ -485,7 +485,7 @@ namespace ProjectSETimeStamp
             this.buttonAccept.Image = global::ProjectSETimeStamp.Properties.Resources.Apply1;
             this.buttonAccept.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonAccept.Location = new System.Drawing.Point(910, 659);
-            this.buttonAccept.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonAccept.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonAccept.Name = "buttonAccept";
             this.buttonAccept.Size = new System.Drawing.Size(153, 36);
             this.buttonAccept.TabIndex = 9;
@@ -500,7 +500,7 @@ namespace ProjectSETimeStamp
             this.buttonCancel.Image = global::ProjectSETimeStamp.Properties.Resources.Delete;
             this.buttonCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonCancel.Location = new System.Drawing.Point(910, 703);
-            this.buttonCancel.Margin = new System.Windows.Forms.Padding(4);
+            this.buttonCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonCancel.Name = "buttonCancel";
             this.buttonCancel.Size = new System.Drawing.Size(153, 38);
             this.buttonCancel.TabIndex = 10;
@@ -515,7 +515,7 @@ namespace ProjectSETimeStamp
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1067, 745);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "AskTimeStamp";
             this.Text = "AskTimeStamp";
             this.tableLayoutPanel1.ResumeLayout(false);
